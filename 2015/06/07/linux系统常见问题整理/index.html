@@ -195,9 +195,9 @@
 <h2 id="git_clone_—recursive_https://github-com/rbgirshick/fast-rcnn-git">git clone —recursive <a href="https://github.com/rbgirshick/fast-rcnn.git" target="_blank" rel="external">https://github.com/rbgirshick/fast-rcnn.git</a></h2><p>  error: Failed connect to github  fatal: HTTP request failed</p>
 <p>  Solution<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global url.<span class="string">"https://"</span><span class="class">.insteadOf</span> git:<span class="comment">//</span></span><br><span class="line">git config --global http<span class="class">.proxy</span> <span class="number">114.212</span>.~~.~~:~~~~~</span><br></pre></td></tr></table></figure></p>
 <h2 id="install_redhat6-5">install redhat6.5</h2><p>  close firewall: service iptables stop<br>  start firewall: service iptables start<br><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">service iptables <span class="built_in">stop</span>  <span class="comment">/* 关闭防火墙 */</span> </span><br><span class="line">service iptables <span class="built_in">start</span> <span class="comment">/* 开启防火墙 */</span> </span><br><span class="line">chkconfig iptables off <span class="comment">/* 默认关闭防火墙 */</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">start</span> network: service network restart</span><br><span class="line"><span class="built_in">start</span> vncserver: service vncserver <span class="command"><span class="keyword">on</span></span></span><br><span class="line">chkconfig vncserver <span class="command"><span class="keyword">on</span></span></span><br></pre></td></tr></table></figure></p>
-<h2 id="mount_disk">mount disk</h2><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mount <span class="regexp">/dev/</span>sdb /home</span><br><span class="line"></span><br><span class="line">vim <span class="regexp">/etc/</span>fstab</span><br><span class="line"><span class="regexp">/dev/</span>sdb   /home  ext4  defaults <span class="number">0</span> <span class="number">0</span></span><br></pre></td></tr></table></figure>
+<h2 id="mount_disk">mount disk</h2><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mount <span class="regexp">/dev/</span>sdb /home</span><br><span class="line">vim <span class="regexp">/etc/</span>fstab</span><br><span class="line"><span class="regexp">/dev/</span>sdb   /home  ext4  defaults <span class="number">0</span> <span class="number">0</span></span><br></pre></td></tr></table></figure>
 <h2 id="VNC_Server_Installation_on_CentOS_6-5">VNC Server Installation on CentOS 6.5</h2><p> <a href="https://www.howtoforge.com/vnc-server-installation-centos-6.5" target="_blank" rel="external">https://www.howtoforge.com/vnc-server-installation-centos-6.5</a></p>
-<p> I am logged in my system with root, &amp; now I will be installing the VNC-server.<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">yum groupinstall Desktop</span><br><span class="line"></span><br><span class="line">yum <span class="operator"><span class="keyword">install</span> gnome-core </span><br><span class="line"></span><br><span class="line">yum <span class="keyword">install</span> tigervnc-<span class="keyword">server</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">Now</span> make the service <span class="keyword">on</span> <span class="keyword">after</span> every reboot</span><br><span class="line"></span><br><span class="line">chkconfig vncserver <span class="keyword">on</span></span></span><br></pre></td></tr></table></figure></p>
+<p> I am logged in my system with root, &amp; now I will be installing the VNC-server.<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">yum groupinstall Desktop</span><br><span class="line">yum <span class="operator"><span class="keyword">install</span> gnome-core </span><br><span class="line">yum <span class="keyword">install</span> tigervnc-<span class="keyword">server</span></span><br><span class="line">%<span class="keyword">Now</span> make the service <span class="keyword">on</span> <span class="keyword">after</span> every reboot</span><br><span class="line">chkconfig vncserver <span class="keyword">on</span></span></span><br></pre></td></tr></table></figure></p>
 <h2 id="Adding_VNC_user">Adding VNC user</h2><p>  In my case I am using user=srijan it will differ in your case. You can use any username for the same.<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">useradd</span> xxxx</span><br></pre></td></tr></table></figure></p>
 <p>  Now I will assign the vncpassword for the user with the user I just created before as:<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">su</span> - srijan</span><br><span class="line">vncpasswd</span><br></pre></td></tr></table></figure></p>
 <p>  Now I will restart the VNC server service as root user:<br><figure class="highlight puppet"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">service</span> vncserver <span class="literal">restart</span></span><br></pre></td></tr></table></figure></p>
@@ -227,6 +227,8 @@
       
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/06/07/CV-and-ML-Conference/">CV and ML Conference</a>
             
           </div>
 
@@ -296,7 +298,7 @@
         <div class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">8</span>
+              <span class="site-state-item-count">9</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -310,7 +312,7 @@
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">15</span>
+              <span class="site-state-item-count">16</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
