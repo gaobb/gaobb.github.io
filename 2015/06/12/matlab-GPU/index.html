@@ -186,7 +186,7 @@
       
 
       
-        <p>本文主要总结 MATLAB 下如何合理使用GPU计算资源.<br><a id="more"></a> </p>
+        <p>本文主要总结 MATLAB 下如何指定GPU计算资源.<br><a id="more"></a> </p>
 <h2 id="查看服务器GPU计算资源">查看服务器GPU计算资源</h2><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>nvidia-smi</span><br></pre></td></tr></table></figure>
 <p><img src="../../../../image/nvidia-smi.png" alt=""></p>
 <p>上图可以知道，该台服务器共有4 块GPU（0 1 2 3），其中2和3 被进程PID：14138和16433使用.<br>如果自己的应用需要很大显存，可以指定GPU，例如这里至少可以使用 0 和 1. 在matlab 环境下，可以使用 gpuDevice 和 reset.<br><figure class="highlight erlang-repl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function_or_atom">matlab</span>  <span class="comment">%启动matlab</span></span><br><span class="line"><span class="function_or_atom">gpuDevice</span></span><br></pre></td></tr></table></figure></p>
