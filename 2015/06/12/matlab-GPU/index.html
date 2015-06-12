@@ -191,10 +191,10 @@
 <p><img src="../../../../image/nvidia-smi.png" alt=""></p>
 <p>上图可以知道，该台服务器共有4 块GPU（0 1 2 3），其中2和3 被进程PID：14138和16433使用.<br>如果自己的应用需要很大显存，可以指定GPU，例如这里至少可以使用 0 和 1. 在matlab 环境下，可以使用 gpuDevice 和 reset.<br><figure class="highlight erlang-repl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function_or_atom">matlab</span>  <span class="comment">%启动matlab</span></span><br><span class="line"><span class="function_or_atom">gpuDevice</span></span><br></pre></td></tr></table></figure></p>
 <p><img src="../../../../image/gpudevice.png" alt=""><br>默认为第0块GPU. 需要指出的是matlab 从1开始计数，而系统则是从0开始计数. 因此在matlab 下4块显卡的编号从（0 1 2 3）变为（1 2 3 4）.</p>
-<p>如果我们想制定用第1块显卡，则对应于matlab下面的第2块.可以使用reset 设定.<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ g=<span class="function"><span class="title">gpuDevice</span><span class="params">(<span class="number">2</span>)</span></span></span><br><span class="line">$ <span class="function"><span class="title">reset</span><span class="params">(g)</span></span></span><br><span class="line">$ <span class="function"><span class="title">system</span><span class="params">(<span class="string">'nvidia-smi'</span>)</span></span></span><br></pre></td></tr></table></figure></p>
-<p><img src="../../../../image/resetgpu.png" alt=""></p>
+<p>如果我们想用第1块显卡，则对应于matlab下面的第2块.可以使用reset 设定.<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>g=gpuDevice(<span class="number">2</span>)</span><br><span class="line"><span class="variable">$ </span>reset(g)</span><br><span class="line"><span class="variable">$ </span>system(<span class="string">'nvidia-smi'</span>)  %调用系统命令查看</span><br></pre></td></tr></table></figure></p>
+<p><img src="../../../../image/resetgpu.png" alt=""><br>可以看到第1块显卡被启动，也可以使用matlab 提供的函数gpuDevice 查看.</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gpuDevice</span><br></pre></td></tr></table></figure>
-<p><img src="../../../../image/viewgpudevice.png" alt=""></p>
+<p><img src="../../../../image/viewgpudevice.png" alt=""><br>可以看到当前的GPU的编号为2,对应于系统的1.</p>
 
       
     </div>
