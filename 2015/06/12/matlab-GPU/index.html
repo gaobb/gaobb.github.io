@@ -22,7 +22,7 @@
 
 
 
-  <meta name="keywords" content="CNN,backpropagation,convolutional,details,fully connected,loss function,normalization,pooling," />
+  <meta name="keywords" content="gpu,matlab," />
 
 
 
@@ -55,7 +55,7 @@
 
 
 
-  <title> The details  are always in convolutional neural network // Sunshine </title>
+  <title> matlab & GPU // Sunshine </title>
 </head>
 
 <body>
@@ -143,7 +143,7 @@
           
           
             
-              The details  are always in convolutional neural network
+              matlab & GPU
             
           
         </h1>
@@ -151,14 +151,14 @@
 
       <div class="post-meta">
         <span class="post-time">
-          发表于 2015-06-04
+          发表于 2015-06-12
         </span>
 
         
           <span class="post-category">
             &nbsp; | &nbsp; 分类于
             
-              <a href="/categories/CNN/">CNN</a>
+              <a href="/categories/linux/">linux</a>
 
               
               
@@ -171,8 +171,8 @@
           
             <span class="post-comments-count">
             &nbsp; | &nbsp;
-            <a href="/2015/06/04/The  details  are always in convolutional neural network/#comments" >
-              <span class="post-comments-count ds-thread-count" data-thread-key="2015/06/04/The  details  are always in convolutional neural network/"></span>
+            <a href="/2015/06/12/matlab-GPU/#comments" >
+              <span class="post-comments-count ds-thread-count" data-thread-key="2015/06/12/matlab-GPU/"></span>
             </a>
           </span>
           
@@ -186,9 +186,10 @@
       
 
       
-        <p>阐述CNN 前向传播与反响传播原理，包括卷积、池化、正规化、全连接、损失函数以及反向传播原理.<br><a id="more"></a> </p>
-<h2 id="Forward">Forward</h2><h4 id="convolutional">convolutional</h4><h4 id="pooling">pooling</h4><h4 id="normalization">normalization</h4><h4 id="fully_connected">fully connected</h4><h4 id="loss_function">loss function</h4><hr>
-<h2 id="Backpropagation">Backpropagation</h2>
+        <p>本文主要总结 MATLAB 下如何合理使用GPU计算资源.<br><a id="more"></a> </p>
+<h2 id="查看服务器GPU计算资源">查看服务器GPU计算资源</h2><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>nvidia-smi</span><br></pre></td></tr></table></figure>
+<p><img src="../../../../image/nvidia-smi.png" alt=""></p>
+
       
     </div>
 
@@ -196,21 +197,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/CNN/"> #CNN </a>
+            <a href="/tags/gpu/"> #gpu </a>
           
-            <a href="/tags/backpropagation/"> #backpropagation </a>
-          
-            <a href="/tags/convolutional/"> #convolutional </a>
-          
-            <a href="/tags/details/"> #details </a>
-          
-            <a href="/tags/fully-connected/"> #fully connected </a>
-          
-            <a href="/tags/loss-function/"> #loss function </a>
-          
-            <a href="/tags/normalization/"> #normalization </a>
-          
-            <a href="/tags/pooling/"> #pooling </a>
+            <a href="/tags/matlab/"> #matlab </a>
           
         </div>
       
@@ -219,13 +208,11 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/06/04/Convolutional neural network toolbox/">Convolutional neural network toolbox</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/06/04/Redhat6-5-安装caffe指南/">Redhat6.5 安装caffe指南</a>
+              <a href="/2015/06/07/CV-and-ML-Conference/">CV and ML Conference</a>
             
           </div>
         </div>
@@ -241,8 +228,8 @@
     
       <div class="comments" id="comments">
         
-          <div class="ds-thread" data-thread-key="2015/06/04/The  details  are always in convolutional neural network/"
-               data-title="The details  are always in convolutional neural network" data-url="http://gaobb.github.io/2015/06/04/The  details  are always in convolutional neural network/">
+          <div class="ds-thread" data-thread-key="2015/06/12/matlab-GPU/"
+               data-title="matlab & GPU" data-url="http://gaobb.github.io/2015/06/12/matlab-GPU/">
           </div>
         
       </div>
@@ -351,7 +338,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Forward"><span class="nav-number">1.</span> <span class="nav-text">Forward</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#convolutional"><span class="nav-number">1.0.1.</span> <span class="nav-text">convolutional</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#pooling"><span class="nav-number">1.0.2.</span> <span class="nav-text">pooling</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#normalization"><span class="nav-number">1.0.3.</span> <span class="nav-text">normalization</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#fully_connected"><span class="nav-number">1.0.4.</span> <span class="nav-text">fully connected</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#loss_function"><span class="nav-number">1.0.5.</span> <span class="nav-text">loss function</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Backpropagation"><span class="nav-number">2.</span> <span class="nav-text">Backpropagation</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#查看服务器GPU计算资源"><span class="nav-number">1.</span> <span class="nav-text">查看服务器GPU计算资源</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
