@@ -55,7 +55,7 @@
 
 
 
-  <title> Redhat6.5 安装caffe指南 // Sunshine </title>
+  <title>  // Sunshine </title>
 </head>
 
 <body>
@@ -143,7 +143,7 @@
           
           
             
-              Redhat6.5 安装caffe指南
+              
             
           
         </h1>
@@ -151,7 +151,7 @@
 
       <div class="post-meta">
         <span class="post-time">
-          发表于 2015-06-04
+          发表于 2015-06-17
         </span>
 
         
@@ -160,8 +160,8 @@
           
             <span class="post-comments-count">
             &nbsp; | &nbsp;
-            <a href="/2015/06/04/Redhat6-5-安装caffe指南/#comments" >
-              <span class="post-comments-count ds-thread-count" data-thread-key="2015/06/04/Redhat6-5-安装caffe指南/"></span>
+            <a href="/2015/06/17/Matlab-常见问题整理/#comments" >
+              <span class="post-comments-count ds-thread-count" data-thread-key="2015/06/17/Matlab-常见问题整理/"></span>
             </a>
           </span>
           
@@ -175,7 +175,24 @@
       
 
       
-        
+        <p>title: Matlab 常见问题整理<br>date: 2015-06-17 19:53:38</p>
+<p>tags: [Matlab]<br>categories: Matlab</p>
+<h2 id="使用Matlab_在没有安装excel的linux,Mac以及win_系统环境上写数据到excel-">使用Matlab 在没有安装excel的linux,Mac以及win 系统环境上写数据到excel.</h2><p>xlwrite: Generate XLS(X) files without Excel on Mac/Linux/Win.<br>解决方法来自：<br><a href="http://www.mathworks.com/matlabcentral/fileexchange/38591-xlwrite--generate-xls-x--files-without-excel-on-mac-linux-win" target="_blank" rel="external">http://www.mathworks.com/matlabcentral/fileexchange/38591-xlwrite--generate-xls-x--files-without-excel-on-mac-linux-win</a></p>
+<p>具体例子如下：<br>% Small demonstration on how to use XLWRITE<br>% Initialisation of POI Libs<br>% Add Java POI Libs to matlab javapath<br><figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">javaaddpath<span class="list">(<span class="quoted">'poi_library/poi-3</span>.<span class="number">8</span><span class="number">-20120326</span>.jar')</span><span class="comment">;</span></span><br><span class="line">javaaddpath<span class="list">(<span class="quoted">'poi_library/poi-ooxml-3</span>.<span class="number">8</span><span class="number">-20120326</span>.jar')</span><span class="comment">;</span></span><br><span class="line">javaaddpath<span class="list">(<span class="quoted">'poi_library/poi-ooxml-schemas-3</span>.<span class="number">8</span><span class="number">-20120326</span>.jar')</span><span class="comment">;</span></span><br><span class="line">javaaddpath<span class="list">(<span class="quoted">'poi_library/xmlbeans-2</span>.<span class="number">3.0</span>.jar')</span><span class="comment">;</span></span><br><span class="line">javaaddpath<span class="list">(<span class="quoted">'poi_library/dom4j-1</span>.<span class="number">6.1</span>.jar')</span><span class="comment">;</span></span><br><span class="line">javaaddpath<span class="list">(<span class="quoted">'poi_library/stax-api-1</span>.<span class="number">0.1</span>.jar')</span><span class="comment">;</span></span><br></pre></td></tr></table></figure></p>
+<p>% Data Generation for XLSX<br>% Define an xls name<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">fileName</span> = <span class="string">'test_xlwrite.xlsx'</span>;</span><br><span class="line"><span class="title">sheetName</span> = <span class="string">'this_is_sheetname'</span>;</span><br><span class="line"><span class="title">startRange</span> = <span class="string">'B3'</span>;</span><br></pre></td></tr></table></figure></p>
+<p>% Generate some data<br><figure class="highlight ocaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">xlsData = &#123;<span class="symbol">'A</span> <span class="type">Number'</span> <span class="symbol">'Boolean</span> <span class="type">Data'</span> <span class="symbol">'Empty</span> <span class="type">Cells'</span> <span class="symbol">'Strings'</span>;...</span><br><span class="line"><span class="number">1</span> <span class="literal">true</span> <span class="literal">[]</span> <span class="symbol">'String</span> <span class="type">Text'</span>;...</span><br><span class="line"><span class="number">5</span> <span class="literal">false</span> <span class="literal">[]</span> <span class="symbol">'Another</span> very descriptive text';...</span><br><span class="line">-<span class="number">6.26</span> <span class="literal">false</span> <span class="symbol">'This</span> should have been an empty cell but <span class="type">I</span> made an error' <span class="symbol">'This</span> is text';...</span><br><span class="line"><span class="number">1e8</span> <span class="literal">true</span> <span class="literal">[]</span> <span class="symbol">'Last</span> cell <span class="keyword">with</span> text';...</span><br><span class="line"><span class="number">1e3</span> <span class="literal">false</span> <span class="type">NaN</span> <span class="type">NaN</span>;...</span><br><span class="line"><span class="number">1e2</span> <span class="literal">true</span> <span class="literal">[]</span> <span class="symbol">'test'</span>&#125;</span><br></pre></td></tr></table></figure></p>
+<p>% Generate XLSX file<br><figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xlwrite<span class="list">(<span class="keyword">fileName</span>, xlsData, sheetName, startRange)</span><span class="comment">;</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="I_can’t_open_Matlab_2015a_after_I_upgrade_Ubuntu_14-10_to_15-04-">I can’t open Matlab 2015a after I upgrade Ubuntu 14.10 to 15.04.</h2><p>Picked up JAVA_TOOL_OPTIONS: -javaagent:/usr/share/java/jayatanaag.jar</p>
+<p>This package is responsible for application menu support for Java swing applications, and seems to be the cause for the segfault. Removing it worked for me:<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-<span class="built_in">get</span> <span class="built_in">remove</span> jayatana</span><br></pre></td></tr></table></figure></p>
+<p>If you just want to remove the message you can just edit your $HOME/.bashrc (if using bash) or $HOME/.profile and unset the variable with: unset JAVA_TOOL_OPTIONS<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ echo <span class="string">'unset JAVA_TOOL_OPTIONS'</span> &gt;&gt; ~/<span class="class">.bashrc</span></span><br><span class="line">$ echo <span class="string">'unset JAVA_TOOL_OPTIONS'</span> &gt;&gt; ~/<span class="class">.profile</span></span><br><span class="line">$ source ~/<span class="class">.bashrc</span></span><br><span class="line">$ source ~/.profile</span><br></pre></td></tr></table></figure></p>
+<h2 id="MATLAB_parallel_error">MATLAB parallel error</h2><p>  Java exception occurred:<br>  java.net.UnknownHostException: <strong><strong>**</strong></strong>: nodename nor servname provided, or not known<br>    at java.net.InetAddress.getLocalHost(InetAddress.java:1473)</p>
+<p>When you type !hostname in the command window In Matlab, it returns a string. In /etc/hosts (OS X/Linux), you should add: 127.0.0.1 str (str being whatever string !hostname returned). Is this what you tried? I had the same issue and it worked for me. (in my case I added 127.0.0.1 server because my hostname is server) –  Franck Dernoncourt Feb 2 at 4:17 </p>
+<h2 id="matlab_read_CMYK_image_error">matlab read CMYK image error</h2><figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">image_path=<span class="string">'./Desktop/n01739381_1309.JPEG'</span>;</span><br><span class="line">image_name=<span class="string">'n01739381_1309.JPEG'</span></span><br><span class="line"><span class="keyword">if</span> <span class="keyword">strcmp</span>(info(<span class="number">1</span>,<span class="number">1</span>).ColorType,<span class="string">'CMYK'</span>)</span><br><span class="line">    <span class="keyword">system</span>([<span class="string">'convert '</span>, image_path, <span class="string">' -colorspace RGB'</span>, <span class="string">' ./tmp/'</span>,image_name]);</span><br><span class="line">    <span class="keyword">image</span>=imread([<span class="string">'./tmp/'</span>,image_name]);</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+<h2 id="Vlfeat_Error_in_vl_demo_covdet_(line_15)">Vlfeat Error in vl_demo_covdet (line 15)</h2><p>Invalid MEX-file ‘/home/gaobb/mywork/toolbox/vlfeat-0.9.19/toolbox/mex/mexa64/vl_covdet.mexa64’:<br>/home/gaobb/mywork/toolbox/vlfeat-0.9.19/toolbox/mex/mexa64/libvl.so: undefined symbol: GOMP_parallel<br>Error in vl_demo_covdet (line 15)<br>frames = vl_covdet(imgs, ‘verbose’) ;</p>
+<p>Solution<br>open the /vlfeat/makefile and edit:<br>Makefile DISABLE_OPENMP=yes</p>
+<h2 id="Vlfeat_Error_libvl-so:_cannot_open_shared_object_file:_No_such_file_or_directory">Vlfeat Error libvl.so: cannot open shared object file: No such file or directory</h2><p>Invalid MEX-file ‘/home/gaobb/. mcrCache8.3/main_C0/home/gaobb/mywork/<br>toolbox/vlfeat- 0.9.20/toolbox/mex/mexa64/vl_fisher.mexa64’: libvl.so: cannot open shared object file: No such file or directory</p>
+<p>Solution<br>Open the /etc/ld.so.conf as sudo and add a new line with the library directory. In this case, we add /home/gaobb/mywork/toolbox/vlfeat-0.9.20/toolbox/mex/mexa64<br>Rerun ldconfig to rebuild the cache:<br>sudo ldconfig<br>Check if the shared library cache now includes the shared libraries from the new directory:<br>ldconfig -p</p>
+
       
     </div>
 
@@ -186,11 +203,11 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/06/04/The  details  are always in convolutional neural network/">The details  are always in convolutional neural network</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/06/12/matlab-GPU/">matlab & GPU</a>
             
           </div>
         </div>
@@ -206,8 +223,8 @@
     
       <div class="comments" id="comments">
         
-          <div class="ds-thread" data-thread-key="2015/06/04/Redhat6-5-安装caffe指南/"
-               data-title="Redhat6.5 安装caffe指南" data-url="http://gaobb.github.io/2015/06/04/Redhat6-5-安装caffe指南/">
+          <div class="ds-thread" data-thread-key="2015/06/17/Matlab-常见问题整理/"
+               data-title="" data-url="http://gaobb.github.io/2015/06/17/Matlab-常见问题整理/">
           </div>
         
       </div>
@@ -316,7 +333,7 @@
           <div class="post-toc">
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用Matlab_在没有安装excel的linux,Mac以及win_系统环境上写数据到excel-"><span class="nav-number">1.</span> <span class="nav-text">使用Matlab 在没有安装excel的linux,Mac以及win 系统环境上写数据到excel.</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#I_can’t_open_Matlab_2015a_after_I_upgrade_Ubuntu_14-10_to_15-04-"><span class="nav-number">2.</span> <span class="nav-text">I can’t open Matlab 2015a after I upgrade Ubuntu 14.10 to 15.04.</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MATLAB_parallel_error"><span class="nav-number">3.</span> <span class="nav-text">MATLAB parallel error</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#matlab_read_CMYK_image_error"><span class="nav-number">4.</span> <span class="nav-text">matlab read CMYK image error</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vlfeat_Error_in_vl_demo_covdet_(line_15)"><span class="nav-number">5.</span> <span class="nav-text">Vlfeat Error in vl_demo_covdet (line 15)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vlfeat_Error_libvl-so:_cannot_open_shared_object_file:_No_such_file_or_directory"><span class="nav-number">6.</span> <span class="nav-text">Vlfeat Error libvl.so: cannot open shared object file: No such file or directory</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
