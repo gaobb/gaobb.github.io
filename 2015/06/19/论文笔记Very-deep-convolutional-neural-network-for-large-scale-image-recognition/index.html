@@ -22,7 +22,7 @@
 
 
 
-  <meta name="keywords" content="CNN,caffe,matconvernet,toobox,torch," />
+  <meta name="keywords" content="CNN," />
 
 
 
@@ -55,7 +55,7 @@
 
 
 
-  <title> Convolutional neural network toolbox // Sunshine </title>
+  <title> 论文笔记Very deep convolutional neural network for large scale image recognition // Sunshine </title>
 </head>
 
 <body>
@@ -143,7 +143,7 @@
           
           
             
-              Convolutional neural network toolbox
+              论文笔记Very deep convolutional neural network for large scale image recognition
             
           
         </h1>
@@ -151,14 +151,14 @@
 
       <div class="post-meta">
         <span class="post-time">
-          发表于 2015-06-04
+          发表于 2015-06-19
         </span>
 
         
           <span class="post-category">
             &nbsp; | &nbsp; 分类于
             
-              <a href="/categories/CNN/">CNN</a>
+              <a href="/categories/论文笔记/">论文笔记</a>
 
               
               
@@ -171,8 +171,8 @@
           
             <span class="post-comments-count">
             &nbsp; | &nbsp;
-            <a href="/2015/06/04/Convolutional neural network toolbox/#comments" >
-              <span class="post-comments-count ds-thread-count" data-thread-key="2015/06/04/Convolutional neural network toolbox/"></span>
+            <a href="/2015/06/19/论文笔记Very-deep-convolutional-neural-network-for-large-scale-image-recognition/#comments" >
+              <span class="post-comments-count ds-thread-count" data-thread-key="2015/06/19/论文笔记Very-deep-convolutional-neural-network-for-large-scale-image-recognition/"></span>
             </a>
           </span>
           
@@ -186,26 +186,7 @@
       
 
       
-        <p>总结目前流行的CNN 架构，包括Caffe,Matcovernet以及Torch.<br><a id="more"></a> </p>
-<h2 id="Caffe"><a href="http://caffe.berkeleyvision.org/" target="_blank" rel="external">Caffe</a></h2><p>Caffe is a deep learning framework made with expression, speed, and modularity in mind. It is developed by the Berkeley Vision and Learning Center (BVLC) and by community contributors. Yangqing Jia created the project during his PhD at UC Berkeley. Caffe is released under the BSD 2-Clause license.</p>
-<p><img src="../../../../image/caffe.png" alt="caffe"></p>
-<p>Why Caffe?</p>
-<p>Expressive architecture encourages application and innovation. Models and optimization are defined by configuration without hard-coding. Switch between CPU and GPU by setting a single flag to train on a GPU machine then deploy to commodity clusters or mobile devices.</p>
-<p>Extensible code fosters active development. In Caffe’s first year, it has been forked by over 1,000 developers and had many significant changes contributed back. Thanks to these contributors the framework tracks the state-of-the-art in both code and models.</p>
-<p>Speed makes Caffe perfect for research experiments and industry deployment. Caffe can process over 60M images per day with a single NVIDIA K40 GPU*. That’s 1 ms/image for inference and 4 ms/image for learning. We believe that Caffe is the fastest convnet implementation available.</p>
-<p>Community: Caffe already powers academic research projects, startup prototypes, and even large-scale industrial applications in vision, speech, and multimedia. Join our community of brewers on the caffe-users group and Github.</p>
-<h2 id="Matconvernet"><a href="http://www.vlfeat.org/matconvnet/" target="_blank" rel="external">Matconvernet</a></h2><p>MatConvNet is a MATLAB toolbox implementing Convolutional Neural Networks (CNNs) for computer vision applications. It is simple, efficient, and can run and learn state-of-the-art CNNs. Several example CNNs are included to classify and encode images.</p>
-<p><img src="../../../../image/matconvernet.png" alt="matcovernet"></p>
-<p>MatConvNet was born in the Oxford Visual Geometry Group as both an educatinonal and research platform for fast prototyping in Convolutional Neural Nets. Its main features are:</p>
-<p>Flexibility. Neural network layers are implemented in a straightforward manner, often directly in MATLAB code, so that they are easy to modify, extend, or integrate with new ones. Other toolboxes hide the neural network layers behind a wall of compiled code; here the granularity is much finer.</p>
-<p>Power. The implementation can run large models such as Krizhevsky et al., including the DeCAF and Caffe variants. Several pre-trained models are provided.</p>
-<p>Efficiency. The implementation is quite efficient, supporting both CPU and GPU computation.</p>
-<p>This library may be merged in the future with VLFeat library. It uses a very similar style, so if you are familiar with VLFeat, you should be right at home here.</p>
-<h2 id="Torch"><a href="http://torch.ch/" target="_blank" rel="external">Torch</a></h2><p>Torch is a scientific computing framework with wide support for machine learning algorithms. It is easy to use and efficient, thanks to an easy and fast scripting language, LuaJIT, and an underlying C/CUDA implementation.</p>
-<p><img src="../../../../image/Torch_2014_logo.png" alt="totch"></p>
-<p>Why Torch?</p>
-<p>The goal of Torch is to have maximum flexibility and speed in building your scientific algorithms while making the process extremely simple. Torch comes with a large ecosystem of community-driven packages in machine learning, computer vision, signal processing, parallel processing, image, video, audio and networking among others, and builds on top of the Lua community.</p>
-<p>At the heart of Torch are the popular neural network and optimization libraries which are simple to use, while having maximum flexibility in implementing complex neural network topologies. You can build arbitrary graphs of neural networks, and parallelize them over CPUs and GPUs in an efficient manner.</p>
+        <p>这篇论文主要在CNN的深度上做了一个探索，结论是一个较深的网络架构，确实可以学到更加general and dicrimnative feature.<br><a id="more"></a> </p>
 
       
     </div>
@@ -216,14 +197,6 @@
           
             <a href="/tags/CNN/"> #CNN </a>
           
-            <a href="/tags/caffe/"> #caffe </a>
-          
-            <a href="/tags/matconvernet/"> #matconvernet </a>
-          
-            <a href="/tags/toobox/"> #toobox </a>
-          
-            <a href="/tags/torch/"> #torch </a>
-          
         </div>
       
 
@@ -231,13 +204,11 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/06/05/Visualizing-what-ConvNets-learn/">Visualizing what ConvNets learn</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/06/04/The  details  are always in convolutional neural network/">The details  are always in convolutional neural network</a>
+              <a href="/2015/06/17/Matlab-常见问题整理/">Matlab 常见问题整理</a>
             
           </div>
         </div>
@@ -253,8 +224,8 @@
     
       <div class="comments" id="comments">
         
-          <div class="ds-thread" data-thread-key="2015/06/04/Convolutional neural network toolbox/"
-               data-title="Convolutional neural network toolbox" data-url="http://gaobb.github.io/2015/06/04/Convolutional neural network toolbox/">
+          <div class="ds-thread" data-thread-key="2015/06/19/论文笔记Very-deep-convolutional-neural-network-for-large-scale-image-recognition/"
+               data-title="论文笔记Very deep convolutional neural network for large scale image recognition" data-url="http://gaobb.github.io/2015/06/19/论文笔记Very-deep-convolutional-neural-network-for-large-scale-image-recognition/">
           </div>
         
       </div>
@@ -363,7 +334,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Caffe"><span class="nav-number">1.</span> <span class="nav-text">Caffe</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Matconvernet"><span class="nav-number">2.</span> <span class="nav-text">Matconvernet</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Torch"><span class="nav-number">3.</span> <span class="nav-text">Torch</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
