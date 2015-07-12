@@ -191,7 +191,7 @@
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">% eg1</span></span><br><span class="line">x= <span class="number">50</span>:<span class="number">0.1</span>:<span class="number">200</span>;</span><br><span class="line">y= <span class="built_in">sin</span>(x)./x;</span><br><span class="line"></span><br><span class="line"><span class="comment">% eg2</span></span><br><span class="line">x=<span class="number">1</span>:<span class="number">200</span>;</span><br><span class="line">y=<span class="built_in">rand</span>(<span class="number">1</span>,<span class="number">200</span>);</span><br><span class="line"></span><br><span class="line">n=<span class="number">2</span>;</span><br><span class="line">maximumat =nms(y,n);</span><br><span class="line">plot(x,y,<span class="string">'-bo'</span>);</span><br><span class="line">hold on </span><br><span class="line">plot(x(maximumat),y(maximumat),<span class="string">'-rs'</span>,  <span class="string">'MarkerFaceColor'</span>,<span class="string">'r'</span>,...</span><br><span class="line"> <span class="string">'MarkerSize'</span>,<span class="number">8</span>);</span><br><span class="line">legend(<span class="string">'Original data'</span>,<span class="string">'NMS'</span>);</span><br><span class="line">title(sprintf(<span class="string">'NMS:%d(2*%d+1)-Neighborhood  '</span>,<span class="number">2</span>*n+<span class="number">1</span>,n));</span><br></pre></td></tr></table></figure>
 <p><img src="../../../../image/nms_1.jpg" alt=""><br><img src="../../../../image/nms_2.jpg" alt=""><br>````</p>
 <h2 id="2-D_NMS">2-D NMS</h2><p>  2D邻域为以当前点为中心的(2n+1)×(2n+1)区域。</p>
-
+<h2 id="NMS_在目标检测中应用">NMS 在目标检测中应用</h2>
       
     </div>
 
@@ -340,7 +340,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-D_NMS"><span class="nav-number">1.</span> <span class="nav-text">1-D NMS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-D_NMS"><span class="nav-number">2.</span> <span class="nav-text">2-D NMS</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-D_NMS"><span class="nav-number">1.</span> <span class="nav-text">1-D NMS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-D_NMS"><span class="nav-number">2.</span> <span class="nav-text">2-D NMS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NMS_在目标检测中应用"><span class="nav-number">3.</span> <span class="nav-text">NMS 在目标检测中应用</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
