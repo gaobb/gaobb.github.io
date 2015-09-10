@@ -22,7 +22,7 @@
 
 
 
-  <meta name="keywords" content="Hexo,next" />
+  <meta name="keywords" content="Age estimation,CNN,Face detection," />
 
 
 
@@ -55,14 +55,12 @@
 
 
 
-  <title> Sunshine </title>
+  <title> Age Estimation // Sunshine </title>
 </head>
 
 <body>
 <!--[if lte IE 8]> <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'> <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari." style='margin-left:auto;margin-right:auto;display: block;'/></a></div> <![endif]-->
-  <div class="container one-column 
-   page-home 
-">
+  <div class="container one-column page-post-detail">
     <div class="headband"></div>
 
     <div id="header" class="header">
@@ -132,9 +130,9 @@
       <div class="main-inner">
         <div id="content" class="content">
           
+
   <div id="posts" class="posts-expand">
     
-      
 
   <div class="post post-type-normal ">
     <div class="post-header">
@@ -145,9 +143,7 @@
           
           
             
-              <a class="post-title-link" href="/2015/06/05/hello-world/">
-                Hello World
-              </a>
+              Age Estimation
             
           
         </h1>
@@ -155,84 +151,14 @@
 
       <div class="post-meta">
         <span class="post-time">
-          发表于 2015-06-05
-        </span>
-
-        
-
-        
-          
-            <span class="post-comments-count">
-            &nbsp; | &nbsp;
-            <a href="/2015/06/05/hello-world/#comments" >
-              <span class="post-comments-count ds-thread-count" data-thread-key="2015/06/05/hello-world/"></span>
-            </a>
-          </span>
-          
-        
-      </div>
-    </div>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>Welcome to (<a href="http://gaobb.github.io">http://gaobb.github.io</a>). Github 为我们分享自己的学习、研究提供了一个非常开放的平台. 从今天开始我计划将自己学习、生活中有意义的事情记录在这儿, 与大家分享交流自己的经验、心得. </p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/06/05/hello-world/#more">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </div>
-  </div>
-
-
-    
-      
-
-  <div class="post post-type-normal ">
-    <div class="post-header">
-
-      
-      
-        <h1 class="post-title">
-          
-          
-            
-              <a class="post-title-link" href="/2015/06/05/Visualizing-what-ConvNets-learn/">
-                Visualizing what ConvNets learn
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          发表于 2015-06-05
+          发表于 2015-09-10
         </span>
 
         
           <span class="post-category">
             &nbsp; | &nbsp; 分类于
             
-              <a href="/categories/CNN/">CNN</a>
+              <a href="/categories/Project/">Project</a>
 
               
               
@@ -245,8 +171,8 @@
           
             <span class="post-comments-count">
             &nbsp; | &nbsp;
-            <a href="/2015/06/05/Visualizing-what-ConvNets-learn/#comments" >
-              <span class="post-comments-count ds-thread-count" data-thread-key="2015/06/05/Visualizing-what-ConvNets-learn/"></span>
+            <a href="/2015/09/10/Age-Estimation/#comments" >
+              <span class="post-comments-count ds-thread-count" data-thread-key="2015/09/10/Age-Estimation/"></span>
             </a>
           </span>
           
@@ -260,263 +186,55 @@
       
 
       
+        <p>使用CNN　做人脸年龄估计技术总结．人脸含有非常重要的个人信息，无论我们随身携带的各种证件，还是电子档案，都有一个非常重要的位置用于放置脸部照片．人脸识别(身份验证，表情，种族，性别，年龄）是人脸研究核心课题，人脸检测, 人脸关键点对准是做好人脸识别的基础．由于人脸识别广阔的应用前景，国内关于人脸识别的公司陆续上市，例如ＬinkFace <img src="http://www.linkface.cn/" alt="">，Face++ <img src="http://www.faceplusplus.com.cn/" alt="">．本文主要总结最近的一个项目（年龄估计）．<br><a id="more"></a> </p>
+<h2 id="人脸检测（Face_detection)">人脸检测（Face detection)</h2><p>脸部含有人类年龄最重要的信息，因此做年龄估计的第一步就是如何准确的从一张含有人脸的图像中Crop　出一张脸．这在CV 称作人脸检测，是一个古老的话题．伴随深度学习等技术的迅速发展，人脸检测的准确度有了很大提高．</p>
+<h2 id="关键点检测(_Key_points_detetion)">关键点检测( Key points detetion)</h2><h2 id="人脸矫正(Face_alignment)">人脸矫正(Face alignment)</h2><h2 id="训练CNN(Training_CNN)">　训练CNN(Training CNN)</h2><h2 id="估计年龄(Age_estimation)">估计年龄(Age estimation)</h2>
+      
+    </div>
+
+    <div class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Age-estimation/"> #Age estimation </a>
+          
+            <a href="/tags/CNN/"> #CNN </a>
+          
+            <a href="/tags/Face-detection/"> #Face detection </a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/08/05/Coordinate-Descent-Fuzzy-Twin-Support-Vector-Machine-for-Classification/">Coordinate Descent Fuzzy Twin Support Vector Machine  for Classification</a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </div>
+  </div>
+
+
+
+    
+      <div class="comments" id="comments">
         
-          <p>通过可视化卷积网络的feature map、fiflters来更好理解（解释）CNN<br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/06/05/Visualizing-what-ConvNets-learn/#more">
-              阅读全文 &raquo;
-            </a>
+          <div class="ds-thread" data-thread-key="2015/09/10/Age-Estimation/"
+               data-title="Age Estimation" data-url="http://gaobb.github.io/2015/09/10/Age-Estimation/">
           </div>
         
-      
-    </div>
-
-    <div class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </div>
-  </div>
-
-
-    
-      
-
-  <div class="post post-type-normal ">
-    <div class="post-header">
-
-      
-      
-        <h1 class="post-title">
-          
-          
-            
-              <a class="post-title-link" href="/2015/06/04/Convolutional neural network toolbox/">
-                Convolutional neural network toolbox
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          发表于 2015-06-04
-        </span>
-
-        
-          <span class="post-category">
-            &nbsp; | &nbsp; 分类于
-            
-              <a href="/categories/CNN/">CNN</a>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-            <span class="post-comments-count">
-            &nbsp; | &nbsp;
-            <a href="/2015/06/04/Convolutional neural network toolbox/#comments" >
-              <span class="post-comments-count ds-thread-count" data-thread-key="2015/06/04/Convolutional neural network toolbox/"></span>
-            </a>
-          </span>
-          
-        
       </div>
-    </div>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>总结目前流行的CNN 架构，包括Caffe,Matcovernet以及Torch.<br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/06/04/Convolutional neural network toolbox/#more">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </div>
-  </div>
-
-
     
-      
-
-  <div class="post post-type-normal ">
-    <div class="post-header">
-
-      
-      
-        <h1 class="post-title">
-          
-          
-            
-              <a class="post-title-link" href="/2015/06/04/The  details  are always in convolutional neural network/">
-                The details  are always in convolutional neural network
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          发表于 2015-06-04
-        </span>
-
-        
-          <span class="post-category">
-            &nbsp; | &nbsp; 分类于
-            
-              <a href="/categories/CNN/">CNN</a>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-            <span class="post-comments-count">
-            &nbsp; | &nbsp;
-            <a href="/2015/06/04/The  details  are always in convolutional neural network/#comments" >
-              <span class="post-comments-count ds-thread-count" data-thread-key="2015/06/04/The  details  are always in convolutional neural network/"></span>
-            </a>
-          </span>
-          
-        
-      </div>
-    </div>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>阐述CNN 前向传播与反响传播原理，包括卷积、池化、正规化、全连接、损失函数以及反向传播原理.<br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/06/04/The  details  are always in convolutional neural network/#more">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </div>
-  </div>
-
-
-    
-      
-
-  <div class="post post-type-normal ">
-    <div class="post-header">
-
-      
-      
-        <h1 class="post-title">
-          
-          
-            
-              <a class="post-title-link" href="/2015/06/04/Redhat6-5-安装caffe指南/">
-                Redhat6.5 安装caffe指南
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          发表于 2015-06-04
-        </span>
-
-        
-
-        
-          
-            <span class="post-comments-count">
-            &nbsp; | &nbsp;
-            <a href="/2015/06/04/Redhat6-5-安装caffe指南/#comments" >
-              <span class="post-comments-count ds-thread-count" data-thread-key="2015/06/04/Redhat6-5-安装caffe指南/"></span>
-            </a>
-          </span>
-          
-        
-      </div>
-    </div>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          
-        
-      
-    </div>
-
-    <div class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </div>
-  </div>
-
-
-    
-  </div>
-
-  
-  <div class="pagination">
-    <a class="extend prev" rel="prev" href="/">&laquo;</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
   </div>
 
 
@@ -539,6 +257,15 @@
   <div id="sidebar" class="sidebar">
     <div class="sidebar-inner">
 
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
       
 
       <div class="site-overview">
@@ -607,6 +334,17 @@
       </div>
 
       
+        <div class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#人脸检测（Face_detection)"><span class="nav-number">1.</span> <span class="nav-text">人脸检测（Face detection)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关键点检测(_Key_points_detetion)"><span class="nav-number">2.</span> <span class="nav-text">关键点检测( Key points detetion)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#人脸矫正(Face_alignment)"><span class="nav-number">3.</span> <span class="nav-text">人脸矫正(Face alignment)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#训练CNN(Training_CNN)"><span class="nav-number">4.</span> <span class="nav-text">　训练CNN(Training CNN)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#估计年龄(Age_estimation)"><span class="nav-number">5.</span> <span class="nav-text">估计年龄(Age estimation)</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </div>
+      
 
     </div>
   </div>
@@ -667,6 +405,145 @@
 
 
   
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var $sidebarInner = $('.sidebar-inner');
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.didShow', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+          var self = this;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      $(indicator).velocity('stop').velocity({
+        opacity: action === 'show' ? 0.4 : 0
+      }, { duration: 100 });
+    }
+
+  });
+</script>
+
+
+  <script type="text/javascript" id="sidebar.nav">
+    $(document).ready(function () {
+      var html = $('html');
+
+      $('.sidebar-nav li').on('click', function () {
+        var item = $(this);
+        var activeTabClassName = 'sidebar-nav-active';
+        var activePanelClassName = 'sidebar-panel-active';
+        if (item.hasClass(activeTabClassName)) {
+          return;
+        }
+
+        var currentTarget = $('.' + activePanelClassName);
+        var target = $('.' + item.data('target'));
+
+        currentTarget.velocity('transition.slideUpOut', 200, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', 200)
+            .addClass(activePanelClassName);
+        });
+
+        item.siblings().removeClass(activeTabClassName);
+        item.addClass(activeTabClassName);
+      });
+
+      $('.post-toc a').on('click', function (e) {
+        e.preventDefault();
+        var offset = $(escapeSelector(this.getAttribute('href'))).offset().top;
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        });
+      });
+
+      // Expand sidebar on post detail page by default, when post has a toc.
+      var $tocContent = $('.post-toc-content');
+      if (isDesktop() && CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          displaySidebar();
+        }
+      }
+    });
+  </script>
+
+
+
 
   <script type="text/javascript">
     $(document).ready(function () {
