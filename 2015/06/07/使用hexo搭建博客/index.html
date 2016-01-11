@@ -193,10 +193,8 @@
 <p>npm —version<br>3.5.2</p>
 <h2 id="配置_Git">配置 Git</h2><p>sudo apt-get install git</p>
 <p>git  —version<br>git version 2.7.0.rc3</p>
-<h2 id="配置_hexo">配置 hexo</h2><p>sudo  npm install -g hexo<br> hexo init <folder></folder></p>
-<p>1.删除redhat原有的yum<br>rpm -aq|grep yum|xargs rpm -e —nodeps </p>
-<p>2.下载yum安装文件<br>wget <a href="http://mirrors.ustc.edu.cn/centos/6/os/x86_64/Packages/yum-3.2.29-69.el6.centos.noarch.rpm" target="_blank" rel="external">http://mirrors.ustc.edu.cn/centos/6/os/x86_64/Packages/yum-3.2.29-69.el6.centos.noarch.rpm</a><br>wget <a href="http://mirrors.ustc.edu.cn/centos/6/os/x86_64/Packages/yum-metadata-parser-1.1.2-16.el6.x86_64.rpm" target="_blank" rel="external">http://mirrors.ustc.edu.cn/centos/6/os/x86_64/Packages/yum-metadata-parser-1.1.2-16.el6.x86_64.rpm</a><br>wget <a href="http://mirrors.ustc.edu.cn/centos/6/os/x86_64/Packages/yum-plugin-fastestmirror-1.1.30-30.el6.noarch.rpm" target="_blank" rel="external">http://mirrors.ustc.edu.cn/centos/6/os/x86_64/Packages/yum-plugin-fastestmirror-1.1.30-30.el6.noarch.rpm</a><br>wget <a href="http://mirrors.ustc.edu.cn/centos/6/os/x86_64/Packages/python-iniparse-0.3.1-2.1.el6.noarch.rpm" target="_blank" rel="external">http://mirrors.ustc.edu.cn/centos/6/os/x86_64/Packages/python-iniparse-0.3.1-2.1.el6.noarch.rpm</a><br>3.进行安装yum </p>
-<p>rpm -ivh python-iniparse-0.3.1-2.1.el6.noarch.rpm<br>rpm -ivh yum-metadata-parser-1.1.2-16.el6.x86_64.rpm<br>rpm -ivh yum-3.2.29-69.el6.centos.noarch.rpm yum-plugin-fastestmirror-1.1.30-30.el6.noarch.rpm<br>注意最后两个包必需同时安装，否则会相互依赖 </p>
+<h2 id="配置_hexo">配置 hexo</h2><p>sudo  npm install -g hexo<br>hexo init <folder></folder></p>
+<p>hexo server  启动本地服务器<br>hexo deploy<br>hexo genernate</p>
 
       
     </div>
