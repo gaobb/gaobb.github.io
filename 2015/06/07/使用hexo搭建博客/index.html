@@ -22,7 +22,7 @@
 
 
 
-  <meta name="keywords" content="CNN,caffe,matconvernet,toobox,torch," />
+  <meta name="keywords" content="linux," />
 
 
 
@@ -55,7 +55,7 @@
 
 
 
-  <title> Convolutional neural network toolbox // Sunshine </title>
+  <title> 使用hexo搭建博客 // Sunshine </title>
 </head>
 
 <body>
@@ -143,7 +143,7 @@
           
           
             
-              Convolutional neural network toolbox
+              使用hexo搭建博客
             
           
         </h1>
@@ -151,14 +151,14 @@
 
       <div class="post-meta">
         <span class="post-time">
-          发表于 2015-06-04
+          发表于 2015-06-07
         </span>
 
         
           <span class="post-category">
             &nbsp; | &nbsp; 分类于
             
-              <a href="/categories/CNN/">CNN</a>
+              <a href="/categories/Linux/">Linux</a>
 
               
               
@@ -171,8 +171,8 @@
           
             <span class="post-comments-count">
             &nbsp; | &nbsp;
-            <a href="/2015/06/04/Convolutional neural network toolbox/#comments" >
-              <span class="post-comments-count ds-thread-count" data-thread-key="2015/06/04/Convolutional neural network toolbox/"></span>
+            <a href="/2015/06/07/使用hexo搭建博客/#comments" >
+              <span class="post-comments-count ds-thread-count" data-thread-key="2015/06/07/使用hexo搭建博客/"></span>
             </a>
           </span>
           
@@ -186,29 +186,17 @@
       
 
       
-        <p>总结目前流行的CNN 架构，包括Caffe,Matcovernet以及Torch.<br><a id="more"></a> </p>
-<h2 id="Caffe"><a href="http://caffe.berkeleyvision.org/" target="_blank" rel="external">Caffe</a></h2><p>Caffe is a deep learning framework made with expression, speed, and modularity in mind. It is developed by the Berkeley Vision and Learning Center (BVLC) and by community contributors. Yangqing Jia created the project during his PhD at UC Berkeley. Caffe is released under the BSD 2-Clause license.</p>
-<p><img src="../../../../image/caffe.png" alt="caffe"></p>
-<p>Why Caffe?</p>
-<p>Expressive architecture encourages application and innovation. Models and optimization are defined by configuration without hard-coding. Switch between CPU and GPU by setting a single flag to train on a GPU machine then deploy to commodity clusters or mobile devices.</p>
-<p>Extensible code fosters active development. In Caffe’s first year, it has been forked by over 1,000 developers and had many significant changes contributed back. Thanks to these contributors the framework tracks the state-of-the-art in both code and models.</p>
-<p>Speed makes Caffe perfect for research experiments and industry deployment. Caffe can process over 60M images per day with a single NVIDIA K40 GPU*. That’s 1 ms/image for inference and 4 ms/image for learning. We believe that Caffe is the fastest convnet implementation available.</p>
-<p>Community: Caffe already powers academic research projects, startup prototypes, and even large-scale industrial applications in vision, speech, and multimedia. Join our community of brewers on the caffe-users group and Github.</p>
-<h2 id="Matconvernet"><a href="http://www.vlfeat.org/matconvnet/" target="_blank" rel="external">Matconvernet</a></h2><p>MatConvNet is a MATLAB toolbox implementing Convolutional Neural Networks (CNNs) for computer vision applications. It is simple, efficient, and can run and learn state-of-the-art CNNs. Several example CNNs are included to classify and encode images.</p>
-<p><img src="../../../../image/matconvernet.png" alt="matcovernet"></p>
-<p>MatConvNet was born in the Oxford Visual Geometry Group as both an educatinonal and research platform for fast prototyping in Convolutional Neural Nets. Its main features are:</p>
-<p>Flexibility. Neural network layers are implemented in a straightforward manner, often directly in MATLAB code, so that they are easy to modify, extend, or integrate with new ones. Other toolboxes hide the neural network layers behind a wall of compiled code; here the granularity is much finer.</p>
-<p>Power. The implementation can run large models such as Krizhevsky et al., including the DeCAF and Caffe variants. Several pre-trained models are provided.</p>
-<p>Efficiency. The implementation is quite efficient, supporting both CPU and GPU computation.</p>
-<p>This library may be merged in the future with VLFeat library. It uses a very similar style, so if you are familiar with VLFeat, you should be right at home here.</p>
-<h2 id="cpu">cpu</h2><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>make <span class="constant">ARCH</span>=glnxa64  <span class="constant">MATLABROOT</span>=<span class="regexp">/usr/local</span><span class="regexp">/MATLAB/</span><span class="constant">R2014a</span></span><br></pre></td></tr></table></figure>
-<h2 id="gpu">gpu</h2><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ make <span class="variable">ARCH=</span>glnxa64  <span class="variable">MATLABROOT=</span>/usr/local/MATLAB/R2014a  <span class="variable">ENABLE_GPU=</span>yes <span class="variable">CUDAROOT=</span>/usr/local/cuda-<span class="number">7.0</span>  <span class="variable">CUDAMETHOD=</span>nvcc</span><br></pre></td></tr></table></figure>
-<h2 id="gpu+cudnn">gpu+cudnn</h2><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>sudo cp *.h /usr/local/<span class="keyword">include</span>/</span><br><span class="line"><span class="variable">$ </span>sudo cp lib* <span class="regexp">/usr/local</span><span class="regexp">/lib64/</span></span><br><span class="line"><span class="variable">$ </span>sudo ldconfig</span><br><span class="line"><span class="variable">$ </span>make <span class="constant">ARCH</span>=glnxa64  <span class="constant">MATLABROOT</span>=<span class="regexp">/usr/local</span><span class="regexp">/MATLAB/</span><span class="constant">R2014a</span>  <span class="constant">ENABLE_GPU</span>=yes <span class="constant">CUDAROOT</span>=<span class="regexp">/usr/local</span><span class="regexp">/cuda-7.0  CUDAMETHOD=nvcc  ENABLE_CUDNN=yes CUDNNROOT=/usr</span><span class="regexp">/local</span></span><br></pre></td></tr></table></figure>
-<h2 id="Torch"><a href="http://torch.ch/" target="_blank" rel="external">Torch</a></h2><p>Torch is a scientific computing framework with wide support for machine learning algorithms. It is easy to use and efficient, thanks to an easy and fast scripting language, LuaJIT, and an underlying C/CUDA implementation.</p>
-<p><img src="../../../../image/Torch_2014_logo.png" alt="totch"></p>
-<p>Why Torch?</p>
-<p>The goal of Torch is to have maximum flexibility and speed in building your scientific algorithms while making the process extremely simple. Torch comes with a large ecosystem of community-driven packages in machine learning, computer vision, signal processing, parallel processing, image, video, audio and networking among others, and builds on top of the Lua community.</p>
-<p>At the heart of Torch are the popular neural network and optimization libraries which are simple to use, while having maximum flexibility in implementing complex neural network topologies. You can build arbitrary graphs of neural networks, and parallelize them over CPUs and GPUs in an efficient manner.</p>
+        <p>使用hexo搭建博客<br><a id="more"></a> </p>
+<h2 id="配置好Node-js环境">配置好Node.js环境</h2><p>sudo apt-get install nodejs-legacy</p>
+<p>node —version<br>v4.2.4</p>
+<h2 id="配置npm工具">配置npm工具</h2><p>sudo apt-get install npm</p>
+<p>npm —version<br>3.5.2</p>
+<h2 id="配置_Git">配置 Git</h2><p>sudo apt-get install git</p>
+<p>git  —version<br>git version 2.7.0.rc3</p>
+<h2 id="配置_hexo">配置 hexo</h2><p>sudo  npm install -g hexo<br> hexo init <folder></folder></p>
+<p>1.删除redhat原有的yum<br>rpm -aq|grep yum|xargs rpm -e —nodeps </p>
+<p>2.下载yum安装文件<br>wget <a href="http://mirrors.ustc.edu.cn/centos/6/os/x86_64/Packages/yum-3.2.29-69.el6.centos.noarch.rpm" target="_blank" rel="external">http://mirrors.ustc.edu.cn/centos/6/os/x86_64/Packages/yum-3.2.29-69.el6.centos.noarch.rpm</a><br>wget <a href="http://mirrors.ustc.edu.cn/centos/6/os/x86_64/Packages/yum-metadata-parser-1.1.2-16.el6.x86_64.rpm" target="_blank" rel="external">http://mirrors.ustc.edu.cn/centos/6/os/x86_64/Packages/yum-metadata-parser-1.1.2-16.el6.x86_64.rpm</a><br>wget <a href="http://mirrors.ustc.edu.cn/centos/6/os/x86_64/Packages/yum-plugin-fastestmirror-1.1.30-30.el6.noarch.rpm" target="_blank" rel="external">http://mirrors.ustc.edu.cn/centos/6/os/x86_64/Packages/yum-plugin-fastestmirror-1.1.30-30.el6.noarch.rpm</a><br>wget <a href="http://mirrors.ustc.edu.cn/centos/6/os/x86_64/Packages/python-iniparse-0.3.1-2.1.el6.noarch.rpm" target="_blank" rel="external">http://mirrors.ustc.edu.cn/centos/6/os/x86_64/Packages/python-iniparse-0.3.1-2.1.el6.noarch.rpm</a><br>3.进行安装yum </p>
+<p>rpm -ivh python-iniparse-0.3.1-2.1.el6.noarch.rpm<br>rpm -ivh yum-metadata-parser-1.1.2-16.el6.x86_64.rpm<br>rpm -ivh yum-3.2.29-69.el6.centos.noarch.rpm yum-plugin-fastestmirror-1.1.30-30.el6.noarch.rpm<br>注意最后两个包必需同时安装，否则会相互依赖 </p>
 
       
     </div>
@@ -217,15 +205,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/CNN/"> #CNN </a>
-          
-            <a href="/tags/caffe/"> #caffe </a>
-          
-            <a href="/tags/matconvernet/"> #matconvernet </a>
-          
-            <a href="/tags/toobox/"> #toobox </a>
-          
-            <a href="/tags/torch/"> #torch </a>
+            <a href="/tags/linux/"> #linux </a>
           
         </div>
       
@@ -234,13 +214,13 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/06/05/Visualizing-what-ConvNets-learn/">Visualizing what ConvNets learn</a>
+              <a href="/2015/06/07/linux系统常见问题整理/">linux系统常见问题整理</a>
             
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/06/04/The details are always in convolutional neural network/">The details  are always in convolutional neural network</a>
+              <a href="/2015/06/07/关于-Non-Maximum-Suppression/">关于Non-Maximum Supression</a>
             
           </div>
         </div>
@@ -256,8 +236,8 @@
     
       <div class="comments" id="comments">
         
-          <div class="ds-thread" data-thread-key="2015/06/04/Convolutional neural network toolbox/"
-               data-title="Convolutional neural network toolbox" data-url="http://gaobb.github.io/2015/06/04/Convolutional neural network toolbox/">
+          <div class="ds-thread" data-thread-key="2015/06/07/使用hexo搭建博客/"
+               data-title="使用hexo搭建博客" data-url="http://gaobb.github.io/2015/06/07/使用hexo搭建博客/">
           </div>
         
       </div>
@@ -366,7 +346,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Caffe"><span class="nav-number">1.</span> <span class="nav-text">Caffe</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Matconvernet"><span class="nav-number">2.</span> <span class="nav-text">Matconvernet</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cpu"><span class="nav-number">3.</span> <span class="nav-text">cpu</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#gpu"><span class="nav-number">4.</span> <span class="nav-text">gpu</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#gpu+cudnn"><span class="nav-number">5.</span> <span class="nav-text">gpu+cudnn</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Torch"><span class="nav-number">6.</span> <span class="nav-text">Torch</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#配置好Node-js环境"><span class="nav-number">1.</span> <span class="nav-text">配置好Node.js环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置npm工具"><span class="nav-number">2.</span> <span class="nav-text">配置npm工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置_Git"><span class="nav-number">3.</span> <span class="nav-text">配置 Git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置_hexo"><span class="nav-number">4.</span> <span class="nav-text">配置 hexo</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
