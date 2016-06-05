@@ -192,9 +192,7 @@
 <p>Unsupported gpu architecture ‘compute_11’</p>
 <p>cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D CUDA_GENERATION=Kepler ..</p>
 <p>cmake需要指定GPU架构3 ：-D CUDA_GENERATION=Kepler，否则报错：Unsupported gpu architecture ‘compute_11’<br>生成lib/libopencv_highgui.so.2.4.9找不到png_set_longjmp_fn，可以这样解决：</p>
-<h1 id="google之后发现这个函数定义在libpng中">google之后发现这个函数定义在libpng中</h1><h1 id="查看libopencv_highgui-so-2-4-9引用了哪个libpng">查看libopencv_highgui.so.2.4.9引用了哪个libpng</h1><p>$ ldd lib/libopencv_highgui.so.2.4.9 | grep libpng</p>
-<h1 id="查看该lipng中是否定义了png_set_longjmp_fn，注意根据自己的环境替换掉/usr/lib64/libpng12-so-0-49-0">查看该lipng中是否定义了png_set_longjmp_fn，注意根据自己的环境替换掉/usr/lib64/libpng12.so.0.49.0</h1><p>$ readelf -s /usr/lib64/libpng12.so.0.49.0 | grep png_set_longjmp_fn</p>
-<h1 id="没有任何输出，说明没有定义，则需要安装更新的版本">没有任何输出，说明没有定义，则需要安装更新的版本</h1><p>$ wget <a href="http://github.com/glennrp/libpng-releases/raw/master/libpng-1.5.23.tar.xz" target="_blank" rel="external">http://github.com/glennrp/libpng-releases/raw/master/libpng-1.5.23.tar.xz</a><br>$ tar -xvf libpng-1.5.23.tar.xz<br>$ cd libpng-1.5.23<br>$ make install<br>安装后发现仍然找不到，这是因为链接时查找路径的问题4:</p>
+<p>google之后发现这个函数定义在libpng中<br>查看libopencv_highgui.so.2.4.9引用了哪个libpng<br>$ ldd lib/libopencv_highgui.so.2.4.9 | grep libpng<br>查看该lipng中是否定义了png_set_longjmp_fn，注意根据自己的环境替换掉/usr/lib64/libpng12.so.0.49.0<br>$ readelf -s /usr/lib64/libpng12.so.0.49.0 | grep png_set_longjmp_fn<br>没有任何输出，说明没有定义，则需要安装更新的版本<br>$ wget <a href="http://github.com/glennrp/libpng-releases/raw/master/libpng-1.5.23.tar.xz" target="_blank" rel="external">http://github.com/glennrp/libpng-releases/raw/master/libpng-1.5.23.tar.xz</a><br>$ tar -xvf libpng-1.5.23.tar.xz<br>$ cd libpng-1.5.23<br>$ make install<br>安装后发现仍然找不到，这是因为链接时查找路径的问题4:</p>
 <p>$ cd /usr/local/lib<br>$ cp -d libpng15.a libpng15.la libpng15.so<em> libpng.a libpng.</em> /usr/lib64</p>
 
       
@@ -339,7 +337,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#google之后发现这个函数定义在libpng中"><span class="nav-number">1.</span> <span class="nav-text">google之后发现这个函数定义在libpng中</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#查看libopencv_highgui-so-2-4-9引用了哪个libpng"><span class="nav-number">2.</span> <span class="nav-text">查看libopencv_highgui.so.2.4.9引用了哪个libpng</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#查看该lipng中是否定义了png_set_longjmp_fn，注意根据自己的环境替换掉/usr/lib64/libpng12-so-0-49-0"><span class="nav-number">3.</span> <span class="nav-text">查看该lipng中是否定义了png_set_longjmp_fn，注意根据自己的环境替换掉/usr/lib64/libpng12.so.0.49.0</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#没有任何输出，说明没有定义，则需要安装更新的版本"><span class="nav-number">4.</span> <span class="nav-text">没有任何输出，说明没有定义，则需要安装更新的版本</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
