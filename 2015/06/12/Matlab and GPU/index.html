@@ -20,9 +20,11 @@
 
 
 
-  <meta name="keywords" content="gpu,matlab," />
+  <meta name="keywords" content="matlab,gpu," />
 
 
+
+  <link rel="alternate" href="/atom.xml" title="Sunshine" type="application/atom+xml" />
 
 
 
@@ -175,16 +177,16 @@
 
       
         <p>本文主要总结 MATLAB 下如何指定GPU计算资源.<br><a id="more"></a> </p>
-<h2 id="查看服务器GPU计算资源">查看服务器GPU计算资源</h2><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>nvidia-smi</span><br></pre></td></tr></table></figure>
+<h2 id="查看服务器GPU计算资源"><a href="#查看服务器GPU计算资源" class="headerlink" title="查看服务器GPU计算资源"></a>查看服务器GPU计算资源</h2><figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$ </span>nvidia-smi</div></pre></td></tr></table></figure>
 <p><img src="../../../../image/nvidia-smi.png" alt=""></p>
-<p>上图可以知道，该台服务器共有4 块GPU（0 1 2 3），其中2和3 被进程PID：14138和16433使用.<br>如果自己的应用需要很大显存，可以指定GPU，例如这里至少可以使用 0 和 1. 在matlab 环境下，可以使用 gpuDevice 和 reset.<br><figure class="highlight erlang-repl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function_or_atom">matlab</span>  <span class="comment">%启动matlab</span></span><br><span class="line"><span class="function_or_atom">gpuDevice</span></span><br></pre></td></tr></table></figure></p>
+<p>上图可以知道，该台服务器共有4 块GPU（0 1 2 3），其中2和3 被进程PID：14138和16433使用.<br>如果自己的应用需要很大显存，可以指定GPU，例如这里至少可以使用 0 和 1. 在matlab 环境下，可以使用 gpuDevice 和 reset.<br><figure class="highlight erlang-repl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">matlab  <span class="comment">%启动matlab</span></div><div class="line">gpuDevice</div></pre></td></tr></table></figure></p>
 <p><img src="../../../../image/gpudevice.png" alt=""><br>默认为第0块GPU. 需要指出的是matlab 从1开始计数，而系统则是从0开始计数. 因此在matlab 下4块显卡的编号从（0 1 2 3）变为（1 2 3 4）.</p>
-<p>如果我们想用第1块显卡，则对应于matlab下面的第2块.可以使用reset 设定.<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>g=gpuDevice(<span class="number">2</span>)</span><br><span class="line"><span class="variable">$ </span>reset(g)</span><br><span class="line"><span class="variable">$ </span>system(<span class="string">'nvidia-smi'</span>)  %调用系统命令查看</span><br></pre></td></tr></table></figure></p>
+<p>如果我们想用第1块显卡，则对应于matlab下面的第2块.可以使用reset 设定.<br><figure class="highlight gams"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">$</span> g=gpuDevice(<span class="number">2</span>)</div><div class="line"><span class="symbol">$</span> reset(g)</div><div class="line"><span class="symbol">$</span> <span class="keyword">system</span>(<span class="string">'nvidia-smi'</span>)  %调用系统命令查看</div></pre></td></tr></table></figure></p>
 <p><img src="../../../../image/resetgpu.png" alt=""><br>可以看到第1块显卡被启动，也可以使用matlab 提供的函数gpuDevice 查看.</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gpuDevice</span><br></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gpuDevice</div></pre></td></tr></table></figure>
 <p><img src="../../../../image/viewgpudevice.png" alt=""><br>可以看到当前的GPU的编号为2,对应于系统的1.</p>
-<h2 id="GPU_与_CPU_之间的数据交换">GPU 与 CPU 之间的数据交换</h2><p>gpuArray<br>MATLAB中的gpuArray表示存储在GPU上的数据。使用gpuArray函数可以将数据从MATLAB工作空间传送到GPU。例如：<br><figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">A</span> = data(10)<span class="comment">;</span></span><br><span class="line">G = gpuArray(<span class="keyword">A</span>)<span class="comment">;</span></span><br></pre></td></tr></table></figure></p>
-<p>gather<br>执行以上语句后，G 就是一个MATLAB GPUArray对象了。<br>当GPU运行完程序后，可以通过gather函数将数据从GPU取回到MATLAB工作空间。<br><figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">D = gather<span class="list">(<span class="keyword">G</span>)</span><span class="comment">;</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="GPU-与-CPU-之间的数据交换"><a href="#GPU-与-CPU-之间的数据交换" class="headerlink" title="GPU 与 CPU 之间的数据交换"></a>GPU 与 CPU 之间的数据交换</h2><p>gpuArray<br>MATLAB中的gpuArray表示存储在GPU上的数据。使用gpuArray函数可以将数据从MATLAB工作空间传送到GPU。例如：<br><figure class="highlight ini"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attr">A</span> = data(<span class="number">10</span>);</div><div class="line"><span class="attr">G</span> = gpuArray(A);</div></pre></td></tr></table></figure></p>
+<p>gather<br>执行以上语句后，G 就是一个MATLAB GPUArray对象了。<br>当GPU运行完程序后，可以通过gather函数将数据从GPU取回到MATLAB工作空间。<br><figure class="highlight ini"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attr">D</span> = gather(G);</div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -193,9 +195,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/gpu/"> #gpu </a>
-          
             <a href="/tags/matlab/"> #matlab </a>
+          
+            <a href="/tags/gpu/"> #gpu </a>
           
         </div>
       
@@ -274,7 +276,7 @@
         <div class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">18</span>
+              <span class="site-state-item-count">17</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -295,6 +297,13 @@
 
         </div>
 
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml">
+              <i class="menu-item-icon icon-feed"></i>
+              RSS
+            </a>
+          </div>
         
 
         <div class="links-of-author motion-element">
@@ -330,7 +339,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#查看服务器GPU计算资源"><span class="nav-number">1.</span> <span class="nav-text">查看服务器GPU计算资源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GPU_与_CPU_之间的数据交换"><span class="nav-number">2.</span> <span class="nav-text">GPU 与 CPU 之间的数据交换</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#查看服务器GPU计算资源"><span class="nav-number">1.</span> <span class="nav-text">查看服务器GPU计算资源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GPU-与-CPU-之间的数据交换"><span class="nav-number">2.</span> <span class="nav-text">GPU 与 CPU 之间的数据交换</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>

@@ -20,9 +20,11 @@
 
 
 
-  <meta name="keywords" content="CNN,caffe,matconvernet,toobox,torch," />
+  <meta name="keywords" content="CNN,toobox,caffe,matconvernet,torch," />
 
 
+
+  <link rel="alternate" href="/atom.xml" title="Sunshine" type="application/atom+xml" />
 
 
 
@@ -175,24 +177,24 @@
 
       
         <p>总结目前流行的CNN 架构，包括Caffe,Matcovernet以及Torch.<br><a id="more"></a> </p>
-<h2 id="Caffe"><a href="http://caffe.berkeleyvision.org/" target="_blank" rel="external">Caffe</a></h2><p>Caffe is a deep learning framework made with expression, speed, and modularity in mind. It is developed by the Berkeley Vision and Learning Center (BVLC) and by community contributors. Yangqing Jia created the project during his PhD at UC Berkeley. Caffe is released under the BSD 2-Clause license.</p>
+<h2 id="Caffe"><a href="#Caffe" class="headerlink" title="Caffe"></a><a href="http://caffe.berkeleyvision.org/" target="_blank" rel="external">Caffe</a></h2><p>Caffe is a deep learning framework made with expression, speed, and modularity in mind. It is developed by the Berkeley Vision and Learning Center (BVLC) and by community contributors. Yangqing Jia created the project during his PhD at UC Berkeley. Caffe is released under the BSD 2-Clause license.</p>
 <p><img src="../../../../image/caffe.png" alt="caffe"></p>
 <p>Why Caffe?</p>
 <p>Expressive architecture encourages application and innovation. Models and optimization are defined by configuration without hard-coding. Switch between CPU and GPU by setting a single flag to train on a GPU machine then deploy to commodity clusters or mobile devices.</p>
 <p>Extensible code fosters active development. In Caffe’s first year, it has been forked by over 1,000 developers and had many significant changes contributed back. Thanks to these contributors the framework tracks the state-of-the-art in both code and models.</p>
 <p>Speed makes Caffe perfect for research experiments and industry deployment. Caffe can process over 60M images per day with a single NVIDIA K40 GPU*. That’s 1 ms/image for inference and 4 ms/image for learning. We believe that Caffe is the fastest convnet implementation available.</p>
 <p>Community: Caffe already powers academic research projects, startup prototypes, and even large-scale industrial applications in vision, speech, and multimedia. Join our community of brewers on the caffe-users group and Github.</p>
-<h2 id="Matconvernet"><a href="http://www.vlfeat.org/matconvnet/" target="_blank" rel="external">Matconvernet</a></h2><p>MatConvNet is a MATLAB toolbox implementing Convolutional Neural Networks (CNNs) for computer vision applications. It is simple, efficient, and can run and learn state-of-the-art CNNs. Several example CNNs are included to classify and encode images.</p>
+<h2 id="Matconvernet"><a href="#Matconvernet" class="headerlink" title="Matconvernet"></a><a href="http://www.vlfeat.org/matconvnet/" target="_blank" rel="external">Matconvernet</a></h2><p>MatConvNet is a MATLAB toolbox implementing Convolutional Neural Networks (CNNs) for computer vision applications. It is simple, efficient, and can run and learn state-of-the-art CNNs. Several example CNNs are included to classify and encode images.</p>
 <p><img src="../../../../image/matconvernet.png" alt="matcovernet"></p>
 <p>MatConvNet was born in the Oxford Visual Geometry Group as both an educatinonal and research platform for fast prototyping in Convolutional Neural Nets. Its main features are:</p>
 <p>Flexibility. Neural network layers are implemented in a straightforward manner, often directly in MATLAB code, so that they are easy to modify, extend, or integrate with new ones. Other toolboxes hide the neural network layers behind a wall of compiled code; here the granularity is much finer.</p>
 <p>Power. The implementation can run large models such as Krizhevsky et al., including the DeCAF and Caffe variants. Several pre-trained models are provided.</p>
 <p>Efficiency. The implementation is quite efficient, supporting both CPU and GPU computation.</p>
 <p>This library may be merged in the future with VLFeat library. It uses a very similar style, so if you are familiar with VLFeat, you should be right at home here.</p>
-<h2 id="cpu">cpu</h2><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>make <span class="constant">ARCH</span>=glnxa64  <span class="constant">MATLABROOT</span>=<span class="regexp">/usr/local</span><span class="regexp">/MATLAB/</span><span class="constant">R2014a</span></span><br></pre></td></tr></table></figure>
-<h2 id="gpu">gpu</h2><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ make <span class="variable">ARCH=</span>glnxa64  <span class="variable">MATLABROOT=</span>/usr/local/MATLAB/R2014a  <span class="variable">ENABLE_GPU=</span>yes <span class="variable">CUDAROOT=</span>/usr/local/cuda-<span class="number">7.0</span>  <span class="variable">CUDAMETHOD=</span>nvcc</span><br></pre></td></tr></table></figure>
-<h2 id="gpu+cudnn">gpu+cudnn</h2><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>sudo cp *.h /usr/local/<span class="keyword">include</span>/</span><br><span class="line"><span class="variable">$ </span>sudo cp lib* <span class="regexp">/usr/local</span><span class="regexp">/lib64/</span></span><br><span class="line"><span class="variable">$ </span>sudo ldconfig</span><br><span class="line"><span class="variable">$ </span>make <span class="constant">ARCH</span>=glnxa64  <span class="constant">MATLABROOT</span>=<span class="regexp">/usr/local</span><span class="regexp">/MATLAB/</span><span class="constant">R2014a</span>  <span class="constant">ENABLE_GPU</span>=yes <span class="constant">CUDAROOT</span>=<span class="regexp">/usr/local</span><span class="regexp">/cuda-7.0  CUDAMETHOD=nvcc  ENABLE_CUDNN=yes CUDNNROOT=/usr</span><span class="regexp">/local</span></span><br></pre></td></tr></table></figure>
-<h2 id="Torch"><a href="http://torch.ch/" target="_blank" rel="external">Torch</a></h2><p>Torch is a scientific computing framework with wide support for machine learning algorithms. It is easy to use and efficient, thanks to an easy and fast scripting language, LuaJIT, and an underlying C/CUDA implementation.</p>
+<h2 id="cpu"><a href="#cpu" class="headerlink" title="cpu"></a>cpu</h2><figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$ </span>make ARCH=glnxa64  MATLABROOT=<span class="regexp">/usr/local</span><span class="regexp">/MATLAB/</span>R2014a</div></pre></td></tr></table></figure>
+<h2 id="gpu"><a href="#gpu" class="headerlink" title="gpu"></a>gpu</h2><figure class="highlight nix"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ make <span class="attr">ARCH=glnxa64</span>  <span class="attr">MATLABROOT=/usr/local/MATLAB/R2014a</span>  <span class="attr">ENABLE_GPU=yes</span> <span class="attr">CUDAROOT=/usr/local/cuda-7.0</span>  <span class="attr">CUDAMETHOD=nvcc</span></div></pre></td></tr></table></figure>
+<h2 id="gpu-cudnn"><a href="#gpu-cudnn" class="headerlink" title="gpu+cudnn"></a>gpu+cudnn</h2><figure class="highlight crystal"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ sudo cp *.h /usr/local/<span class="keyword">include</span>/</div><div class="line">$ sudo cp <span class="class"><span class="keyword">lib</span>* /<span class="title">usr</span>/<span class="title">local</span>/<span class="title">lib64</span>/</span></div><div class="line">$ sudo ldconfig</div><div class="line">$ make ARCH=glnxa64  MATLABROOT=<span class="regexp">/usr/local</span><span class="regexp">/MATLAB/</span>R2014a  ENABLE_GPU=yes CUDAROOT=<span class="regexp">/usr/local</span><span class="regexp">/cuda-7.0  CUDAMETHOD=nvcc  ENABLE_CUDNN=yes CUDNNROOT=/usr</span><span class="regexp">/local</span></div></pre></td></tr></table></figure>
+<h2 id="Torch"><a href="#Torch" class="headerlink" title="Torch"></a><a href="http://torch.ch/" target="_blank" rel="external">Torch</a></h2><p>Torch is a scientific computing framework with wide support for machine learning algorithms. It is easy to use and efficient, thanks to an easy and fast scripting language, LuaJIT, and an underlying C/CUDA implementation.</p>
 <p><img src="../../../../image/Torch_2014_logo.png" alt="totch"></p>
 <p>Why Torch?</p>
 <p>The goal of Torch is to have maximum flexibility and speed in building your scientific algorithms while making the process extremely simple. Torch comes with a large ecosystem of community-driven packages in machine learning, computer vision, signal processing, parallel processing, image, video, audio and networking among others, and builds on top of the Lua community.</p>
@@ -207,11 +209,11 @@
           
             <a href="/tags/CNN/"> #CNN </a>
           
+            <a href="/tags/toobox/"> #toobox </a>
+          
             <a href="/tags/caffe/"> #caffe </a>
           
             <a href="/tags/matconvernet/"> #matconvernet </a>
-          
-            <a href="/tags/toobox/"> #toobox </a>
           
             <a href="/tags/torch/"> #torch </a>
           
@@ -292,7 +294,7 @@
         <div class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">18</span>
+              <span class="site-state-item-count">17</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -313,6 +315,13 @@
 
         </div>
 
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml">
+              <i class="menu-item-icon icon-feed"></i>
+              RSS
+            </a>
+          </div>
         
 
         <div class="links-of-author motion-element">
@@ -348,7 +357,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Caffe"><span class="nav-number">1.</span> <span class="nav-text">Caffe</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Matconvernet"><span class="nav-number">2.</span> <span class="nav-text">Matconvernet</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cpu"><span class="nav-number">3.</span> <span class="nav-text">cpu</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#gpu"><span class="nav-number">4.</span> <span class="nav-text">gpu</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#gpu+cudnn"><span class="nav-number">5.</span> <span class="nav-text">gpu+cudnn</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Torch"><span class="nav-number">6.</span> <span class="nav-text">Torch</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Caffe"><span class="nav-number">1.</span> <span class="nav-text">Caffe</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Matconvernet"><span class="nav-number">2.</span> <span class="nav-text">Matconvernet</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cpu"><span class="nav-number">3.</span> <span class="nav-text">cpu</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#gpu"><span class="nav-number">4.</span> <span class="nav-text">gpu</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#gpu-cudnn"><span class="nav-number">5.</span> <span class="nav-text">gpu+cudnn</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Torch"><span class="nav-number">6.</span> <span class="nav-text">Torch</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>

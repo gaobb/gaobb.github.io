@@ -1,0 +1,667 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Sunshine</title>
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://gaobb.github.io/"/>
+  <updated>2016-06-13T02:07:23.000Z</updated>
+  <id>http://gaobb.github.io/</id>
+  
+  <author>
+    <name>Bin-Bin Gao</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Reading Papers List</title>
+    <link href="http://gaobb.github.io/2016/06/04/ReadingPaperList/"/>
+    <id>http://gaobb.github.io/2016/06/04/ReadingPaperList/</id>
+    <published>2016-06-04T13:48:19.000Z</published>
+    <updated>2016-06-13T02:07:23.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://github.com/gaobb/Reading-papers" target="_blank" rel="external">Reading Papers List</a><br><a id="more"></a> </p>
+<h2 id="Classification"><a href="#Classification" class="headerlink" title="Classification"></a>Classification</h2><h3 id="Architecture"><a href="#Architecture" class="headerlink" title="Architecture"></a>Architecture</h3><ul>
+<li><a href="../../../../papers/Classification/very_deep/AlexNet.pdf">ImageNet Classification with Deep Convolutional Neural Networks</a>. (NIPS,2012).</li>
+<li><a href="../../../../papers/Classification/very_deep/NIN.pdf">Natural Neural Networks</a>. (NIPS,2015).</li>
+<li><a href="../../../../papers/Classification/very_deep/vgg.pdf">Very Deep Convolutional Networks for Large-Scale Image Recognition</a>. (ICLR,2015), <a href="http://www.robots.ox.ac.uk/~vgg/research/very_deep/" target="_blank" rel="external">project</a>.</li>
+<li><a href="../../../../papers/Classification/very_deep/GoogLeNet.pdf">Going deeper with convolutions</a>. (CVPR,2015).</li>
+<li><a href="../../../../papers/Classification/very_deep/BN-Inception.pdf">Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift</a>. (ICML,2015).</li>
+<li><a href="../../../../papers/Classification/very_deep/Inception-v3.pdf">Rethinking the Inception Architecture for Computer Vision</a>. (CVPR,2016).</li>
+<li><a href="../../../../papers/Classification/very_deep/ResNet.pdf">Deep Residual Learning for Image Recognition</a>. (CVPR,2016).</li>
+</ul>
+<h3 id="Optimization-Regularization"><a href="#Optimization-Regularization" class="headerlink" title="Optimization / Regularization"></a>Optimization / Regularization</h3><ul>
+<li>Taking the human out of the loop: A review of bayesian optimization (2016), B. Shahriari et al. <a href="https://www.cs.ox.ac.uk/people/nando.defreitas/publications/BayesOptLoop.pdf" target="_blank" rel="external">[pdf]</a></li>
+<li>Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift (2015), S. Loffe and C. Szegedy <a href="http://arxiv.org/pdf/1502.03167" target="_blank" rel="external">[pdf]</a> :sparkles:</li>
+<li>Delving deep into rectifiers: Surpassing human-level performance on imagenet classification (2015), K. He et al. <a href="http://www.cv-foundation.org/openaccess/content_iccv_2015/papers/He_Delving_Deep_into_ICCV_2015_paper.pdf" target="_blank" rel="external">[pdf]</a> :sparkles:</li>
+<li>Dropout: A simple way to prevent neural networks from overfitting (2014), N. Srivastava et al. <em>(Hinton)</em> <a href="http://jmlr.org/papers/volume15/srivastava14a/srivastava14a.pdf" target="_blank" rel="external">[pdf]</a> :sparkles:</li>
+<li>Adam: A method for stochastic optimization (2014), D. Kingma and J. Ba <a href="http://arxiv.org/pdf/1412.6980" target="_blank" rel="external">[pdf]</a></li>
+<li>Spatial pyramid pooling in deep convolutional networks for visual recognition (2014), K. He et al. <a href="http://arxiv.org/pdf/1406.4729" target="_blank" rel="external">[pdf]</a></li>
+<li>Regularization of neural networks using dropconnect (2013), L. Wan et al. <em>(LeCun)</em> <a href="http://machinelearning.wustl.edu/mlpapers/paper_files/icml2013_wan13.pdf" target="_blank" rel="external">[pdf]</a></li>
+<li>Improving neural networks by preventing co-adaptation of feature detectors (2012), G. Hinton et al. <a href="http://arxiv.org/pdf/1207.0580.pdf" target="_blank" rel="external">[pdf]</a> :sparkles:</li>
+<li>Random search for hyper-parameter optimization (2012) J. Bergstra and Y. Bengio <a href="http://www.jmlr.org/papers/volume13/bergstra12a/bergstra12a" target="_blank" rel="external">[pdf]</a></li>
+</ul>
+<h3 id="Multi-label"><a href="#Multi-label" class="headerlink" title="Multi-label"></a>Multi-label</h3><ul>
+<li><a href="../../../../papers/Classification/Multi-label/HCP.pdf">CNN: Single-label to Multi-label</a>.</li>
+</ul>
+<h2 id="Detection"><a href="#Detection" class="headerlink" title="Detection"></a>Detection</h2><ul>
+<li><a href="../../../../papers/Detection/R-FCN.pdf.pdf">R-FCN</a>. (NIPS,2016).</li>
+<li><a href="../../../../papers/Detection/FasterR-CNN.pdf.pdf">Faster R-CNN</a>. (NIPS,2015).</li>
+<li><a href="../../../../papers/Detection/FastR-CNN.pdf.pdf">Fast R-CNN</a>. (ICCV,2015).</li>
+<li><a href="../../../../papers/Detection/R-CNN.pdf.pdf">R-CNN</a>. (CVPR,2014).</li>
+</ul>
+<h2 id="Segmentation"><a href="#Segmentation" class="headerlink" title="Segmentation"></a>Segmentation</h2><h3 id="Supervised"><a href="#Supervised" class="headerlink" title="Supervised"></a>Supervised</h3><ul>
+<li><a href="../../../../papers/Segmentation/Supervised/DeconvNet.pdf">Learning Deconvolution Network for Semantic Segmentation</a>. (ICCV,2015), <a href="http://cvlab.postech.ac.kr/research/deconvnet/" target="_blank" rel="external">project</a>,  <a href="http://cvlab.postech.ac.kr/~hyeonwoonoh/" target="_blank" rel="external">homepage</a>.</li>
+<li><a href="../../../../papers/Supervised/Segmentation/FCN.pdf">Fully Convolutional Networks for Semantic Segmentation</a>. (CVPR best paper honorable mention,2015), <a href="https://github.com/shelhamer/fcn.berkeleyvision.org" target="_blank" rel="external">Caffe_code</a>, <a href="http://people.eecs.berkeley.edu/~jonlong/" target="_blank" rel="external">homepage</a>.</li>
+</ul>
+<h3 id="Weakly-supervised"><a href="#Weakly-supervised" class="headerlink" title="Weakly-supervised"></a>Weakly-supervised</h3><ul>
+<li><a href="../../../../papers/Segmentation/Weakly-supervised/BoxSup.pdf">BoxSup: Exploiting Bounding Boxes to Supervise Convolutional Networks for Semantic Segmentation</a>. (ICCV,2015).</li>
+<li><a href="../../../../papers/Segmentation/Weakly-supervised/ScribbleSup.pdf">ScribbleSup: Scribble-Supervised Convolutional Networks for Semantic Segmentation</a>. (CVPR,2016).</li>
+<li><a href="http://arxiv.org/pdf/1502.02734v3.pdf" target="_blank" rel="external">Weakly- and Semi-Supervised Learning of a Deep Convolutional Network for Semantic Image Segmentation</a>. (ICCV,2015)</li>
+<li><a href="../../../../papers/Segmentation/Weakly-supervised/good_image_segment.pdf">What is a Good Image Segment? A Unified Approach to Segment Extraction</a>. (ECCV,2008), <a href="http://www.wisdom.weizmann.ac.il/~vision/GoodSegment.html" target="_blank" rel="external">project</a>, <a href="http://www.wisdom.weizmann.ac.il/~bagon/" target="_blank" rel="external">homepage</a>.</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;https://github.com/gaobb/Reading-papers&quot;&gt;Reading Papers List&lt;/a&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="CNN" scheme="http://gaobb.github.io/categories/CNN/"/>
+    
+    
+      <category term="CNN" scheme="http://gaobb.github.io/tags/CNN/"/>
+    
+      <category term="details" scheme="http://gaobb.github.io/tags/details/"/>
+    
+      <category term="convolutional" scheme="http://gaobb.github.io/tags/convolutional/"/>
+    
+      <category term="pooling" scheme="http://gaobb.github.io/tags/pooling/"/>
+    
+      <category term="normalization" scheme="http://gaobb.github.io/tags/normalization/"/>
+    
+      <category term="fully connected" scheme="http://gaobb.github.io/tags/fully-connected/"/>
+    
+      <category term="loss function" scheme="http://gaobb.github.io/tags/loss-function/"/>
+    
+      <category term="backpropagation" scheme="http://gaobb.github.io/tags/backpropagation/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Caffe 安装常见问题</title>
+    <link href="http://gaobb.github.io/2016/02/24/Caffe%20%E5%AE%89%E8%A3%85%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/"/>
+    <id>http://gaobb.github.io/2016/02/24/Caffe 安装常见问题/</id>
+    <published>2016-02-24T07:55:52.000Z</published>
+    <updated>2016-06-05T09:23:14.059Z</updated>
+    
+    <content type="html"><![CDATA[<p>Caffe 安装常见问题<br><a id="more"></a><br>After ‘make all’, you may face two errors. Here are the solutions:</p>
+<p>Error One:</p>
+<p>./include/caffe/common.hpp:5:27: fatal error: gflags/gflags.h: No such file or directory<br>compilation terminated.<br>Solutions:</p>
+<p>wget <a href="https://github.com/schuhschuh/gflags/archive/master.zip" target="_blank" rel="external">https://github.com/schuhschuh/gflags/archive/master.zip</a><br>unzip master.zip<br>cd gflags-master<br>mkdir build &amp;&amp; cd build<br>export CXXFLAGS=”-fPIC” &amp;&amp; cmake .. &amp;&amp; make VERBOSE=1<br>make<br>sudo make install<br>Error Two:</p>
+<p>./include/caffe/data_layers.hpp:11:18: fatal error: lmdb.h: No such file or directory<br>Solution:</p>
+<p>git clone git://gitorious.org/mdb/mdb.git<br>cd mdb/libraries/liblmdb<br>make<br>sudo make install<br>After the installation of caffe, you could build the python interfance for it:</p>
+<p>sudo ln -s /usr/include/python2.7/ /usr/local/include/python2.7<br>sudo ln -s /usr/local/lib/python2.7/dist-packages/numpy-1.8.1-py2.7-linux-x86_64.egg/numpy/core/include/numpy /usr/local/include/python2.7/numpy<br>make pycaffe<br>echo ‘export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64:/usr/local/lib’ &gt;&gt; ~/.bashrc<br>source ~/.bashrc<br>sudo easy_install pillow<br>If when you run ‘make pycaffe’, you see this error</p>
+<p>UnicodeDecodeError: ‘ascii’ codec can’t decode byte 0xe2 in position 54: ordinal not in range(128)<br>you could fix it by running:</p>
+<p>sudo apt-get install libevent-dev python-dev<br>That should be the end of the installation. You can test that it runs with:</p>
+<p>python python/classify.py –print_results examples/images/cat.jpg foo<br>The expected output is:</p>
+<p>[(‘kit fox’, ‘0.27327’), (‘red fox’, ‘0.20591’), (‘wood rabbit’, ‘0.12281’), (‘Egyptian </p>
+<ol>
+<li>安装配置nVidia cuDNN 加速Caffe模型运算<br>a. 安装cuDNN<br>该改版本caffe-master默认支持cudnn-6.5-linux-x64-v2，使用cudnn-6.5-linux-R1会报错，安装前请去先官网下载最新的cuDNN。<br>$ sudo cp cudnn.h /usr/local/include<br>$ sudo cp libcudnn.so /usr/local/lib<br>$ sudo cp libcudnn.so.6.5 /usr/local/lib<br>$ sudo cp libcudnn.so.6.5.48 /usr/local/lib<br>b. 链接cuDNN的库文件<br>$ sudo ln -sf /usr/local/lib/libcudnn.so.6.5.48 /usr/local/lib/libcudnn.so.6.5<br>$ sudo ln -sf /usr/local/lib/libcudnn.so.6.5 /usr/local/lib/libcudnn.so<br>$ sudo ldconfig -v</li>
+</ol>
+<p>opencv</p>
+<p>Unsupported gpu architecture ‘compute_11’</p>
+<p>cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D CUDA_GENERATION=Kepler ..</p>
+<p>cmake需要指定GPU架构3 ：-D CUDA_GENERATION=Kepler，否则报错：Unsupported gpu architecture ‘compute_11’<br>生成lib/libopencv_highgui.so.2.4.9找不到png_set_longjmp_fn，可以这样解决：</p>
+<p>google之后发现这个函数定义在libpng中<br>查看libopencv_highgui.so.2.4.9引用了哪个libpng<br>$ ldd lib/libopencv_highgui.so.2.4.9 | grep libpng<br>查看该lipng中是否定义了png_set_longjmp_fn，注意根据自己的环境替换掉/usr/lib64/libpng12.so.0.49.0<br>$ readelf -s /usr/lib64/libpng12.so.0.49.0 | grep png_set_longjmp_fn<br>没有任何输出，说明没有定义，则需要安装更新的版本<br>$ wget <a href="http://github.com/glennrp/libpng-releases/raw/master/libpng-1.5.23.tar.xz" target="_blank" rel="external">http://github.com/glennrp/libpng-releases/raw/master/libpng-1.5.23.tar.xz</a><br>$ tar -xvf libpng-1.5.23.tar.xz<br>$ cd libpng-1.5.23<br>$ make install<br>安装后发现仍然找不到，这是因为链接时查找路径的问题4:</p>
+<p>$ cd /usr/local/lib<br>$ cp -d libpng15.a libpng15.la libpng15.so<em> libpng.a libpng.</em> /usr/lib64</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Caffe 安装常见问题&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Project" scheme="http://gaobb.github.io/categories/Project/"/>
+    
+    
+      <category term="Caffe" scheme="http://gaobb.github.io/tags/Caffe/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux命令行备份数据到GoogleDrive神器之Grive</title>
+    <link href="http://gaobb.github.io/2016/02/22/linux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%87%E4%BB%BD%E6%95%B0%E6%8D%AE%E5%88%B0GoogleDrive%E7%A5%9E%E5%99%A8%E4%B9%8BGrive/"/>
+    <id>http://gaobb.github.io/2016/02/22/linux命令行备份数据到GoogleDrive神器之Grive/</id>
+    <published>2016-02-22T03:55:52.000Z</published>
+    <updated>2016-02-25T06:38:08.803Z</updated>
+    
+    <content type="html"><![CDATA[<p>几天前用亚马逊提供的 AWS 计算服务器下载了一些数据，可是如何下载到本地？<br><a id="more"></a><br>Google 雲端硬碟是 Google 所提供的線上雲端儲存服務，除了可以儲存各種檔案之外，也支援檔案的同步、分享與協同編輯等功能，而目前 Google 雲端硬碟已經支援 Windows、Mac OS X、Android 與 iOS 這些平台，但是 Linux 卻尚未有官方的正式支援，因此在 Linux 平台上若想要使用 Google 雲端硬碟只能使用網頁來存取，或是使用第三方所開發的軟體。</p>
+<p>Grive 是一個開放原始碼的非官方 Google 雲端硬碟 Linux client，它是一個指令模式的工具，可讓 Linux 本機的資料夾與 Google 雲端硬碟同步，只要啟動這個 Grive  之後，它就會自動把本機的檔案變動同步到 Google 雲端硬碟上，反之亦然。</p>
+<p>安裝 Grive</p>
+<p>在 Ubuntu Linux 中，若要安裝 Grive，使用 apt 安裝，首先加入這個 PPA：<br>sudo add-apt-repository ppa:nilarimogard/webupd8</p>
+<p>然後再安裝 grive 套件：<br>sudo apt-get update<br>sudo apt-get install grive</p>
+<p>如果不想使用第三方的 PPA，要從原始碼編譯安裝也可以，首先安裝一些必要套件：<br>sudo apt-get install cmake build-essential libgcrypt11-dev libjson0-dev libcurl4-openssl-dev libexpat1-dev libboost-filesystem-dev libboost-program-options-dev binutils-dev</p>
+<p>再從 Grive 的網站下載原始碼，或直接使用 wget 下載：<br>wget <a href="http://www.lbreda.com/grive/_media/packages/0.2.0/grive-0.2.0.tar.gz" target="_blank" rel="external">http://www.lbreda.com/grive/_media/packages/0.2.0/grive-0.2.0.tar.gz</a></p>
+<p>解壓縮之後再編譯並安裝：<br>tar xvfvz grive-0.2.0.tar.gz<br>cd grive-0.2.0<br>cmake .<br>make<br>sudo make install</p>
+<p>安裝完成之後，第一次執行前，要先建立一個本機的資料夾，然後再使用 grive 指令配合 -a 參數跟 Google 雲端硬碟設定同步：<br>mkdir ~/google_drive<br>cd ~/google_drive<br>grive -a</p>
+<p>執行之後，會出現一個 URL 網址，這是為了取得 Google 應用程式的權限用的，以瀏覽器打開這個網址之後，登入 Google 的帳號，就可以看到這樣畫面：</p>
+<p>Google 應用程式要求權限</p>
+<p>點擊「接受」後，就會出現一個授權碼：</p>
+<p>Google 應用程式授權碼</p>
+<p>把這個授權碼複製下來，貼在剛剛 Grive 要求輸入授權碼（authentication code）的地方：</p>
+<p>Grive 要求輸入 Google 授權碼</p>
+<p>貼上授權碼之後，再按下 Enter 鍵，這時候 Grive 就會把所有 Google 雲端硬碟上的資料同步到這個資料夾中：</p>
+<p>Grive 同步</p>
+<p>使用 Grive 進行同步</p>
+<p>之後如果在本機的 ~/google_drive 目錄或是 Google 雲端硬碟有新增、修改或刪除的檔案時，你可以在這個目錄中執行 grive 指令，這樣 Grive 就會自動將本機與 Google 雲端硬碟檔案作比對，自動下載或上傳，讓兩邊的檔案同步，例如若在本機新增一個 new_file 檔案：<br>cd ~/google_drive<br>touch new_file</p>
+<p>如果要進同步，就執行：<br>grive</p>
+<p>輸出為<br>Reading local directories<br>Synchronizing folders<br>Reading remote server file list<br>Detecting changes from last sync<br>Synchronizing files<br>sync “./new_file” doesn’t exist in server, uploading<br>Finished!<br>這裡 Grive 發現 ./new_file 這個檔案沒有在 Google 雲端硬碟上，就會自動上傳。當然如果 Grive 發現 Google 雲端硬碟上有新檔案時，它也會幫你自動下載。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;几天前用亚马逊提供的 AWS 计算服务器下载了一些数据，可是如何下载到本地？&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Project" scheme="http://gaobb.github.io/categories/Project/"/>
+    
+    
+      <category term="Linux" scheme="http://gaobb.github.io/tags/Linux/"/>
+    
+      <category term="数据备份" scheme="http://gaobb.github.io/tags/%E6%95%B0%E6%8D%AE%E5%A4%87%E4%BB%BD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>年龄估计</title>
+    <link href="http://gaobb.github.io/2015/09/10/%E5%B9%B4%E9%BE%84%E4%BC%B0%E8%AE%A1/"/>
+    <id>http://gaobb.github.io/2015/09/10/年龄估计/</id>
+    <published>2015-09-10T00:43:52.000Z</published>
+    <updated>2016-06-06T05:19:52.164Z</updated>
+    
+    <content type="html"><![CDATA[<p>ＣonvNet年龄估计技术总结．人脸含有非常重要的个人信息，无论我们随身携带的各种证件，还是电子档案，都有一个非常重要的位置用于放置脸部照片．人脸识别(身份验证，表情，种族，性别，年龄）是人脸研究核心课题，人脸检测, 人脸关键点对准是做好人脸识别的基础．由于人脸识别广阔的应用前景，国内关于人脸识别的公司陆续上市，例如 <a href="http://www.linkface.cn/" target="_blank" rel="external">LinkFace </a>， <a href="http://www.faceplusplus.com.cn/" target="_blank" rel="external">Face++</a>．本文主要总结最近的一个工作（年龄估计）．<br><a id="more"></a> </p>
+<h2 id="人脸检测-Face-detection"><a href="#人脸检测-Face-detection" class="headerlink" title="人脸检测(Face detection)"></a>人脸检测(Face detection)</h2><p>脸部含有人类年龄最重要的信息，因此做年龄估计的第一步就是如何准确Crop　出一张脸，通常称作人脸检测．伴随深度学习等技术的迅速发展，人脸检测的准确度有了很大提高．很多相关的成果在最近几年的顶级会议或者期刊发表．其中<a href="http://markusmathias.bitbucket.org/2014_eccv_face_detection/" target="_blank" rel="external">DPM,ECCV2014</a> 是一个非常成功的方法．<br><img src="../../../../image/oscar.medium.png" alt="DPM"></p>
+<h2 id="关键点检测-Key-points-与人脸矫正-Face-alignment"><a href="#关键点检测-Key-points-与人脸矫正-Face-alignment" class="headerlink" title="关键点检测(Key points)　与人脸矫正(Face alignment)"></a>关键点检测(Key points)　与人脸矫正(Face alignment)</h2><p>在一张人脸图像上，关键点主要是以下５个位置：一双眼睛，鼻尖，嘴巴的两角．如果能够准确的预测这５个位置，那么对于人脸识别的相关任务意义不言而喻．但是在实际应用中人脸图像由于受到姿态，表情，灯光，遮挡等复杂因素的影响，对于解决这个问题带来严重的挑战．为了解决这个问题，各种模型以及算法被提出． 香港中文大学　<a href="http://www.ie.cuhk.edu.hk/people/xotang.shtml" target="_blank" rel="external">Prof. Xiaoou Tang</a> 带领的 <a href="http://mmlab.ie.cuhk.edu.hk/" target="_blank" rel="external">Multimedia Laboratory</a> 在解决这个问题取得重大成功，他们的<a href="http://mmlab.ie.cuhk.edu.hk/archive/CNN_FacePoint.htm" target="_blank" rel="external">工作</a> 发表在 CVPR2013. 只要提取到关键点，对齐将是一件比较容易的事情，常用的方法比如模板匹配．<br><img src="../../../../image/keypoints.png" alt=""></p>
+<h2 id="训练CNN-Training-CNN"><a href="#训练CNN-Training-CNN" class="headerlink" title="训练CNN(Training CNN)"></a>训练CNN(Training CNN)</h2><p>最终目的是要根据人脸面部的表征预测年龄．有了前面的准备工作，可能很多人会想，只要把这些数据塞到一个深度卷积网络（ＣonvNet）训练不就好了吗？遗憾的是要成功的训练一个ＣonvNet　并非易事．因为ＣonvNet能够取得成功一个重要因素就是大量的训练样本．但是目前公开的相关的年龄的数据集训练样本相当有限，例如 Morph 作为最大的数据集也仅仅只有５万多张．因此训练样本成为使用ＣonvNet　模型估计年龄的瓶颈．我们的工作正是为了解决这一问题．<br>……</p>
+<h2 id="估计年龄-Age-estimation"><a href="#估计年龄-Age-estimation" class="headerlink" title="估计年龄(Age estimation)"></a>估计年龄(Age estimation)</h2><p>这里提供一个演示．使用我们的方法在一些测试数据年龄的预测结果．<br><img src="../../../../image/pre_age.gif" alt=""></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;ＣonvNet年龄估计技术总结．人脸含有非常重要的个人信息，无论我们随身携带的各种证件，还是电子档案，都有一个非常重要的位置用于放置脸部照片．人脸识别(身份验证，表情，种族，性别，年龄）是人脸研究核心课题，人脸检测, 人脸关键点对准是做好人脸识别的基础．由于人脸识别广阔的应用前景，国内关于人脸识别的公司陆续上市，例如 &lt;a href=&quot;http://www.linkface.cn/&quot;&gt;LinkFace &lt;/a&gt;， &lt;a href=&quot;http://www.faceplusplus.com.cn/&quot;&gt;Face++&lt;/a&gt;．本文主要总结最近的一个工作（年龄估计）．&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Project" scheme="http://gaobb.github.io/categories/Project/"/>
+    
+    
+      <category term="CNN" scheme="http://gaobb.github.io/tags/CNN/"/>
+    
+      <category term="Face detection" scheme="http://gaobb.github.io/tags/Face-detection/"/>
+    
+      <category term="Age estimation" scheme="http://gaobb.github.io/tags/Age-estimation/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>模糊孪生支持向量机</title>
+    <link href="http://gaobb.github.io/2015/08/05/%E6%A8%A1%E7%B3%8A%E5%AD%AA%E7%94%9F%E6%94%AF%E6%8C%81%E5%90%91%E9%87%8F%E6%9C%BA/"/>
+    <id>http://gaobb.github.io/2015/08/05/模糊孪生支持向量机/</id>
+    <published>2015-08-05T06:22:30.000Z</published>
+    <updated>2016-06-06T05:16:37.680Z</updated>
+    
+    <content type="html"><![CDATA[<p>孪生支持向量机的一个变种——模糊孪生支持向量机. 该工具箱的功能当前主要用于解决含有异常样本的分类问题. 下载链接 <a href="https://github.com/gaobb/CDFTSVM" target="_blank" rel="external">CDFTSVM Toolbox</a>.</p>
+<a id="more"></a> 
+<h2 id="CDFTSVM-has-two-distinguished-advantages"><a href="#CDFTSVM-has-two-distinguished-advantages" class="headerlink" title="CDFTSVM has two distinguished advantages"></a>CDFTSVM has two distinguished advantages</h2><p>(1) An effectivefuzzy membership function is produced for removing the noiseincurred by the contaminant inputs. </p>
+<p>(2) A coordinate descent strategy with shrinking by active set is used to deal with the computational complexity brought by the high dimensional input.</p>
+<h2 id="CDFTSVM-demo-shows"><a href="#CDFTSVM-demo-shows" class="headerlink" title="CDFTSVM demo shows"></a>CDFTSVM demo shows</h2><p><img src="../../../../image/demo_01.png" alt="CDFTSVM"></p>
+<p><img src="../../../../image/demo_02.png" alt="CDFTSVM"></p>
+<p><img src="../../../../image/demo_03.png" alt="CDFTSVM"></p>
+<p><img src="../../../../image/demo_04.png" alt="CDFTSVM"></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;孪生支持向量机的一个变种——模糊孪生支持向量机. 该工具箱的功能当前主要用于解决含有异常样本的分类问题. 下载链接 &lt;a href=&quot;https://github.com/gaobb/CDFTSVM&quot;&gt;CDFTSVM Toolbox&lt;/a&gt;.&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="TSVM" scheme="http://gaobb.github.io/categories/TSVM/"/>
+    
+    
+      <category term="toobox" scheme="http://gaobb.github.io/tags/toobox/"/>
+    
+      <category term="TSVM" scheme="http://gaobb.github.io/tags/TSVM/"/>
+    
+      <category term="MATLAB" scheme="http://gaobb.github.io/tags/MATLAB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>论文笔记Very deep convolutional neural network for large scale image recognition</title>
+    <link href="http://gaobb.github.io/2015/06/19/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0Very-deep-convolutional-neural-network-for-large-scale-image-recognition/"/>
+    <id>http://gaobb.github.io/2015/06/19/论文笔记Very-deep-convolutional-neural-network-for-large-scale-image-recognition/</id>
+    <published>2015-06-18T17:31:09.000Z</published>
+    <updated>2015-06-18T17:46:13.931Z</updated>
+    
+    <content type="html"><![CDATA[<p>这篇论文主要在CNN的深度上做了一个探索，结论是一个较深的网络架构，确实可以学到更加general and discriminative feature.<br><a id="more"></a> </p>
+<h2 id="分类框架"><a href="#分类框架" class="headerlink" title="分类框架"></a>分类框架</h2><h2 id="训练"><a href="#训练" class="headerlink" title="训练"></a>训练</h2><p>以 multinomial logistic regression 作为目标函数在每个 mini-batch 上采用 SGD 算法优化.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这篇论文主要在CNN的深度上做了一个探索，结论是一个较深的网络架构，确实可以学到更加general and discriminative feature.&lt;br&gt;
+    
+    </summary>
+    
+      <category term="论文笔记" scheme="http://gaobb.github.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="CNN" scheme="http://gaobb.github.io/tags/CNN/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Matlab 常见问题整理</title>
+    <link href="http://gaobb.github.io/2015/06/17/Matlab-%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%95%B4%E7%90%86/"/>
+    <id>http://gaobb.github.io/2015/06/17/Matlab-常见问题整理/</id>
+    <published>2015-06-17T11:53:38.000Z</published>
+    <updated>2015-06-17T12:04:22.339Z</updated>
+    
+    <content type="html"><![CDATA[<p>本文总结一些在Linux 环境（ubuntu15.04 and redhat 6.5）下使用MATLAB常见的一些问题以及解决方案.<br><a id="more"></a> </p>
+<h2 id="使用Matlab-在没有安装excel的linux-Mac以及win-系统环境上写数据到excel"><a href="#使用Matlab-在没有安装excel的linux-Mac以及win-系统环境上写数据到excel" class="headerlink" title="使用Matlab 在没有安装excel的linux,Mac以及win 系统环境上写数据到excel."></a>使用Matlab 在没有安装excel的linux,Mac以及win 系统环境上写数据到excel.</h2><p>xlwrite: Generate XLS(X) files without Excel on Mac/Linux/Win.<br>解决方法来自：<br><a href="http://www.mathworks.com/matlabcentral/fileexchange/38591-xlwrite--generate-xls-x--files-without-excel-on-mac-linux-win" target="_blank" rel="external">http://www.mathworks.com/matlabcentral/fileexchange/38591-xlwrite--generate-xls-x--files-without-excel-on-mac-linux-win</a></p>
+<p>具体例子如下：<br>% Small demonstration on how to use XLWRITE<br>% Initialisation of POI Libs<br>% Add Java POI Libs to matlab javapath<br><figure class="highlight lisp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">javaaddpath('poi_library/poi-3.<span class="number">8</span><span class="number">-20120326</span>.jar')<span class="comment">;</span></div><div class="line">javaaddpath('poi_library/poi-ooxml-3.<span class="number">8</span><span class="number">-20120326</span>.jar')<span class="comment">;</span></div><div class="line">javaaddpath('poi_library/poi-ooxml-schemas-3.<span class="number">8</span><span class="number">-20120326</span>.jar')<span class="comment">;</span></div><div class="line">javaaddpath('poi_library/xmlbeans-2.<span class="number">3.0</span>.jar')<span class="comment">;</span></div><div class="line">javaaddpath('poi_library/dom4j-1.<span class="number">6.1</span>.jar')<span class="comment">;</span></div><div class="line">javaaddpath('poi_library/stax-api-1.<span class="number">0.1</span>.jar')<span class="comment">;</span></div></pre></td></tr></table></figure></p>
+<p>% Data Generation for XLSX<br>% Define an xls name<br><figure class="highlight ini"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="attr">fileName</span> = <span class="string">'test_xlwrite.xlsx'</span>;</div><div class="line"><span class="attr">sheetName</span> = <span class="string">'this_is_sheetname'</span>;</div><div class="line"><span class="attr">startRange</span> = <span class="string">'B3'</span>;</div></pre></td></tr></table></figure></p>
+<p>% Generate some data<br><figure class="highlight sml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">xlsData = &#123;<span class="symbol">'A</span> <span class="type">Number'</span> <span class="symbol">'Boolean</span> <span class="type">Data'</span> <span class="symbol">'Empty</span> <span class="type">Cells'</span> <span class="symbol">'Strings'</span>;...</div><div class="line"><span class="number">1</span> <span class="literal">true</span> <span class="literal">[]</span> <span class="symbol">'String</span> <span class="type">Text'</span>;...</div><div class="line"><span class="number">5</span> <span class="literal">false</span> <span class="literal">[]</span> <span class="symbol">'Another</span> very descriptive text';...</div><div class="line">-<span class="number">6.26</span> <span class="literal">false</span> <span class="symbol">'This</span> should have been an empty cell but <span class="type">I</span> made an error' <span class="symbol">'This</span> is text';...</div><div class="line"><span class="number">1e8</span> <span class="literal">true</span> <span class="literal">[]</span> <span class="symbol">'Last</span> cell <span class="keyword">with</span> text';...</div><div class="line"><span class="number">1e3</span> <span class="literal">false</span> <span class="type">NaN</span> <span class="type">NaN</span>;...</div><div class="line"><span class="number">1e2</span> <span class="literal">true</span> <span class="literal">[]</span> <span class="symbol">'test'</span>&#125;</div></pre></td></tr></table></figure></p>
+<p>% Generate XLSX file<br><figure class="highlight lisp"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">xlwrite(<span class="name">fileName</span>, xlsData, sheetName, startRange)<span class="comment">;</span></div></pre></td></tr></table></figure></p>
+<h2 id="I-can’t-open-Matlab-2015a-after-I-upgrade-Ubuntu-14-10-to-15-04"><a href="#I-can’t-open-Matlab-2015a-after-I-upgrade-Ubuntu-14-10-to-15-04" class="headerlink" title="I can’t open Matlab 2015a after I upgrade Ubuntu 14.10 to 15.04."></a>I can’t open Matlab 2015a after I upgrade Ubuntu 14.10 to 15.04.</h2><p>Picked up JAVA_TOOL_OPTIONS: -javaagent:/usr/share/java/jayatanaag.jar</p>
+<p>This package is responsible for application menu support for Java swing applications, and seems to be the cause for the segfault. Removing it worked for me:<br><figure class="highlight arduino"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo apt-<span class="built_in">get</span> <span class="built_in">remove</span> jayatana</div></pre></td></tr></table></figure></p>
+<p>If you just want to remove the message you can just edit your $HOME/.bashrc (if using bash) or $HOME/.profile and unset the variable with: unset JAVA_TOOL_OPTIONS<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ echo <span class="string">'unset JAVA_TOOL_OPTIONS'</span> &gt;&gt; ~/<span class="selector-class">.bashrc</span></div><div class="line">$ echo <span class="string">'unset JAVA_TOOL_OPTIONS'</span> &gt;&gt; ~/<span class="selector-class">.profile</span></div><div class="line">$ source ~/<span class="selector-class">.bashrc</span></div><div class="line">$ source ~/.profile</div></pre></td></tr></table></figure></p>
+<h2 id="MATLAB-parallel-error"><a href="#MATLAB-parallel-error" class="headerlink" title="MATLAB parallel error"></a>MATLAB parallel error</h2><p>  Java exception occurred:<br>  java.net.UnknownHostException: <strong><strong>**</strong></strong>: nodename nor servname provided, or not known<br>    at java.net.InetAddress.getLocalHost(InetAddress.java:1473)</p>
+<p>When you type !hostname in the command window In Matlab, it returns a string. In /etc/hosts (OS X/Linux), you should add: 127.0.0.1 str (str being whatever string !hostname returned). Is this what you tried? I had the same issue and it worked for me. (in my case I added 127.0.0.1 server because my hostname is server) –  Franck Dernoncourt Feb 2 at 4:17 </p>
+<h2 id="matlab-read-CMYK-image-error"><a href="#matlab-read-CMYK-image-error" class="headerlink" title="matlab read CMYK image error"></a>matlab read CMYK image error</h2><figure class="highlight mel"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">image_path=<span class="string">'./Desktop/n01739381_1309.JPEG'</span>;</div><div class="line">image_name=<span class="string">'n01739381_1309.JPEG'</span></div><div class="line"><span class="keyword">if</span> <span class="keyword">strcmp</span>(info(<span class="number">1</span>,<span class="number">1</span>).ColorType,<span class="string">'CMYK'</span>)</div><div class="line">    <span class="keyword">system</span>([<span class="string">'convert '</span>, image_path, <span class="string">' -colorspace RGB'</span>, <span class="string">' ./tmp/'</span>,image_name]);</div><div class="line">    <span class="keyword">image</span>=imread([<span class="string">'./tmp/'</span>,image_name]);</div><div class="line">end</div></pre></td></tr></table></figure>
+<h2 id="Vlfeat-Error-in-vl-demo-covdet-line-15"><a href="#Vlfeat-Error-in-vl-demo-covdet-line-15" class="headerlink" title="Vlfeat Error in vl_demo_covdet (line 15)"></a>Vlfeat Error in vl_demo_covdet (line 15)</h2><p>Invalid MEX-file ‘/home/gaobb/mywork/toolbox/vlfeat-0.9.19/toolbox/mex/mexa64/vl_covdet.mexa64’:<br>/home/gaobb/mywork/toolbox/vlfeat-0.9.19/toolbox/mex/mexa64/libvl.so: undefined symbol: GOMP_parallel<br>Error in vl_demo_covdet (line 15)<br>frames = vl_covdet(imgs, ‘verbose’) ;</p>
+<p>Solution<br>open the /vlfeat/makefile and edit:<br>Makefile DISABLE_OPENMP=yes</p>
+<h2 id="Vlfeat-Error-libvl-so-cannot-open-shared-object-file-No-such-file-or-directory"><a href="#Vlfeat-Error-libvl-so-cannot-open-shared-object-file-No-such-file-or-directory" class="headerlink" title="Vlfeat Error libvl.so: cannot open shared object file: No such file or directory"></a>Vlfeat Error libvl.so: cannot open shared object file: No such file or directory</h2><p>Invalid MEX-file ‘/home/gaobb/. mcrCache8.3/main_C0/home/gaobb/mywork/<br>toolbox/vlfeat- 0.9.20/toolbox/mex/mexa64/vl_fisher.mexa64’: libvl.so: cannot open shared object file: No such file or directory</p>
+<p>Solution<br>Open the /etc/ld.so.conf as sudo and add a new line with the library directory. In this case, we add /home/gaobb/mywork/toolbox/vlfeat-0.9.20/toolbox/mex/mexa64<br>Rerun ldconfig to rebuild the cache:<br>sudo ldconfig<br>Check if the shared library cache now includes the shared libraries from the new directory:<br>ldconfig -p</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本文总结一些在Linux 环境（ubuntu15.04 and redhat 6.5）下使用MATLAB常见的一些问题以及解决方案.&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Matlab" scheme="http://gaobb.github.io/categories/Matlab/"/>
+    
+    
+      <category term="Matlab" scheme="http://gaobb.github.io/tags/Matlab/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Matlab and GPU</title>
+    <link href="http://gaobb.github.io/2015/06/12/Matlab%20and%20GPU/"/>
+    <id>http://gaobb.github.io/2015/06/12/Matlab and GPU/</id>
+    <published>2015-06-12T10:58:58.000Z</published>
+    <updated>2015-11-14T01:56:41.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>本文主要总结 MATLAB 下如何指定GPU计算资源.<br><a id="more"></a> </p>
+<h2 id="查看服务器GPU计算资源"><a href="#查看服务器GPU计算资源" class="headerlink" title="查看服务器GPU计算资源"></a>查看服务器GPU计算资源</h2><figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$ </span>nvidia-smi</div></pre></td></tr></table></figure>
+<p><img src="../../../../image/nvidia-smi.png" alt=""></p>
+<p>上图可以知道，该台服务器共有4 块GPU（0 1 2 3），其中2和3 被进程PID：14138和16433使用.<br>如果自己的应用需要很大显存，可以指定GPU，例如这里至少可以使用 0 和 1. 在matlab 环境下，可以使用 gpuDevice 和 reset.<br><figure class="highlight erlang-repl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">matlab  <span class="comment">%启动matlab</span></div><div class="line">gpuDevice</div></pre></td></tr></table></figure></p>
+<p><img src="../../../../image/gpudevice.png" alt=""><br>默认为第0块GPU. 需要指出的是matlab 从1开始计数，而系统则是从0开始计数. 因此在matlab 下4块显卡的编号从（0 1 2 3）变为（1 2 3 4）.</p>
+<p>如果我们想用第1块显卡，则对应于matlab下面的第2块.可以使用reset 设定.<br><figure class="highlight gams"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">$</span> g=gpuDevice(<span class="number">2</span>)</div><div class="line"><span class="symbol">$</span> reset(g)</div><div class="line"><span class="symbol">$</span> <span class="keyword">system</span>(<span class="string">'nvidia-smi'</span>)  %调用系统命令查看</div></pre></td></tr></table></figure></p>
+<p><img src="../../../../image/resetgpu.png" alt=""><br>可以看到第1块显卡被启动，也可以使用matlab 提供的函数gpuDevice 查看.</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gpuDevice</div></pre></td></tr></table></figure>
+<p><img src="../../../../image/viewgpudevice.png" alt=""><br>可以看到当前的GPU的编号为2,对应于系统的1.</p>
+<h2 id="GPU-与-CPU-之间的数据交换"><a href="#GPU-与-CPU-之间的数据交换" class="headerlink" title="GPU 与 CPU 之间的数据交换"></a>GPU 与 CPU 之间的数据交换</h2><p>gpuArray<br>MATLAB中的gpuArray表示存储在GPU上的数据。使用gpuArray函数可以将数据从MATLAB工作空间传送到GPU。例如：<br><figure class="highlight ini"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attr">A</span> = data(<span class="number">10</span>);</div><div class="line"><span class="attr">G</span> = gpuArray(A);</div></pre></td></tr></table></figure></p>
+<p>gather<br>执行以上语句后，G 就是一个MATLAB GPUArray对象了。<br>当GPU运行完程序后，可以通过gather函数将数据从GPU取回到MATLAB工作空间。<br><figure class="highlight ini"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attr">D</span> = gather(G);</div></pre></td></tr></table></figure></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本文主要总结 MATLAB 下如何指定GPU计算资源.&lt;br&gt;
+    
+    </summary>
+    
+      <category term="linux" scheme="http://gaobb.github.io/categories/linux/"/>
+    
+    
+      <category term="matlab" scheme="http://gaobb.github.io/tags/matlab/"/>
+    
+      <category term="gpu" scheme="http://gaobb.github.io/tags/gpu/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CV and ML Conference</title>
+    <link href="http://gaobb.github.io/2015/06/07/CV-and-ML-Conference/"/>
+    <id>http://gaobb.github.io/2015/06/07/CV-and-ML-Conference/</id>
+    <published>2015-06-07T08:54:54.000Z</published>
+    <updated>2015-06-07T08:56:38.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>CVPR2015 <a href="http://www.pamitc.org/cvpr15/program.php" target="_blank" rel="external">http://www.pamitc.org/cvpr15/program.php</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;CVPR2015 &lt;a href=&quot;http://www.pamitc.org/cvpr15/program.php&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.pamitc.org/cvpr15/program.php&lt;/a&gt;&lt;/
+    
+    </summary>
+    
+    
+      <category term="Conference" scheme="http://gaobb.github.io/tags/Conference/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>linux系统常见问题整理</title>
+    <link href="http://gaobb.github.io/2015/06/07/linux%E7%B3%BB%E7%BB%9F%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%95%B4%E7%90%86/"/>
+    <id>http://gaobb.github.io/2015/06/07/linux系统常见问题整理/</id>
+    <published>2015-06-07T03:21:39.000Z</published>
+    <updated>2016-03-23T06:07:22.114Z</updated>
+    
+    <content type="html"><![CDATA[<p>本文总结一些在Linux 系统下常见的一些问题以及解决方案.<br><a id="more"></a> </p>
+<h2 id="git-clone-–recursive-https-github-com-rbgirshick-fast-rcnn-git"><a href="#git-clone-–recursive-https-github-com-rbgirshick-fast-rcnn-git" class="headerlink" title="git clone –recursive https://github.com/rbgirshick/fast-rcnn.git"></a>git clone –recursive <a href="https://github.com/rbgirshick/fast-rcnn.git" target="_blank" rel="external">https://github.com/rbgirshick/fast-rcnn.git</a></h2><p>  error: Failed connect to github  fatal: HTTP request failed</p>
+<p>  Solution<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$  git config --global url.<span class="string">"https://"</span><span class="selector-class">.insteadOf</span> git:<span class="comment">//</span></div><div class="line">$  git config --global http<span class="selector-class">.proxy</span> <span class="number">114.212</span>.~~.~~:~~~~~</div></pre></td></tr></table></figure></p>
+<h2 id="install-redhat6-5"><a href="#install-redhat6-5" class="headerlink" title="install redhat6.5"></a>install redhat6.5</h2><p>  close firewall: service iptables stop<br>  start firewall: service iptables start<br><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$  service iptables <span class="built_in">stop</span>  <span class="comment">/* 关闭防火墙 */</span> </div><div class="line">$  service iptables <span class="built_in">start</span> <span class="comment">/* 开启防火墙 */</span> </div><div class="line">$  chkconfig iptables off <span class="comment">/* 默认关闭防火墙 */</span></div><div class="line">  %<span class="built_in">start</span> network: service network restart</div><div class="line">$  <span class="built_in">start</span> vncserver: service vncserver <span class="keyword">on</span></div><div class="line">$  chkconfig vncserver <span class="keyword">on</span></div></pre></td></tr></table></figure></p>
+<h2 id="mount-disk"><a href="#mount-disk" class="headerlink" title="mount disk"></a>mount disk</h2><figure class="highlight dts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$  mount <span class="meta-keyword">/dev/</span>sdb /home</div><div class="line">$  vim <span class="meta-keyword">/etc/</span>fstab</div><div class="line">  <span class="meta-keyword">/dev/</span>sdb   /home  ext4  defaults <span class="number">0</span> <span class="number">0</span></div><div class="line">$  sudo mount  <span class="comment">//210.28.132.63/data3/USERS/gaobb  /home/gaobb/mywork/SV3   -o username=xxxxxx,password=xxxxxx,rw,dir_mode=0777,file_mode=0777,uid=gaobb,gid=gaobb  /*挂载网络硬盘*/</span></div><div class="line">$  sudo umount   <span class="meta-keyword">/home/</span>gaobb<span class="meta-keyword">/mywork/</span>SV3 <span class="comment">/*卸载挂载*/</span></div></pre></td></tr></table></figure>
+<h2 id="VNC-Server-Installation-on-CentOS-6-5"><a href="#VNC-Server-Installation-on-CentOS-6-5" class="headerlink" title="VNC Server Installation on CentOS 6.5"></a>VNC Server Installation on CentOS 6.5</h2><p> <a href="https://www.howtoforge.com/vnc-server-installation-centos-6.5" target="_blank" rel="external">https://www.howtoforge.com/vnc-server-installation-centos-6.5</a><br> I am logged in my system with root, &amp; now I will be installing the VNC-server.<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ yum groupinstall Desktop</div><div class="line">$ yum <span class="keyword">install</span> gnome-core </div><div class="line">$ yum <span class="keyword">install</span> tigervnc-<span class="keyword">server</span></div><div class="line"> %<span class="keyword">Now</span> make the service <span class="keyword">on</span> <span class="keyword">after</span> every reboot</div><div class="line">$ chkconfig vncserver <span class="keyword">on</span></div></pre></td></tr></table></figure></p>
+<h2 id="Adding-VNC-user"><a href="#Adding-VNC-user" class="headerlink" title="Adding VNC user"></a>Adding VNC user</h2><p>  In my case I am using user=srijan it will differ in your case. You can use any username for the same.<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$ </span> useradd xxxx</div></pre></td></tr></table></figure></p>
+<p>  Now I will assign the vncpassword for the user with the user I just created before as:<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$ </span> su - srijan</div><div class="line"><span class="variable">$ </span> vncpasswd</div></pre></td></tr></table></figure></p>
+<p>  Now I will restart the VNC server service as root user:<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$ </span> service vncserver restart</div></pre></td></tr></table></figure></p>
+<h2 id="libcudart-so-6-5-can-not-open-shared-object-file-No-such-file-or-directory…"><a href="#libcudart-so-6-5-can-not-open-shared-object-file-No-such-file-or-directory…" class="headerlink" title="libcudart.so.6.5: can not open shared object file: No such file or directory…"></a>libcudart.so.6.5: can not open shared object file: No such file or directory…</h2><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">sudo vim /etc/ld<span class="selector-class">.so</span><span class="selector-class">.conf</span><span class="selector-class">.d</span>/mysql-x86-<span class="number">64</span><span class="selector-class">.conf</span></div><div class="line">/usr/local/cuda/lib64</div><div class="line">/usr/......</div><div class="line"></div><div class="line">ldconfig /etc/ld<span class="selector-class">.so</span><span class="selector-class">.cache</span></div></pre></td></tr></table></figure>
+<h2 id="vim-etc-init-id-3-initdefault-Full-multiuser-mode"><a href="#vim-etc-init-id-3-initdefault-Full-multiuser-mode" class="headerlink" title="vim /etc/init  id:3:initdefault:    Full multiuser mode"></a>vim /etc/init  id:3:initdefault:    Full multiuser mode</h2><figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$ </span> reboot</div><div class="line"><span class="variable">$ </span> sh  cuda-....</div><div class="line"><span class="variable">$ </span> vim /etc/init  <span class="symbol">id:</span><span class="number">5</span><span class="symbol">:initdefault</span>:     X11</div><div class="line"><span class="variable">$ </span> reboot</div><div class="line"><span class="variable">$ </span> cuda example make -j8</div></pre></td></tr></table></figure>
+<h2 id="anacoda"><a href="#anacoda" class="headerlink" title="anacoda"></a>anacoda</h2><p>  <a href="https://3230d63b5fc54e62148e-c95ac804525aac4b6dba79b00b39d1d3.ssl.cf1.rackcdn.com/Anaconda-2.2.0-Linux-x86_64.sh" target="_blank" rel="external">https://3230d63b5fc54e62148e-c95ac804525aac4b6dba79b00b39d1d3.ssl.cf1.rackcdn.com/Anaconda-2.2.0-Linux-x86_64.sh</a><br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">bash</span> <span class="selector-tag">Anaconda-2</span><span class="selector-class">.2</span><span class="selector-class">.0-Linux-x86_64</span><span class="selector-class">.sh</span></div></pre></td></tr></table></figure></p>
+<h2 id="opencv"><a href="#opencv" class="headerlink" title="opencv"></a>opencv</h2><figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$ </span> sudo ./opencv_latest.sh</div></pre></td></tr></table></figure>
+<h2 id="torch-http-torch-ch-docs-getting-started-html"><a href="#torch-http-torch-ch-docs-getting-started-html" class="headerlink" title="torch: http://torch.ch/docs/getting-started.html#_"></a>torch: <a href="http://torch.ch/docs/getting-started.html#_" target="_blank" rel="external">http://torch.ch/docs/getting-started.html#_</a></h2><h2 id="MKL-https-software-intel-com-en-us-intel-education-offerings"><a href="#MKL-https-software-intel-com-en-us-intel-education-offerings" class="headerlink" title="MKL  https://software.intel.com/en-us/intel-education-offerings"></a>MKL  <a href="https://software.intel.com/en-us/intel-education-offerings" target="_blank" rel="external">https://software.intel.com/en-us/intel-education-offerings</a></h2><figure class="highlight gams"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">$</span>  tar -zxvf parallel_studio_xe_2015</div><div class="line"><span class="symbol">$</span>  chmod a+x parallel_studio_xe_2015 -R</div><div class="line"><span class="symbol">$</span>  cd ~/parallel_studio_xe_2015</div><div class="line"><span class="symbol">$</span> sudo ./install_GUI.sh</div><div class="line"><span class="symbol">$</span>  SKCG<span class="number">-37</span>XWFDHH</div></pre></td></tr></table></figure>
+<h2 id="清理缓存"><a href="#清理缓存" class="headerlink" title="清理缓存"></a>清理缓存</h2><figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$ </span>su</div><div class="line"><span class="variable">$ </span>echo <span class="number">3</span> &gt; <span class="regexp">/proc/sys</span><span class="regexp">/vm/drop</span>_caches</div></pre></td></tr></table></figure>
+<h2 id="查看，杀死僵尸进程"><a href="#查看，杀死僵尸进程" class="headerlink" title="查看，杀死僵尸进程"></a>查看，杀死僵尸进程</h2><figure class="highlight perl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$   ps -ef | <span class="keyword">grep</span> defunct | <span class="keyword">grep</span> -v <span class="keyword">grep</span></div><div class="line">$   ps -A -o <span class="keyword">stat</span>,ppid,pid,cmd | <span class="keyword">grep</span> -e <span class="string">'^[Zz]'</span> | awk <span class="string">'&#123;print $2&#125;'</span> | xargs <span class="keyword">kill</span> -<span class="number">9</span></div><div class="line">               ps -A -o <span class="keyword">stat</span>,ppid,pid,cmd |<span class="keyword">grep</span> -e <span class="string">"^[Zz]"</span></div></pre></td></tr></table></figure>
+<h2 id="升级到Ubuntu-16-04的方法"><a href="#升级到Ubuntu-16-04的方法" class="headerlink" title="升级到Ubuntu 16.04的方法"></a>升级到Ubuntu 16.04的方法</h2><figure class="highlight q"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$  sudo apt-<span class="built_in">get</span> <span class="keyword">update</span> %先刷新源：</div><div class="line">$  sudo <span class="keyword">update</span>-manager -c -d  %执行更新：</div></pre></td></tr></table></figure>
+<h2 id="linux下测试磁盘的读写IO速度"><a href="#linux下测试磁盘的读写IO速度" class="headerlink" title="linux下测试磁盘的读写IO速度"></a>linux下测试磁盘的读写IO速度</h2><p>有时候我们在做维护的时候，总会遇到类似于IO特别高，但不能判定是IO瓶颈还是软件参数设置不当导致热盘的问题.这时候通常希望能知道磁盘的读写速度，来进行下一步的决策.</p>
+<p>下面是两种测试方法：<br>(1)使用hdparm命令<br>这是一个是用来获取ATA/IDE硬盘的参数的命令,是由早期Linux IDE驱动的开发和维护人员 Mark Lord开发编写的( hdparm has been written by Mark Lord <a href="&#109;&#x61;&#x69;&#108;&#x74;&#x6f;&#x3a;&#109;&#x6c;&#111;&#114;&#x64;&#64;&#x70;&#111;&#x62;&#x6f;&#120;&#46;&#99;&#111;&#x6d;">&#109;&#x6c;&#111;&#114;&#x64;&#64;&#x70;&#111;&#x62;&#x6f;&#120;&#46;&#99;&#111;&#x6d;</a>, the primary developer and maintainer of the (E)IDE driver for Linux, with suggestions from many netfolk).该命令应该也是仅用于Linux系统,对于UNIX系统，ATA/IDE硬盘用的可能比较少，一般大型的系统都是使用磁盘阵列的.</p>
+<p>使用方法很简单</p>
+<h1 id="hdparm-Tt-dev-sda"><a href="#hdparm-Tt-dev-sda" class="headerlink" title="hdparm -Tt /dev/sda"></a>hdparm -Tt /dev/sda</h1><p>/dev/sda:<br>Timing cached reads: 6676 MB in 2.00 seconds = 3340.18 MB/sec<br>Timing buffered disk reads: 218 MB in 3.11 seconds = 70.11 MB/sec</p>
+<p>可以看到,2秒钟读取了6676MB的缓存,约合3340.18 MB/sec;<br>在3.11秒中读取了218MB磁盘(物理读),读取速度约合70.11 MB/sec</p>
+<h2 id="Ubuntu-install-teamviewer"><a href="#Ubuntu-install-teamviewer" class="headerlink" title="Ubuntu install teamviewer"></a>Ubuntu install teamviewer</h2><p>sudo dpkg -i teamviewer_11.0.53191_amd64.deb<br>Selecting previously unselected package teamviewer.<br>(Reading database … 253184 files and directories currently installed.)<br>Preparing to unpack teamviewer_11.0.53191_amd64.deb …<br>Unpacking teamviewer (11.0.53191) …<br>dpkg: dependency problems prevent configuration of teamviewer:<br> teamviewer depends on libc6-i386 (&gt;= 2.4); however:<br>  Package libc6-i386 is not installed.<br> teamviewer depends on lib32asound2; however:<br>  Package lib32asound2 is not installed.<br> teamviewer depends on lib32z1; however:<br>  Package lib32z1 is not installed.<br> teamviewer depends on ia32-libs; however:<br>  Package ia32-libs is not installed.</p>
+<p>dpkg: error processing package teamviewer (–install):<br> dependency problems - leaving unconfigured<br>Errors were encountered while processing:<br> teamviewer</p>
+<pre><code>dpkg --add-architecture i386
+apt-get update
+sudo dpkg -i teamviewer_11.0.53191_i386.deb 
+sudo apt-get install -f 
+</code></pre><h1 id="redhat-replace-centos-source"><a href="#redhat-replace-centos-source" class="headerlink" title="redhat replace centos source"></a>redhat replace centos source</h1><p>1.删除redhat原有的yum<br>rpm -aq|grep yum|xargs rpm -e –nodeps </p>
+<p>2.下载yum安装文件<br>wget <a href="http://mirrors.ustc.edu.cn/centos/6/os/x86_64/Packages/yum-3.2.29-69.el6.centos.noarch.rpm" target="_blank" rel="external">http://mirrors.ustc.edu.cn/centos/6/os/x86_64/Packages/yum-3.2.29-69.el6.centos.noarch.rpm</a><br>wget <a href="http://mirrors.ustc.edu.cn/centos/6/os/x86_64/Packages/yum-metadata-parser-1.1.2-16.el6.x86_64.rpm" target="_blank" rel="external">http://mirrors.ustc.edu.cn/centos/6/os/x86_64/Packages/yum-metadata-parser-1.1.2-16.el6.x86_64.rpm</a><br>wget <a href="http://mirrors.ustc.edu.cn/centos/6/os/x86_64/Packages/yum-plugin-fastestmirror-1.1.30-30.el6.noarch.rpm" target="_blank" rel="external">http://mirrors.ustc.edu.cn/centos/6/os/x86_64/Packages/yum-plugin-fastestmirror-1.1.30-30.el6.noarch.rpm</a><br>wget <a href="http://mirrors.ustc.edu.cn/centos/6/os/x86_64/Packages/python-iniparse-0.3.1-2.1.el6.noarch.rpm" target="_blank" rel="external">http://mirrors.ustc.edu.cn/centos/6/os/x86_64/Packages/python-iniparse-0.3.1-2.1.el6.noarch.rpm</a><br>3.进行安装yum </p>
+<p>rpm -ivh python-iniparse-0.3.1-2.1.el6.noarch.rpm<br>rpm -ivh yum-metadata-parser-1.1.2-16.el6.x86_64.rpm<br>rpm -ivh yum-3.2.29-69.el6.centos.noarch.rpm yum-plugin-fastestmirror-1.1.30-30.el6.noarch.rpm<br>注意最后两个包必需同时安装，否则会相互依赖 </p>
+<p>1<br>down vote<br>I had similar problem, what I did is to manually download the old version python and reinstall it with rpm:</p>
+<p>$ rpm -qa | grep python- | grep 2.6<br>$ sudo rpm -ivh –force ftp://mirror.switch.ch/pool/4/mirror/scientificlinux/6.5/x86_64/updates/fastbugs/python-2.6.6-52.el6.x86_64.rpm<br>sudo rpm -ivh –force python-2.6.6-64.el6.x86_64.rpm</p>
+<p>linux平台下要编译安装除gcc和gcc-c++之外，还需要两个开发库：bzip2-devel 和python-devel，因此在安装前应该先保证这两个库已经安装：</p>
+<p>#yum install gcc gcc-c++ bzip2 bzip2-devel bzip2-libs python-devel -y</p>
+<p>然后是去官网下载源码包，地址<br>下载，解压，按照如下步骤：</p>
+<p>#tar xvzf boost_1_50_0.tar.gz</p>
+<p>进入boost_1_50_0目录：</p>
+<p>#cd boost_1_50_0</p>
+<p>然后是编译安装，boost源码包中有配置脚本，直接用就可以：</p>
+<p>#sh ./bootstrap.sh</p>
+<p>Building Boost.Build engine with toolset gcc… tools/build/v2/engine/bin.linuxx86_64/b2<br>Detecting Python version… 2.6<br>Detecting Python root… /usr<br>Unicode/ICU support for Boost.Regex?… not found.<br>Generating Boost.Build configuration in project-config.jam…</p>
+<p>Bootstrapping is done. To build, run:</p>
+<pre><code>./b2
+</code></pre><p>To adjust configuration, edit ‘project-config.jam’.<br>Further information:</p>
+<ul>
+<li><p>Command line help:<br>./b2 –help</p>
+</li>
+<li><p>Getting started guide:<br><a href="http://www.boost.org/more/getting_started/unix-variants.html" target="_blank" rel="external">http://www.boost.org/more/getting_started/unix-variants.html</a></p>
+</li>
+<li><p>Boost.Build documentation:<br><a href="http://www.boost.org/boost-build2/doc/html/index.html" target="_blank" rel="external">http://www.boost.org/boost-build2/doc/html/index.html</a></p>
+</li>
+</ul>
+<p>接下来就是编译，重点关注是否编译成功：</p>
+<p>#./b2</p>
+<p>然后就是漫长的等待，如果最后出现：<br>The Boost C++ Libraries were successfully built!</p>
+<p>The following directory should be added to compiler include paths:</p>
+<pre><code>/home/gang/BAK/boost_1_50_0
+</code></pre><p>The following directory should be added to linker library paths:</p>
+<pre><code>/home/gang/BAK/boost_1_50_0/stage/lib
+</code></pre><p>最后，sudo ./b2 install –prefix=/usr/local </p>
+<p>1、  boost中大部分库是不用编译成动态或者静态链接库。</p>
+<p>2、  只有regex,thread等几个库比较麻烦一点.要编译。</p>
+<p>3、  如果用gcc编译器-l指定动态链接库的路径,还要指定头文件的路径。</p>
+<p>4、  或者链接的boost库放到.c或.cpp之后，否则链接不能通过，编译可以通过。</p>
+<p>如下所示：g++ -lz -lpthread hh.c -lboost_filesystem -lboost_thread</p>
+<h2 id="安装rar步骤如下："><a href="#安装rar步骤如下：" class="headerlink" title="安装rar步骤如下："></a>安装rar步骤如下：</h2><p>  1、下载rar安装包<br>     下载地址：<a href="http://www.rarsoft.com/download.htm" target="_blank" rel="external">http://www.rarsoft.com/download.htm</a><br>  2、安装rar<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$ </span>    tar -zxvf rarlinux-x64-<span class="number">4.2</span>.<span class="number">0</span>.tar.gz <span class="comment">#解压rar</span></div><div class="line"><span class="variable">$ </span>    cd rar <span class="comment">#进入目录安装</span></div><div class="line"><span class="variable">$ </span>    make</div></pre></td></tr></table></figure></p>
+<p>在linux中的VNC会话更改分辨率<br><a href="http://qa.helplib.com/407397" target="_blank" rel="external">http://qa.helplib.com/407397</a><br>Ubuntu 15.10安装VNC灰屏的问题<br><a href="http://www.linuxdiyf.com/linux/18535.html" target="_blank" rel="external">http://www.linuxdiyf.com/linux/18535.html</a></p>
+<h2 id="convert"><a href="#convert" class="headerlink" title="convert"></a>convert</h2><p>sudo apt-get install imagemagick</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本文总结一些在Linux 系统下常见的一些问题以及解决方案.&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://gaobb.github.io/categories/Linux/"/>
+    
+    
+      <category term="linux" scheme="http://gaobb.github.io/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用hexo搭建博客</title>
+    <link href="http://gaobb.github.io/2015/06/07/%E4%BD%BF%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://gaobb.github.io/2015/06/07/使用hexo搭建博客/</id>
+    <published>2015-06-07T03:21:39.000Z</published>
+    <updated>2016-01-11T09:12:21.665Z</updated>
+    
+    <content type="html"><![CDATA[<p>使用hexo搭建博客<br><a id="more"></a> </p>
+<h2 id="配置好Node-js环境"><a href="#配置好Node-js环境" class="headerlink" title="配置好Node.js环境"></a>配置好Node.js环境</h2><p>sudo apt-get install nodejs-legacy</p>
+<p>node –version<br>v4.2.4</p>
+<h2 id="配置npm工具"><a href="#配置npm工具" class="headerlink" title="配置npm工具"></a>配置npm工具</h2><p>sudo apt-get install npm</p>
+<p>npm –version<br>3.5.2</p>
+<h2 id="配置-Git"><a href="#配置-Git" class="headerlink" title="配置 Git"></a>配置 Git</h2><p>sudo apt-get install git</p>
+<p>git  –version<br>git version 2.7.0.rc3</p>
+<h2 id="配置-hexo"><a href="#配置-hexo" class="headerlink" title="配置 hexo"></a>配置 hexo</h2><p>sudo  npm install -g hexo<br>hexo init <folder></folder></p>
+<p>hexo server  启动本地服务器<br>hexo deploy<br>hexo genernate</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;使用hexo搭建博客&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://gaobb.github.io/categories/Linux/"/>
+    
+    
+      <category term="linux" scheme="http://gaobb.github.io/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于Non-Maximum Supression</title>
+    <link href="http://gaobb.github.io/2015/06/07/%E5%85%B3%E4%BA%8E-Non-Maximum-Suppression/"/>
+    <id>http://gaobb.github.io/2015/06/07/关于-Non-Maximum-Suppression/</id>
+    <published>2015-06-07T03:21:39.000Z</published>
+    <updated>2015-07-12T12:35:20.732Z</updated>
+    
+    <content type="html"><![CDATA[<p>Non-Maximum Supression 是一种局部最大值搜索算法，在CV的很多任务中都有广泛的应用, 如跟踪、数据挖掘、3D重建、目标识别等。<br>参考：Alexander Neubeck的论文：Efﬁcient Non-Maximum Suppression。<br><a id="more"></a> </p>
+<h2 id="1-D-NMS"><a href="#1-D-NMS" class="headerlink" title="1-D NMS"></a>1-D NMS</h2><p>  2n+1邻域: 当前点n+i的2n+1邻域是指是在区间[i,2n+i] 上的2n+1个离散点， 也就是该点和该点左右侧各n个点构成。<br>  给定一个长度为w 的行向量y，NMS 就是以2n+1邻域搜索局部最大值. 下面以一维为例：<br><figure class="highlight matlab"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">maximumat</span> =<span class="title">nms</span><span class="params">(y,n)</span></span></div><div class="line"><span class="built_in">i</span>=<span class="number">1</span>;</div><div class="line">maximumat=[];</div><div class="line">w=<span class="built_in">length</span>(y);</div><div class="line"></div><div class="line"><span class="keyword">while</span> <span class="number">2</span>*n +<span class="built_in">i</span>&lt;w</div><div class="line">    <span class="keyword">if</span> y(<span class="built_in">i</span>+n)&gt;max(y(n+<span class="built_in">i</span>+<span class="number">1</span>:<span class="number">2</span>*n+<span class="built_in">i</span>))</div><div class="line">        <span class="keyword">if</span> y(<span class="built_in">i</span>+n)&gt;max(y(<span class="built_in">i</span>:n+<span class="built_in">i</span><span class="number">-1</span>))</div><div class="line">            maximumat = [maximumat i+n];</div><div class="line">        <span class="keyword">end</span></div><div class="line">    <span class="keyword">else</span> </div><div class="line">        <span class="built_in">i</span>=<span class="built_in">i</span>+<span class="number">1</span>;</div><div class="line">        <span class="keyword">while</span> <span class="number">2</span>*n +<span class="built_in">i</span>&lt;w &amp;&amp; y(<span class="built_in">i</span>+n)&lt;max(y(n+<span class="built_in">i</span>+<span class="number">1</span>:<span class="built_in">i</span>+<span class="number">2</span>*n))</div><div class="line">            <span class="built_in">i</span>=<span class="built_in">i</span>+<span class="number">1</span>;</div><div class="line">        <span class="keyword">end</span></div><div class="line">        <span class="keyword">if</span> <span class="number">2</span>*n +<span class="built_in">i</span>&lt;w</div><div class="line">            maximumat = [maximumat i+n];</div><div class="line">        <span class="keyword">end</span></div><div class="line">    <span class="keyword">end</span></div><div class="line">     <span class="built_in">i</span>=<span class="built_in">i</span>+n;</div><div class="line"><span class="keyword">end</span></div><div class="line"><span class="keyword">end</span></div></pre></td></tr></table></figure></p>
+<p>1、如果一个点比其左右两侧n点的值都大，即得到局部最大值，7-10行。<br>2、在处理过程中，如果未得到局部最大值，可以知道i + n 点比左侧的i到i+n-1点小，那么在下一次处理时，i = i + n，20行。<br><figure class="highlight gams"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">% eg1</div><div class="line">x= <span class="number">50</span>:<span class="number">0.1</span>:<span class="number">200</span>;</div><div class="line">y= <span class="built-in">sin</span>(x)./x;</div><div class="line"></div><div class="line">% eg2</div><div class="line">x=<span class="number">1</span>:<span class="number">200</span>;</div><div class="line">y=rand(<span class="number">1</span>,<span class="number">200</span>);</div><div class="line"></div><div class="line">n=<span class="number">2</span>;</div><div class="line">maximumat =nms(y,n);</div><div class="line">plot(x,y,<span class="string">'-bo'</span>);</div><div class="line">hold on </div><div class="line"><span class="function"><span class="title">plot</span>(<span class="params">x(maximumat</span>)</span>,y(maximumat),<span class="string">'-rs'</span>,  <span class="string">'MarkerFaceColor'</span>,<span class="string">'r'</span>,...</div><div class="line"> <span class="string">'MarkerSize'</span>,<span class="number">8</span>);</div><div class="line">legend(<span class="string">'Original data'</span>,<span class="string">'NMS'</span>);</div><div class="line">title(sprintf(<span class="string">'NMS:%d(2*%d+1)-Neighborhood  '</span>,<span class="number">2</span>*n+<span class="number">1</span>,n));</div></pre></td></tr></table></figure></p>
+<p><img src="../../../../image/nms_1.jpg" alt=""><br><img src="../../../../image/nms_2.jpg" alt=""></p>
+<h2 id="2-D-NMS"><a href="#2-D-NMS" class="headerlink" title="2-D NMS"></a>2-D NMS</h2><p>  2D邻域为以当前点为中心的(2n+1)×(2n+1)区域。</p>
+<h2 id="NMS-在目标检测中应用"><a href="#NMS-在目标检测中应用" class="headerlink" title="NMS 在目标检测中应用"></a>NMS 在目标检测中应用</h2>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Non-Maximum Supression 是一种局部最大值搜索算法，在CV的很多任务中都有广泛的应用, 如跟踪、数据挖掘、3D重建、目标识别等。&lt;br&gt;参考：Alexander Neubeck的论文：Efﬁcient Non-Maximum Suppression。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="读书笔记" scheme="http://gaobb.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="NMS" scheme="http://gaobb.github.io/tags/NMS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>论文笔记R-CNN and Fast-RCNN</title>
+    <link href="http://gaobb.github.io/2015/06/05/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0R-CNN-and-Fast-RCNN/"/>
+    <id>http://gaobb.github.io/2015/06/05/论文笔记R-CNN-and-Fast-RCNN/</id>
+    <published>2015-06-05T13:21:44.000Z</published>
+    <updated>2015-06-05T13:23:00.961Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="CNN" scheme="http://gaobb.github.io/categories/CNN/"/>
+    
+    
+      <category term="CNN" scheme="http://gaobb.github.io/tags/CNN/"/>
+    
+      <category term="detection" scheme="http://gaobb.github.io/tags/detection/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Visualizing what ConvNets learn</title>
+    <link href="http://gaobb.github.io/2015/06/05/Visualizing-what-ConvNets-learn/"/>
+    <id>http://gaobb.github.io/2015/06/05/Visualizing-what-ConvNets-learn/</id>
+    <published>2015-06-05T03:42:37.000Z</published>
+    <updated>2015-06-07T07:41:28.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>通过可视化卷积网络的feature map、fiflters来更好理解（解释）CNN<br><a id="more"></a> </p>
+<h2 id="可视化神经元的激活值（activation）"><a href="#可视化神经元的激活值（activation）" class="headerlink" title="可视化神经元的激活值（activation）"></a>可视化神经元的激活值（activation）</h2><p><img src="../../../../image/act1.jpeg" alt=""><br><img src="../../../../image/act2.jpeg" alt=""></p>
+<h2 id="可视化神经网络每层的权重"><a href="#可视化神经网络每层的权重" class="headerlink" title="可视化神经网络每层的权重"></a>可视化神经网络每层的权重</h2><p><img src="../../../../image/filt1.jpeg" alt=""><br><img src="../../../../image/filt2.jpeg" alt=""></p>
+<h2 id="通过pool5-最大激活值追踪输入图像对应的patch"><a href="#通过pool5-最大激活值追踪输入图像对应的patch" class="headerlink" title="通过pool5 最大激活值追踪输入图像对应的patch"></a>通过pool5 最大激活值追踪输入图像对应的patch</h2><p><img src="../../../../image/pool5max.jpeg" alt=""></p>
+<h2 id="遮挡输入图像的部分，可视化每个遮挡后对应的输出类别在遮挡位置的置信度"><a href="#遮挡输入图像的部分，可视化每个遮挡后对应的输出类别在遮挡位置的置信度" class="headerlink" title="遮挡输入图像的部分，可视化每个遮挡后对应的输出类别在遮挡位置的置信度"></a>遮挡输入图像的部分，可视化每个遮挡后对应的输出类别在遮挡位置的置信度</h2><p><img src="../../../../image/occlude.jpeg" alt=""></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;通过可视化卷积网络的feature map、fiflters来更好理解（解释）CNN&lt;br&gt;
+    
+    </summary>
+    
+      <category term="CNN" scheme="http://gaobb.github.io/categories/CNN/"/>
+    
+    
+      <category term="CNN" scheme="http://gaobb.github.io/tags/CNN/"/>
+    
+      <category term="Visualizing" scheme="http://gaobb.github.io/tags/Visualizing/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Convolutional neural network toolbox</title>
+    <link href="http://gaobb.github.io/2015/06/04/Convolutional%20neural%20network%20toolbox/"/>
+    <id>http://gaobb.github.io/2015/06/04/Convolutional neural network toolbox/</id>
+    <published>2015-06-04T13:49:13.000Z</published>
+    <updated>2015-06-19T03:20:06.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>总结目前流行的CNN 架构，包括Caffe,Matcovernet以及Torch.<br><a id="more"></a> </p>
+<h2 id="Caffe"><a href="#Caffe" class="headerlink" title="Caffe"></a><a href="http://caffe.berkeleyvision.org/" target="_blank" rel="external">Caffe</a></h2><p>Caffe is a deep learning framework made with expression, speed, and modularity in mind. It is developed by the Berkeley Vision and Learning Center (BVLC) and by community contributors. Yangqing Jia created the project during his PhD at UC Berkeley. Caffe is released under the BSD 2-Clause license.</p>
+<p><img src="../../../../image/caffe.png" alt="caffe"></p>
+<p>Why Caffe?</p>
+<p>Expressive architecture encourages application and innovation. Models and optimization are defined by configuration without hard-coding. Switch between CPU and GPU by setting a single flag to train on a GPU machine then deploy to commodity clusters or mobile devices.</p>
+<p>Extensible code fosters active development. In Caffe’s first year, it has been forked by over 1,000 developers and had many significant changes contributed back. Thanks to these contributors the framework tracks the state-of-the-art in both code and models.</p>
+<p>Speed makes Caffe perfect for research experiments and industry deployment. Caffe can process over 60M images per day with a single NVIDIA K40 GPU*. That’s 1 ms/image for inference and 4 ms/image for learning. We believe that Caffe is the fastest convnet implementation available.</p>
+<p>Community: Caffe already powers academic research projects, startup prototypes, and even large-scale industrial applications in vision, speech, and multimedia. Join our community of brewers on the caffe-users group and Github.</p>
+<h2 id="Matconvernet"><a href="#Matconvernet" class="headerlink" title="Matconvernet"></a><a href="http://www.vlfeat.org/matconvnet/" target="_blank" rel="external">Matconvernet</a></h2><p>MatConvNet is a MATLAB toolbox implementing Convolutional Neural Networks (CNNs) for computer vision applications. It is simple, efficient, and can run and learn state-of-the-art CNNs. Several example CNNs are included to classify and encode images.</p>
+<p><img src="../../../../image/matconvernet.png" alt="matcovernet"></p>
+<p>MatConvNet was born in the Oxford Visual Geometry Group as both an educatinonal and research platform for fast prototyping in Convolutional Neural Nets. Its main features are:</p>
+<p>Flexibility. Neural network layers are implemented in a straightforward manner, often directly in MATLAB code, so that they are easy to modify, extend, or integrate with new ones. Other toolboxes hide the neural network layers behind a wall of compiled code; here the granularity is much finer.</p>
+<p>Power. The implementation can run large models such as Krizhevsky et al., including the DeCAF and Caffe variants. Several pre-trained models are provided.</p>
+<p>Efficiency. The implementation is quite efficient, supporting both CPU and GPU computation.</p>
+<p>This library may be merged in the future with VLFeat library. It uses a very similar style, so if you are familiar with VLFeat, you should be right at home here.</p>
+<h2 id="cpu"><a href="#cpu" class="headerlink" title="cpu"></a>cpu</h2><figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$ </span>make ARCH=glnxa64  MATLABROOT=<span class="regexp">/usr/local</span><span class="regexp">/MATLAB/</span>R2014a</div></pre></td></tr></table></figure>
+<h2 id="gpu"><a href="#gpu" class="headerlink" title="gpu"></a>gpu</h2><figure class="highlight nix"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ make <span class="attr">ARCH=glnxa64</span>  <span class="attr">MATLABROOT=/usr/local/MATLAB/R2014a</span>  <span class="attr">ENABLE_GPU=yes</span> <span class="attr">CUDAROOT=/usr/local/cuda-7.0</span>  <span class="attr">CUDAMETHOD=nvcc</span></div></pre></td></tr></table></figure>
+<h2 id="gpu-cudnn"><a href="#gpu-cudnn" class="headerlink" title="gpu+cudnn"></a>gpu+cudnn</h2><figure class="highlight crystal"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ sudo cp *.h /usr/local/<span class="keyword">include</span>/</div><div class="line">$ sudo cp <span class="class"><span class="keyword">lib</span>* /<span class="title">usr</span>/<span class="title">local</span>/<span class="title">lib64</span>/</span></div><div class="line">$ sudo ldconfig</div><div class="line">$ make ARCH=glnxa64  MATLABROOT=<span class="regexp">/usr/local</span><span class="regexp">/MATLAB/</span>R2014a  ENABLE_GPU=yes CUDAROOT=<span class="regexp">/usr/local</span><span class="regexp">/cuda-7.0  CUDAMETHOD=nvcc  ENABLE_CUDNN=yes CUDNNROOT=/usr</span><span class="regexp">/local</span></div></pre></td></tr></table></figure>
+<h2 id="Torch"><a href="#Torch" class="headerlink" title="Torch"></a><a href="http://torch.ch/" target="_blank" rel="external">Torch</a></h2><p>Torch is a scientific computing framework with wide support for machine learning algorithms. It is easy to use and efficient, thanks to an easy and fast scripting language, LuaJIT, and an underlying C/CUDA implementation.</p>
+<p><img src="../../../../image/Torch_2014_logo.png" alt="totch"></p>
+<p>Why Torch?</p>
+<p>The goal of Torch is to have maximum flexibility and speed in building your scientific algorithms while making the process extremely simple. Torch comes with a large ecosystem of community-driven packages in machine learning, computer vision, signal processing, parallel processing, image, video, audio and networking among others, and builds on top of the Lua community.</p>
+<p>At the heart of Torch are the popular neural network and optimization libraries which are simple to use, while having maximum flexibility in implementing complex neural network topologies. You can build arbitrary graphs of neural networks, and parallelize them over CPUs and GPUs in an efficient manner.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;总结目前流行的CNN 架构，包括Caffe,Matcovernet以及Torch.&lt;br&gt;
+    
+    </summary>
+    
+      <category term="CNN" scheme="http://gaobb.github.io/categories/CNN/"/>
+    
+    
+      <category term="CNN" scheme="http://gaobb.github.io/tags/CNN/"/>
+    
+      <category term="toobox" scheme="http://gaobb.github.io/tags/toobox/"/>
+    
+      <category term="caffe" scheme="http://gaobb.github.io/tags/caffe/"/>
+    
+      <category term="matconvernet" scheme="http://gaobb.github.io/tags/matconvernet/"/>
+    
+      <category term="torch" scheme="http://gaobb.github.io/tags/torch/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>The details  are always in convolutional neural network</title>
+    <link href="http://gaobb.github.io/2015/06/04/The%20details%20are%20always%20in%20convolutional%20neural%20network/"/>
+    <id>http://gaobb.github.io/2015/06/04/The details are always in convolutional neural network/</id>
+    <published>2015-06-04T13:48:19.000Z</published>
+    <updated>2015-06-05T13:18:57.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>阐述CNN 前向传播与反响传播原理，包括卷积、池化、正规化、全连接、损失函数以及反向传播原理.<br><a id="more"></a> </p>
+<h2 id="Forward"><a href="#Forward" class="headerlink" title="Forward"></a>Forward</h2><h4 id="convolutional"><a href="#convolutional" class="headerlink" title="convolutional"></a>convolutional</h4><h4 id="pooling"><a href="#pooling" class="headerlink" title="pooling"></a>pooling</h4><h4 id="normalization"><a href="#normalization" class="headerlink" title="normalization"></a>normalization</h4><h4 id="fully-connected"><a href="#fully-connected" class="headerlink" title="fully connected"></a>fully connected</h4><h4 id="loss-function"><a href="#loss-function" class="headerlink" title="loss function"></a>loss function</h4><hr>
+<h2 id="Backpropagation"><a href="#Backpropagation" class="headerlink" title="Backpropagation"></a>Backpropagation</h2>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;阐述CNN 前向传播与反响传播原理，包括卷积、池化、正规化、全连接、损失函数以及反向传播原理.&lt;br&gt;
+    
+    </summary>
+    
+      <category term="CNN" scheme="http://gaobb.github.io/categories/CNN/"/>
+    
+    
+      <category term="CNN" scheme="http://gaobb.github.io/tags/CNN/"/>
+    
+      <category term="details" scheme="http://gaobb.github.io/tags/details/"/>
+    
+      <category term="convolutional" scheme="http://gaobb.github.io/tags/convolutional/"/>
+    
+      <category term="pooling" scheme="http://gaobb.github.io/tags/pooling/"/>
+    
+      <category term="normalization" scheme="http://gaobb.github.io/tags/normalization/"/>
+    
+      <category term="fully connected" scheme="http://gaobb.github.io/tags/fully-connected/"/>
+    
+      <category term="loss function" scheme="http://gaobb.github.io/tags/loss-function/"/>
+    
+      <category term="backpropagation" scheme="http://gaobb.github.io/tags/backpropagation/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Redhat6.5 安装caffe指南</title>
+    <link href="http://gaobb.github.io/2015/06/04/Redhat6-5-%E5%AE%89%E8%A3%85caffe%E6%8C%87%E5%8D%97/"/>
+    <id>http://gaobb.github.io/2015/06/04/Redhat6-5-安装caffe指南/</id>
+    <published>2015-06-04T13:46:12.000Z</published>
+    <updated>2015-06-04T13:46:12.019Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
