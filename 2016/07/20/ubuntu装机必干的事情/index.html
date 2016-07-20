@@ -20,7 +20,7 @@
 
 
 
-  <meta name="keywords" content="matlab,gpu," />
+  <meta name="keywords" content="CNN,Visualizing," />
 
 
 
@@ -45,7 +45,7 @@
 
 
 
-  <title> Matlab and GPU // Sunshine </title>
+  <title> Ubuntu 装机后必须要做的事情 // Sunshine </title>
 </head>
 
 <body>
@@ -133,7 +133,7 @@
           
           
             
-              Matlab and GPU
+              Ubuntu 装机后必须要做的事情
             
           
         </h1>
@@ -141,7 +141,7 @@
 
       <div class="post-meta">
         <span class="post-time">
-          发表于 2015-06-12
+          发表于 2016-07-20
         </span>
 
         
@@ -161,8 +161,8 @@
           
             <span class="post-comments-count">
             &nbsp; | &nbsp;
-            <a href="/2015/06/12/Matlab and GPU/#comments" >
-              <span class="post-comments-count ds-thread-count" data-thread-key="2015/06/12/Matlab and GPU/"></span>
+            <a href="/2016/07/20/ubuntu装机必干的事情/#comments" >
+              <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/20/ubuntu装机必干的事情/"></span>
             </a>
           </span>
           
@@ -176,17 +176,24 @@
       
 
       
-        <p>本文主要总结 MATLAB 下如何指定GPU计算资源.<br><a id="more"></a> </p>
-<h2 id="查看服务器GPU计算资源"><a href="#查看服务器GPU计算资源" class="headerlink" title="查看服务器GPU计算资源"></a>查看服务器GPU计算资源</h2><figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$ </span>nvidia-smi</div></pre></td></tr></table></figure>
-<p><img src="../../../../image/nvidia-smi.png" alt=""></p>
-<p>上图可以知道，该台服务器共有4 块GPU（0 1 2 3），其中2和3 被进程PID：14138和16433使用.<br>如果自己的应用需要很大显存，可以指定GPU，例如这里至少可以使用 0 和 1. 在matlab 环境下，可以使用 gpuDevice 和 reset.<br><figure class="highlight erlang-repl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">matlab  <span class="comment">%启动matlab</span></div><div class="line">gpuDevice</div></pre></td></tr></table></figure></p>
-<p><img src="../../../../image/gpudevice.png" alt=""><br>默认为第0块GPU. 需要指出的是matlab 从1开始计数，而系统则是从0开始计数. 因此在matlab 下4块显卡的编号从（0 1 2 3）变为（1 2 3 4）.</p>
-<p>如果我们想用第1块显卡，则对应于matlab下面的第2块.可以使用reset 设定.<br><figure class="highlight gams"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">$</span> g=gpuDevice(<span class="number">2</span>)</div><div class="line"><span class="symbol">$</span> reset(g)</div><div class="line"><span class="symbol">$</span> <span class="keyword">system</span>(<span class="string">'nvidia-smi'</span>)  %调用系统命令查看</div></pre></td></tr></table></figure></p>
-<p><img src="../../../../image/resetgpu.png" alt=""><br>可以看到第1块显卡被启动，也可以使用matlab 提供的函数gpuDevice 查看.</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gpuDevice</div></pre></td></tr></table></figure>
-<p><img src="../../../../image/viewgpudevice.png" alt=""><br>可以看到当前的GPU的编号为2,对应于系统的1.</p>
-<h2 id="GPU-与-CPU-之间的数据交换"><a href="#GPU-与-CPU-之间的数据交换" class="headerlink" title="GPU 与 CPU 之间的数据交换"></a>GPU 与 CPU 之间的数据交换</h2><p>gpuArray<br>MATLAB中的gpuArray表示存储在GPU上的数据。使用gpuArray函数可以将数据从MATLAB工作空间传送到GPU。例如：<br><figure class="highlight ini"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attr">A</span> = data(<span class="number">10</span>);</div><div class="line"><span class="attr">G</span> = gpuArray(A);</div></pre></td></tr></table></figure></p>
-<p>gather<br>执行以上语句后，G 就是一个MATLAB GPUArray对象了。<br>当GPU运行完程序后，可以通过gather函数将数据从GPU取回到MATLAB工作空间。<br><figure class="highlight ini"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attr">D</span> = gather(G);</div></pre></td></tr></table></figure></p>
+        <p>安装完Ubuntu后，是不是有一点点小兴奋，马上就要使用这个与win截然不同的系统了，让我们看看，还要做点什么。<br><a id="more"></a> </p>
+<p>1 安装中文输入法 <a href="http://pinyin.sogou.com/linux/help.php" target="_blank" rel="external">http://pinyin.sogou.com/linux/help.php</a><br>Ubuntu自带的输入法是ibus，使用起来并不是特别方便，大家可以使用搜狗输入法，来体验飞一般的输入速度。</p>
+<p>2 更新语言支持<br>在一般情况下安装完成后，系统的语言支持并不是很完整，所以我们需要对语言支持进行更新。打开系统设置》语言支持，系统会自动更新语言信息，如果需要安装语言支持，则点击安装即可。</p>
+<p>3 安装flash插件以及额外的版权受限程序<br>flash插件是保证网页视频能正常播放的前提，所以大家需要安装它来正常浏览网页及观看视频，同时额外的版权受限程序包含了一些视频音频的解码器是在本地播放音频视频所必须的，flash插件及额外的版权受限程序都可以在Ubuntu软件中心安装，大家可以在Ubuntu软件中心进行安装。</p>
+<p>6 ubuntu 下的PDF 阅读器 okular [ˈɔkjələ]   中文意思是 眼睛, 这个软件是一用就让你爱上他的那种</p>
+<p>   sudo apt-get install okular </p>
+<p>7 安装 vim </p>
+<p>   sudo apt-get insall vim<br>8 安装很多 LaTeX<br>    使用下面命令可以在 Ubuntu 上安装 Tex Live<br>    sudo apt-get install texlive-full<br>    要编辑 LaTeX 文档需要一个编辑器，你可以找到很多编辑器，这里我们推荐 Texmaker<br>    sudo apt-get install texmaker<br>    在 Ubuntu 下执行下面命令可以打开 Texmaker 编辑器：<br>    texmaker<br>    现在让我们用 Texmaker 创建一个简单的文档，点击 File -&gt; New 然后在新文档中插入如下内容：</p>
+<pre><code>\documentclass{article}
+
+\begin{document}
+
+  Hello oschina!
+
+\end{document}
+</code></pre><p>9 安装VNC<br>  在 <a href="https://www.realvnc.com/download/vnc/" target="_blank" rel="external">https://www.realvnc.com/download/vnc/</a> 下载<br>  解压 tar -xvf VNC-5.3.2-Linux-x64-DEB.tar.gz<br>  sudo dpkg -i VNC-Server-5.3.2-Linux-x64.deb VNC-Viewer-5.3.2-Linux-x64.deb </p>
+<p>10  安装配置git服务器<br>    sudo apt-get install git<br>    <a href="http://yife.im/install-git-and-setting-in-ubuntu/" target="_blank" rel="external">http://yife.im/install-git-and-setting-in-ubuntu/</a></p>
+<p>11 HEXO+Github,搭建属于自己的博客<br>   <a href="http://www.jianshu.com/p/465830080ea9" target="_blank" rel="external">http://www.jianshu.com/p/465830080ea9</a><br>   ERROR Deployer not found: git<br>   <a href="https://github.com/hexojs/hexo/wiki/Migrating-from-2.x-to-3.0" target="_blank" rel="external">https://github.com/hexojs/hexo/wiki/Migrating-from-2.x-to-3.0</a></p>
 
       
     </div>
@@ -195,9 +202,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/matlab/"> #matlab </a>
+            <a href="/tags/CNN/"> #CNN </a>
           
-            <a href="/tags/gpu/"> #gpu </a>
+            <a href="/tags/Visualizing/"> #Visualizing </a>
           
         </div>
       
@@ -206,13 +213,11 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/06/17/Matlab-常见问题整理/">Matlab 常见问题整理</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/06/07/CV-and-ML-Conference/">CV and ML Conference</a>
+              <a href="/2016/06/04/ReadingPaperList/">Reading Papers List</a>
             
           </div>
         </div>
@@ -228,8 +233,8 @@
     
       <div class="comments" id="comments">
         
-          <div class="ds-thread" data-thread-key="2015/06/12/Matlab and GPU/"
-               data-title="Matlab and GPU" data-url="http://gaobb.github.io/2015/06/12/Matlab and GPU/">
+          <div class="ds-thread" data-thread-key="2016/07/20/ubuntu装机必干的事情/"
+               data-title="Ubuntu 装机后必须要做的事情" data-url="http://gaobb.github.io/2016/07/20/ubuntu装机必干的事情/">
           </div>
         
       </div>
@@ -339,7 +344,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#查看服务器GPU计算资源"><span class="nav-number">1.</span> <span class="nav-text">查看服务器GPU计算资源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GPU-与-CPU-之间的数据交换"><span class="nav-number">2.</span> <span class="nav-text">GPU 与 CPU 之间的数据交换</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
