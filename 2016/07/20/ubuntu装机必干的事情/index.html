@@ -20,7 +20,7 @@
 
 
 
-  <meta name="keywords" content="CNN,Visualizing," />
+  <meta name="keywords" content="Linux,Ubuntu," />
 
 
 
@@ -177,23 +177,20 @@
 
       
         <p>安装完Ubuntu后，是不是有一点点小兴奋，马上就要使用这个与win截然不同的系统了，让我们看看，还要做点什么。<br><a id="more"></a> </p>
-<p>1 安装中文输入法 <a href="http://pinyin.sogou.com/linux/help.php" target="_blank" rel="external">http://pinyin.sogou.com/linux/help.php</a><br>Ubuntu自带的输入法是ibus，使用起来并不是特别方便，大家可以使用搜狗输入法，来体验飞一般的输入速度。</p>
-<p>2 更新语言支持<br>在一般情况下安装完成后，系统的语言支持并不是很完整，所以我们需要对语言支持进行更新。打开系统设置》语言支持，系统会自动更新语言信息，如果需要安装语言支持，则点击安装即可。</p>
-<p>3 安装flash插件以及额外的版权受限程序<br>flash插件是保证网页视频能正常播放的前提，所以大家需要安装它来正常浏览网页及观看视频，同时额外的版权受限程序包含了一些视频音频的解码器是在本地播放音频视频所必须的，flash插件及额外的版权受限程序都可以在Ubuntu软件中心安装，大家可以在Ubuntu软件中心进行安装。</p>
-<p>6 ubuntu 下的PDF 阅读器 okular [ˈɔkjələ]   中文意思是 眼睛, 这个软件是一用就让你爱上他的那种</p>
-<p>   sudo apt-get install okular </p>
-<p>7 安装 vim </p>
-<p>   sudo apt-get insall vim<br>8 安装很多 LaTeX<br>    使用下面命令可以在 Ubuntu 上安装 Tex Live<br>    sudo apt-get install texlive-full<br>    要编辑 LaTeX 文档需要一个编辑器，你可以找到很多编辑器，这里我们推荐 Texmaker<br>    sudo apt-get install texmaker<br>    在 Ubuntu 下执行下面命令可以打开 Texmaker 编辑器：<br>    texmaker<br>    现在让我们用 Texmaker 创建一个简单的文档，点击 File -&gt; New 然后在新文档中插入如下内容：</p>
-<pre><code>\documentclass{article}
-
-\begin{document}
-
-  Hello oschina!
-
-\end{document}
-</code></pre><p>9 安装VNC<br>  在 <a href="https://www.realvnc.com/download/vnc/" target="_blank" rel="external">https://www.realvnc.com/download/vnc/</a> 下载<br>  解压 tar -xvf VNC-5.3.2-Linux-x64-DEB.tar.gz<br>  sudo dpkg -i VNC-Server-5.3.2-Linux-x64.deb VNC-Viewer-5.3.2-Linux-x64.deb </p>
-<p>10  安装配置git服务器<br>    sudo apt-get install git<br>    <a href="http://yife.im/install-git-and-setting-in-ubuntu/" target="_blank" rel="external">http://yife.im/install-git-and-setting-in-ubuntu/</a></p>
-<p>11 HEXO+Github,搭建属于自己的博客<br>   <a href="http://www.jianshu.com/p/465830080ea9" target="_blank" rel="external">http://www.jianshu.com/p/465830080ea9</a><br>   ERROR Deployer not found: git<br>   <a href="https://github.com/hexojs/hexo/wiki/Migrating-from-2.x-to-3.0" target="_blank" rel="external">https://github.com/hexojs/hexo/wiki/Migrating-from-2.x-to-3.0</a></p>
+<h2 id="更新与升级"><a href="#更新与升级" class="headerlink" title="更新与升级"></a>更新与升级</h2><figure class="highlight processing"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-<span class="built_in">get</span> update &amp;&amp; sudo apt-<span class="built_in">get</span> <span class="built_in">dist</span>-upgrade</div></pre></td></tr></table></figure>
+<h2 id="安装中文输入法"><a href="#安装中文输入法" class="headerlink" title="安装中文输入法"></a>安装中文输入法</h2><p><a href="http://pinyin.sogou.com/linux/help.php" target="_blank" rel="external">http://pinyin.sogou.com/linux/help.php</a><br>Ubuntu自带的输入法是ibus，使用起来并不是特别方便，大家可以使用搜狗输入法，来体验飞一般的输入速度。</p>
+<h2 id="更新语言支持"><a href="#更新语言支持" class="headerlink" title="更新语言支持"></a>更新语言支持</h2><p>在一般情况下安装完成后，系统的语言支持并不是很完整，所以我们需要对语言支持进行更新。打开系统设置》语言支持，系统会自动更新语言信息，如果需要安装语言支持，则点击安装即可。</p>
+<h2 id="安装flash插件以及额外的版权受限程序"><a href="#安装flash插件以及额外的版权受限程序" class="headerlink" title="安装flash插件以及额外的版权受限程序"></a>安装flash插件以及额外的版权受限程序</h2><p>flash插件是保证网页视频能正常播放的前提，所以大家需要安装它来正常浏览网页及观看视频，同时额外的版权受限程序包含了一些视频音频的解码器是在本地播放音频视频所必须的，flash插件及额外的版权受限程序都可以在Ubuntu软件中心安装，大家可以在Ubuntu软件中心进行安装。</p>
+<h2 id="安装-vim"><a href="#安装-vim" class="headerlink" title="安装 vim"></a>安装 vim</h2><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-<span class="built_in">get</span> insall <span class="keyword">vim</span></div></pre></td></tr></table></figure>
+<h2 id="PDF-阅读器"><a href="#PDF-阅读器" class="headerlink" title="PDF 阅读器"></a>PDF 阅读器</h2><p>okular [ˈɔkjələ]   中文意思是 眼睛, 这个软件是一用就让你爱上他的那种<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-<span class="keyword">get</span> install okular</div></pre></td></tr></table></figure></p>
+<h2 id="安装很多-LaTeX"><a href="#安装很多-LaTeX" class="headerlink" title="安装很多 LaTeX"></a>安装很多 LaTeX</h2><p>使用下面命令可以在 Ubuntu 上安装 Tex Live<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get <span class="keyword">install</span> texlive-<span class="keyword">full</span></div></pre></td></tr></table></figure></p>
+<p>要编辑 LaTeX 文档需要一个编辑器，你可以找到很多编辑器，这里我们推荐 Texmaker<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-<span class="keyword">get</span> install texmaker</div></pre></td></tr></table></figure></p>
+<p>在 Ubuntu 下执行下面命令可以打开 Texmaker 编辑器：<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">texmaker</div></pre></td></tr></table></figure></p>
+<p>现在让我们用 Texmaker 创建一个简单的文档，点击 File -&gt; New 然后在新文档中插入如下内容：<br><figure class="highlight tex"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">\<span class="name">documentclass</span><span class="string">&#123;article&#125;</span></span></div><div class="line"><span class="tag">\<span class="name">begin</span><span class="string">&#123;document&#125;</span></span></div><div class="line">Hello oschina!</div><div class="line"><span class="tag">\<span class="name">end</span><span class="string">&#123;document&#125;</span></span></div></pre></td></tr></table></figure></p>
+<h2 id="安装VNC"><a href="#安装VNC" class="headerlink" title="安装VNC"></a>安装VNC</h2><p>在 <a href="https://www.realvnc.com/download/vnc/" target="_blank" rel="external">https://www.realvnc.com/download/vnc/</a> 下载<br>解压 tar -xvf VNC-5.3.2-Linux-x64-DEB.tar.gz<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">sudo</span> <span class="selector-tag">dpkg</span> <span class="selector-tag">-i</span> <span class="selector-tag">VNC-Server-5</span><span class="selector-class">.3</span><span class="selector-class">.2-Linux-x64</span><span class="selector-class">.deb</span> <span class="selector-tag">VNC-Viewer-5</span><span class="selector-class">.3</span><span class="selector-class">.2-Linux-x64</span><span class="selector-class">.deb</span></div></pre></td></tr></table></figure></p>
+<h2 id="安装配置git服务器"><a href="#安装配置git服务器" class="headerlink" title="安装配置git服务器"></a>安装配置git服务器</h2><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-<span class="keyword">get</span> install git</div></pre></td></tr></table></figure>
+<p><a href="http://yife.im/install-git-and-setting-in-ubuntu/" target="_blank" rel="external">http://yife.im/install-git-and-setting-in-ubuntu/</a></p>
+<h2 id="HEXO-Github-搭建属于自己的博客"><a href="#HEXO-Github-搭建属于自己的博客" class="headerlink" title="HEXO+Github,搭建属于自己的博客"></a>HEXO+Github,搭建属于自己的博客</h2><p><a href="http://www.jianshu.com/p/465830080ea9" target="_blank" rel="external">http://www.jianshu.com/p/465830080ea9</a><br>ERROR Deployer not found: git<br><a href="https://github.com/hexojs/hexo/wiki/Migrating-from-2.x-to-3.0" target="_blank" rel="external">https://github.com/hexojs/hexo/wiki/Migrating-from-2.x-to-3.0</a></p>
 
       
     </div>
@@ -202,9 +199,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/CNN/"> #CNN </a>
+            <a href="/tags/Linux/"> #Linux </a>
           
-            <a href="/tags/Visualizing/"> #Visualizing </a>
+            <a href="/tags/Ubuntu/"> #Ubuntu </a>
           
         </div>
       
@@ -281,7 +278,7 @@
         <div class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">18</span>
+              <span class="site-state-item-count">17</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -295,7 +292,7 @@
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">27</span>
+              <span class="site-state-item-count">28</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
@@ -344,7 +341,7 @@
           <div class="post-toc">
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#更新与升级"><span class="nav-number">1.</span> <span class="nav-text">更新与升级</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装中文输入法"><span class="nav-number">2.</span> <span class="nav-text">安装中文输入法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#更新语言支持"><span class="nav-number">3.</span> <span class="nav-text">更新语言支持</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装flash插件以及额外的版权受限程序"><span class="nav-number">4.</span> <span class="nav-text">安装flash插件以及额外的版权受限程序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装-vim"><span class="nav-number">5.</span> <span class="nav-text">安装 vim</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PDF-阅读器"><span class="nav-number">6.</span> <span class="nav-text">PDF 阅读器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装很多-LaTeX"><span class="nav-number">7.</span> <span class="nav-text">安装很多 LaTeX</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装VNC"><span class="nav-number">8.</span> <span class="nav-text">安装VNC</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装配置git服务器"><span class="nav-number">9.</span> <span class="nav-text">安装配置git服务器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HEXO-Github-搭建属于自己的博客"><span class="nav-number">10.</span> <span class="nav-text">HEXO+Github,搭建属于自己的博客</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
