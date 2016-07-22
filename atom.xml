@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gaobb.github.io/"/>
-  <updated>2016-07-20T13:46:43.226Z</updated>
+  <updated>2016-07-21T09:15:42.701Z</updated>
   <id>http://gaobb.github.io/</id>
   
   <author>
@@ -16,11 +16,76 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>论文笔记 《Learning to segment with image-level annotations》</title>
+    <link href="http://gaobb.github.io/2016/07/21/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0HCP-SS/"/>
+    <id>http://gaobb.github.io/2016/07/21/论文笔记HCP-SS/</id>
+    <published>2016-07-21T15:11:27.000Z</published>
+    <updated>2016-07-21T09:15:42.701Z</updated>
+    
+    <content type="html"><![CDATA[<p>这篇论文提出一种弱监督语义分割算法，仅仅使用图像类别水平的标注. </p>
+<p><a href="">pdf</a><br><a id="more"></a> </p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这篇论文提出一种弱监督语义分割算法，仅仅使用图像类别水平的标注. &lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;&quot;&gt;pdf&lt;/a&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="论文笔记" scheme="http://gaobb.github.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="Segmentation" scheme="http://gaobb.github.io/tags/Segmentation/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>论文笔记 《ScribbleSup Scribble-Supervised Convolutional Networks for Semantic Segmentation》</title>
+    <link href="http://gaobb.github.io/2016/07/21/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0ScribbleSup/"/>
+    <id>http://gaobb.github.io/2016/07/21/论文笔记ScribbleSup/</id>
+    <published>2016-07-21T08:53:27.000Z</published>
+    <updated>2016-07-21T09:15:39.831Z</updated>
+    
+    <content type="html"><![CDATA[<p>这篇论文提出一种弱监督语义分割算法，仅仅使用scribble 标注. 该算法首先使用图模型（GrubCut）从scibble传播信息到未标注的像素，然后可以使用全卷积神经网络(FCN)的框架进行像素级别的预测. 整个学习的过程在传播信息和训练FCN之间交替进行. 因此该算法可以简单地认为是 GrubCut 和 FCN 的结合.<br><a id="more"></a><br><a href="http://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Lin_ScribbleSup_Scribble-Supervised_Convolutional_CVPR_2016_paper.pdf" target="_blank" rel="external">PDF</a> <a href="http://research.microsoft.com/en-us/um/people/jifdai/downloads/scribble_sup/" target="_blank" rel="external">项目</a></p>
+<h2 id="学习的整体框架"><a href="#学习的整体框架" class="headerlink" title="学习的整体框架"></a>学习的整体框架</h2><p><img src="/image/scribblesup.png" alt=""></p>
+<h4 id="Scrrible-SUP-学习"><a href="#Scrrible-SUP-学习" class="headerlink" title="Scrrible-SUP 学习"></a>Scrrible-SUP 学习</h4><p>Task1: 该算法要从scibble传播信息到未标注的像素 方案：GrubCut</p>
+<p>Task2: 该算法要学习一个卷积神经网络以便进行像素级别的预测 方案：FCN<br>目标函数：</p>
+<p><img src="/image/scribble_fun.png" alt=""></p>
+<p>该目标函数包含两部分，第一项是单个超像素的一元项，第二项是关于一对超像素的pairwise 项.</p>
+<p>一元项包括两部分，第一部分基于 scribble 的信息，定义如下：</p>
+<p><img src="/image/scribble_unary1.png" alt=""></p>
+<p>第一个条件：如果一个超像素和scribble 重合，该超像素被赋予标记 c_k, cost 为0.<br>第二个条件：如果一个超像素和任意的scribble 没有重合，该像素被等可能的给予任何可能的标记.</p>
+<p>第二部分是基于FCN 的网络输出，定义为 所有像素对数概率的和.<br><img src="/image/scribble_unary2.png" alt=""></p>
+<p>Pairwise 项建模两个超像素的相似性. 相似性在本文中用颜色和文理的直方图来量化.<br><img src="/image/scribble_pairwise.png" alt=""><br>临近的超像素给予不同的标记，如果他们在颜色和纹理方面比较接近，则会有较高的 cost.</p>
+<h5 id="交替优化"><a href="#交替优化" class="headerlink" title="交替优化"></a>交替优化</h5><p><img src="/image/scribble_opt.png" alt=""></p>
+<h5 id="实验结果"><a href="#实验结果" class="headerlink" title="实验结果"></a>实验结果</h5><p>Strategies of utilizing scribbles<br>两阶段的方法： 基于Scribble 直接使用GrubCut, Lazysnapping 生成Masks, 然后使用 FCN 的框架训练.</p>
+<p>本文方法（Mean IoU：63.1%）比两阶段的方法高 10%.</p>
+<p>Sensitivities to scribble quality</p>
+<p>使用不同长度的 scribble. 结果表明该方法对 scribble 的质量是十分稳健, 特别是当 scribble 缩小到一个点时，任然有 51.6% 的score.</p>
+<p>Comparisons with other weakly-supervised methods</p>
+<p>Comparisons with using masks</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这篇论文提出一种弱监督语义分割算法，仅仅使用scribble 标注. 该算法首先使用图模型（GrubCut）从scibble传播信息到未标注的像素，然后可以使用全卷积神经网络(FCN)的框架进行像素级别的预测. 整个学习的过程在传播信息和训练FCN之间交替进行. 因此该算法可以简单地认为是 GrubCut 和 FCN 的结合.&lt;br&gt;
+    
+    </summary>
+    
+      <category term="论文笔记" scheme="http://gaobb.github.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="Segmentation" scheme="http://gaobb.github.io/tags/Segmentation/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Ubuntu 装机后必须要做的事情</title>
     <link href="http://gaobb.github.io/2016/07/20/ubuntu%E8%A3%85%E6%9C%BA%E5%BF%85%E5%B9%B2%E7%9A%84%E4%BA%8B%E6%83%85/"/>
     <id>http://gaobb.github.io/2016/07/20/ubuntu装机必干的事情/</id>
     <published>2016-07-20T03:42:37.000Z</published>
-    <updated>2016-07-20T13:46:43.226Z</updated>
+    <updated>2016-07-20T14:00:39.735Z</updated>
     
     <content type="html"><![CDATA[<p>安装完Ubuntu后，是不是有一点点小兴奋，马上就要使用这个与win截然不同的系统了，让我们看看，还要做点什么。<br><a id="more"></a> </p>
 <h2 id="更新与升级"><a href="#更新与升级" class="headerlink" title="更新与升级"></a>更新与升级</h2><figure class="highlight processing"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-<span class="built_in">get</span> update &amp;&amp; sudo apt-<span class="built_in">get</span> <span class="built_in">dist</span>-upgrade</div></pre></td></tr></table></figure>
@@ -222,13 +287,13 @@
     <link href="http://gaobb.github.io/2015/09/10/%E5%B9%B4%E9%BE%84%E4%BC%B0%E8%AE%A1/"/>
     <id>http://gaobb.github.io/2015/09/10/年龄估计/</id>
     <published>2015-09-10T00:43:52.000Z</published>
-    <updated>2016-06-06T05:19:52.164Z</updated>
+    <updated>2016-07-22T12:29:36.730Z</updated>
     
     <content type="html"><![CDATA[<p>ＣonvNet年龄估计技术总结．人脸含有非常重要的个人信息，无论我们随身携带的各种证件，还是电子档案，都有一个非常重要的位置用于放置脸部照片．人脸识别(身份验证，表情，种族，性别，年龄）是人脸研究核心课题，人脸检测, 人脸关键点对准是做好人脸识别的基础．由于人脸识别广阔的应用前景，国内关于人脸识别的公司陆续上市，例如 <a href="http://www.linkface.cn/" target="_blank" rel="external">LinkFace </a>， <a href="http://www.faceplusplus.com.cn/" target="_blank" rel="external">Face++</a>．本文主要总结最近的一个工作（年龄估计）．<br><a id="more"></a> </p>
-<h2 id="人脸检测-Face-detection"><a href="#人脸检测-Face-detection" class="headerlink" title="人脸检测(Face detection)"></a>人脸检测(Face detection)</h2><p>脸部含有人类年龄最重要的信息，因此做年龄估计的第一步就是如何准确Crop　出一张脸，通常称作人脸检测．伴随深度学习等技术的迅速发展，人脸检测的准确度有了很大提高．很多相关的成果在最近几年的顶级会议或者期刊发表．其中<a href="http://markusmathias.bitbucket.org/2014_eccv_face_detection/" target="_blank" rel="external">DPM,ECCV2014</a> 是一个非常成功的方法．<br><img src="../../../../image/oscar.medium.png" alt="DPM"></p>
-<h2 id="关键点检测-Key-points-与人脸矫正-Face-alignment"><a href="#关键点检测-Key-points-与人脸矫正-Face-alignment" class="headerlink" title="关键点检测(Key points)　与人脸矫正(Face alignment)"></a>关键点检测(Key points)　与人脸矫正(Face alignment)</h2><p>在一张人脸图像上，关键点主要是以下５个位置：一双眼睛，鼻尖，嘴巴的两角．如果能够准确的预测这５个位置，那么对于人脸识别的相关任务意义不言而喻．但是在实际应用中人脸图像由于受到姿态，表情，灯光，遮挡等复杂因素的影响，对于解决这个问题带来严重的挑战．为了解决这个问题，各种模型以及算法被提出． 香港中文大学　<a href="http://www.ie.cuhk.edu.hk/people/xotang.shtml" target="_blank" rel="external">Prof. Xiaoou Tang</a> 带领的 <a href="http://mmlab.ie.cuhk.edu.hk/" target="_blank" rel="external">Multimedia Laboratory</a> 在解决这个问题取得重大成功，他们的<a href="http://mmlab.ie.cuhk.edu.hk/archive/CNN_FacePoint.htm" target="_blank" rel="external">工作</a> 发表在 CVPR2013. 只要提取到关键点，对齐将是一件比较容易的事情，常用的方法比如模板匹配．<br><img src="../../../../image/keypoints.png" alt=""></p>
+<h2 id="人脸检测-Face-detection"><a href="#人脸检测-Face-detection" class="headerlink" title="人脸检测(Face detection)"></a>人脸检测(Face detection)</h2><p>脸部含有人类年龄最重要的信息，因此做年龄估计的第一步就是如何准确Crop　出一张脸，通常称作人脸检测．伴随深度学习等技术的迅速发展，人脸检测的准确度有了很大提高．很多相关的成果在最近几年的顶级会议或者期刊发表．其中<a href="http://markusmathias.bitbucket.org/2014_eccv_face_detection/" target="_blank" rel="external">DPM,ECCV2014</a> 是一个非常成功的方法．<br><img src="/image/oscar.medium.png" alt="DPM"></p>
+<h2 id="关键点检测-Key-points-与人脸矫正-Face-alignment"><a href="#关键点检测-Key-points-与人脸矫正-Face-alignment" class="headerlink" title="关键点检测(Key points)　与人脸矫正(Face alignment)"></a>关键点检测(Key points)　与人脸矫正(Face alignment)</h2><p>在一张人脸图像上，关键点主要是以下５个位置：一双眼睛，鼻尖，嘴巴的两角．如果能够准确的预测这５个位置，那么对于人脸识别的相关任务意义不言而喻．但是在实际应用中人脸图像由于受到姿态，表情，灯光，遮挡等复杂因素的影响，对于解决这个问题带来严重的挑战．为了解决这个问题，各种模型以及算法被提出． 香港中文大学　<a href="http://www.ie.cuhk.edu.hk/people/xotang.shtml" target="_blank" rel="external">Prof. Xiaoou Tang</a> 带领的 <a href="http://mmlab.ie.cuhk.edu.hk/" target="_blank" rel="external">Multimedia Laboratory</a> 在解决这个问题取得重大成功，他们的<a href="http://mmlab.ie.cuhk.edu.hk/archive/CNN_FacePoint.htm" target="_blank" rel="external">工作</a> 发表在 CVPR2013. 只要提取到关键点，对齐将是一件比较容易的事情，常用的方法比如模板匹配．<br><img src="/image/keypoints.png" alt=""></p>
 <h2 id="训练CNN-Training-CNN"><a href="#训练CNN-Training-CNN" class="headerlink" title="训练CNN(Training CNN)"></a>训练CNN(Training CNN)</h2><p>最终目的是要根据人脸面部的表征预测年龄．有了前面的准备工作，可能很多人会想，只要把这些数据塞到一个深度卷积网络（ＣonvNet）训练不就好了吗？遗憾的是要成功的训练一个ＣonvNet　并非易事．因为ＣonvNet能够取得成功一个重要因素就是大量的训练样本．但是目前公开的相关的年龄的数据集训练样本相当有限，例如 Morph 作为最大的数据集也仅仅只有５万多张．因此训练样本成为使用ＣonvNet　模型估计年龄的瓶颈．我们的工作正是为了解决这一问题．<br>……</p>
-<h2 id="估计年龄-Age-estimation"><a href="#估计年龄-Age-estimation" class="headerlink" title="估计年龄(Age estimation)"></a>估计年龄(Age estimation)</h2><p>这里提供一个演示．使用我们的方法在一些测试数据年龄的预测结果．<br><img src="../../../../image/pre_age.gif" alt=""></p>
+<h2 id="估计年龄-Age-estimation"><a href="#估计年龄-Age-estimation" class="headerlink" title="估计年龄(Age estimation)"></a>估计年龄(Age estimation)</h2><p>这里提供一个演示．使用我们的方法在一些测试数据年龄的预测结果．<br><img src="/image/pre_age.gif" alt=""><br><img src="/image/3-c.png" alt=""><br><img src="/image/8-c.png" alt=""><br><img src="/image/9-c.png" alt=""></p>
 ]]></content>
     
     <summary type="html">
@@ -284,8 +349,8 @@
   
   <entry>
     <title>论文笔记Very deep convolutional neural network for large scale image recognition</title>
-    <link href="http://gaobb.github.io/2015/06/19/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0Very-deep-convolutional-neural-network-for-large-scale-image-recognition/"/>
-    <id>http://gaobb.github.io/2015/06/19/论文笔记Very-deep-convolutional-neural-network-for-large-scale-image-recognition/</id>
+    <link href="http://gaobb.github.io/2015/06/19/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0VGG/"/>
+    <id>http://gaobb.github.io/2015/06/19/论文笔记VGG/</id>
     <published>2015-06-18T17:31:09.000Z</published>
     <updated>2015-06-18T17:46:13.931Z</updated>
     
@@ -380,6 +445,37 @@
   </entry>
   
   <entry>
+    <title>使用hexo搭建博客</title>
+    <link href="http://gaobb.github.io/2015/06/07/%E4%BD%BF%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://gaobb.github.io/2015/06/07/使用hexo搭建博客/</id>
+    <published>2015-06-07T03:21:39.000Z</published>
+    <updated>2016-01-11T09:12:21.665Z</updated>
+    
+    <content type="html"><![CDATA[<p>使用hexo搭建博客<br><a id="more"></a> </p>
+<h2 id="配置好Node-js环境"><a href="#配置好Node-js环境" class="headerlink" title="配置好Node.js环境"></a>配置好Node.js环境</h2><p>sudo apt-get install nodejs-legacy</p>
+<p>node –version<br>v4.2.4</p>
+<h2 id="配置npm工具"><a href="#配置npm工具" class="headerlink" title="配置npm工具"></a>配置npm工具</h2><p>sudo apt-get install npm</p>
+<p>npm –version<br>3.5.2</p>
+<h2 id="配置-Git"><a href="#配置-Git" class="headerlink" title="配置 Git"></a>配置 Git</h2><p>sudo apt-get install git</p>
+<p>git  –version<br>git version 2.7.0.rc3</p>
+<h2 id="配置-hexo"><a href="#配置-hexo" class="headerlink" title="配置 hexo"></a>配置 hexo</h2><p>sudo  npm install -g hexo<br>hexo init <folder></folder></p>
+<p>hexo server  启动本地服务器<br>hexo deploy<br>hexo genernate</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;使用hexo搭建博客&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://gaobb.github.io/categories/Linux/"/>
+    
+    
+      <category term="linux" scheme="http://gaobb.github.io/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
     <title>linux系统常见问题整理</title>
     <link href="http://gaobb.github.io/2015/06/07/linux%E7%B3%BB%E7%BB%9F%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%95%B4%E7%90%86/"/>
     <id>http://gaobb.github.io/2015/06/07/linux系统常见问题整理/</id>
@@ -404,7 +500,7 @@
 <h2 id="查看，杀死僵尸进程"><a href="#查看，杀死僵尸进程" class="headerlink" title="查看，杀死僵尸进程"></a>查看，杀死僵尸进程</h2><figure class="highlight perl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$   ps -ef | <span class="keyword">grep</span> defunct | <span class="keyword">grep</span> -v <span class="keyword">grep</span></div><div class="line">$   ps -A -o <span class="keyword">stat</span>,ppid,pid,cmd | <span class="keyword">grep</span> -e <span class="string">'^[Zz]'</span> | awk <span class="string">'&#123;print $2&#125;'</span> | xargs <span class="keyword">kill</span> -<span class="number">9</span></div><div class="line">               ps -A -o <span class="keyword">stat</span>,ppid,pid,cmd |<span class="keyword">grep</span> -e <span class="string">"^[Zz]"</span></div></pre></td></tr></table></figure>
 <h2 id="升级到Ubuntu-16-04的方法"><a href="#升级到Ubuntu-16-04的方法" class="headerlink" title="升级到Ubuntu 16.04的方法"></a>升级到Ubuntu 16.04的方法</h2><figure class="highlight q"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$  sudo apt-<span class="built_in">get</span> <span class="keyword">update</span> %先刷新源：</div><div class="line">$  sudo <span class="keyword">update</span>-manager -c -d  %执行更新：</div></pre></td></tr></table></figure>
 <h2 id="linux下测试磁盘的读写IO速度"><a href="#linux下测试磁盘的读写IO速度" class="headerlink" title="linux下测试磁盘的读写IO速度"></a>linux下测试磁盘的读写IO速度</h2><p>有时候我们在做维护的时候，总会遇到类似于IO特别高，但不能判定是IO瓶颈还是软件参数设置不当导致热盘的问题.这时候通常希望能知道磁盘的读写速度，来进行下一步的决策.</p>
-<p>下面是两种测试方法：<br>(1)使用hdparm命令<br>这是一个是用来获取ATA/IDE硬盘的参数的命令,是由早期Linux IDE驱动的开发和维护人员 Mark Lord开发编写的( hdparm has been written by Mark Lord <a href="&#109;&#x61;&#x69;&#108;&#x74;&#x6f;&#x3a;&#109;&#108;&#x6f;&#114;&#100;&#x40;&#x70;&#111;&#x62;&#111;&#120;&#x2e;&#99;&#x6f;&#109;">&#109;&#108;&#x6f;&#114;&#100;&#x40;&#x70;&#111;&#x62;&#111;&#120;&#x2e;&#99;&#x6f;&#109;</a>, the primary developer and maintainer of the (E)IDE driver for Linux, with suggestions from many netfolk).该命令应该也是仅用于Linux系统,对于UNIX系统，ATA/IDE硬盘用的可能比较少，一般大型的系统都是使用磁盘阵列的.</p>
+<p>下面是两种测试方法：<br>(1)使用hdparm命令<br>这是一个是用来获取ATA/IDE硬盘的参数的命令,是由早期Linux IDE驱动的开发和维护人员 Mark Lord开发编写的( hdparm has been written by Mark Lord <a href="&#109;&#97;&#x69;&#x6c;&#116;&#x6f;&#58;&#x6d;&#108;&#111;&#x72;&#x64;&#64;&#x70;&#x6f;&#x62;&#111;&#x78;&#x2e;&#99;&#x6f;&#x6d;">&#x6d;&#108;&#111;&#x72;&#x64;&#64;&#x70;&#x6f;&#x62;&#111;&#x78;&#x2e;&#99;&#x6f;&#x6d;</a>, the primary developer and maintainer of the (E)IDE driver for Linux, with suggestions from many netfolk).该命令应该也是仅用于Linux系统,对于UNIX系统，ATA/IDE硬盘用的可能比较少，一般大型的系统都是使用磁盘阵列的.</p>
 <p>使用方法很简单</p>
 <h1 id="hdparm-Tt-dev-sda"><a href="#hdparm-Tt-dev-sda" class="headerlink" title="hdparm -Tt /dev/sda"></a>hdparm -Tt /dev/sda</h1><p>/dev/sda:<br>Timing cached reads: 6676 MB in 2.00 seconds = 3340.18 MB/sec<br>Timing buffered disk reads: 218 MB in 3.11 seconds = 70.11 MB/sec</p>
 <p>可以看到,2秒钟读取了6676MB的缓存,约合3340.18 MB/sec;<br>在3.11秒中读取了218MB磁盘(物理读),读取速度约合70.11 MB/sec</p>
@@ -461,37 +557,6 @@ sudo apt-get install -f
     <summary type="html">
     
       &lt;p&gt;本文总结一些在Linux 系统下常见的一些问题以及解决方案.&lt;br&gt;
-    
-    </summary>
-    
-      <category term="Linux" scheme="http://gaobb.github.io/categories/Linux/"/>
-    
-    
-      <category term="linux" scheme="http://gaobb.github.io/tags/linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>使用hexo搭建博客</title>
-    <link href="http://gaobb.github.io/2015/06/07/%E4%BD%BF%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
-    <id>http://gaobb.github.io/2015/06/07/使用hexo搭建博客/</id>
-    <published>2015-06-07T03:21:39.000Z</published>
-    <updated>2016-01-11T09:12:21.665Z</updated>
-    
-    <content type="html"><![CDATA[<p>使用hexo搭建博客<br><a id="more"></a> </p>
-<h2 id="配置好Node-js环境"><a href="#配置好Node-js环境" class="headerlink" title="配置好Node.js环境"></a>配置好Node.js环境</h2><p>sudo apt-get install nodejs-legacy</p>
-<p>node –version<br>v4.2.4</p>
-<h2 id="配置npm工具"><a href="#配置npm工具" class="headerlink" title="配置npm工具"></a>配置npm工具</h2><p>sudo apt-get install npm</p>
-<p>npm –version<br>3.5.2</p>
-<h2 id="配置-Git"><a href="#配置-Git" class="headerlink" title="配置 Git"></a>配置 Git</h2><p>sudo apt-get install git</p>
-<p>git  –version<br>git version 2.7.0.rc3</p>
-<h2 id="配置-hexo"><a href="#配置-hexo" class="headerlink" title="配置 hexo"></a>配置 hexo</h2><p>sudo  npm install -g hexo<br>hexo init <folder></folder></p>
-<p>hexo server  启动本地服务器<br>hexo deploy<br>hexo genernate</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;使用hexo搭建博客&lt;br&gt;
     
     </summary>
     
