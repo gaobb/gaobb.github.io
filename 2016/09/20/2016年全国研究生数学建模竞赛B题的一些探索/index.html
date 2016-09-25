@@ -22,7 +22,7 @@
 
 
 
-  <meta name="keywords" content="Linux,Ubuntu," />
+  <meta name="keywords" content="数学建模," />
 
 
 
@@ -47,7 +47,7 @@
 
 
 
-  <title> Ubuntu 装机后必须要做的事情 // Sunshine </title>
+  <title> 2016年全国研究生数学建模竞赛B题的一些探索 // Sunshine </title>
 </head>
 
 <body>
@@ -135,7 +135,7 @@
           
           
             
-              Ubuntu 装机后必须要做的事情
+              2016年全国研究生数学建模竞赛B题的一些探索
             
           
         </h1>
@@ -143,14 +143,14 @@
 
       <div class="post-meta">
         <span class="post-time">
-          发表于 2016-07-20
+          发表于 2016-09-20
         </span>
 
         
           <span class="post-category">
             &nbsp; | &nbsp; 分类于
             
-              <a href="/categories/linux/">linux</a>
+              <a href="/categories/Project/">Project</a>
 
               
               
@@ -163,8 +163,8 @@
           
             <span class="post-comments-count">
             &nbsp; | &nbsp;
-            <a href="/2016/07/20/ubuntu装机必干的事情/#comments" >
-              <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/20/ubuntu装机必干的事情/"></span>
+            <a href="/2016/09/20/2016年全国研究生数学建模竞赛B题的一些探索/#comments" >
+              <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/20/2016年全国研究生数学建模竞赛B题的一些探索/"></span>
             </a>
           </span>
           
@@ -178,21 +178,18 @@
       
 
       
-        <p>安装完Ubuntu后，是不是有一点点小兴奋，马上就要使用这个与win截然不同的系统了，让我们看看，还要做点什么。<br><a id="more"></a> </p>
-<h2 id="更新与升级"><a href="#更新与升级" class="headerlink" title="更新与升级"></a>更新与升级</h2><figure class="highlight processing"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-<span class="built_in">get</span> update &amp;&amp; sudo apt-<span class="built_in">get</span> <span class="built_in">dist</span>-upgrade</div></pre></td></tr></table></figure>
-<h2 id="安装中文输入法"><a href="#安装中文输入法" class="headerlink" title="安装中文输入法"></a>安装中文输入法</h2><p><a href="http://pinyin.sogou.com/linux/help.php" target="_blank" rel="external">http://pinyin.sogou.com/linux/help.php</a><br>Ubuntu自带的输入法是ibus，使用起来并不是特别方便，大家可以使用搜狗输入法，来体验飞一般的输入速度。</p>
-<h2 id="更新语言支持"><a href="#更新语言支持" class="headerlink" title="更新语言支持"></a>更新语言支持</h2><p>在一般情况下安装完成后，系统的语言支持并不是很完整，所以我们需要对语言支持进行更新。打开系统设置》语言支持，系统会自动更新语言信息，如果需要安装语言支持，则点击安装即可。</p>
-<h2 id="安装flash插件以及额外的版权受限程序"><a href="#安装flash插件以及额外的版权受限程序" class="headerlink" title="安装flash插件以及额外的版权受限程序"></a>安装flash插件以及额外的版权受限程序</h2><p>flash插件是保证网页视频能正常播放的前提，所以大家需要安装它来正常浏览网页及观看视频，同时额外的版权受限程序包含了一些视频音频的解码器是在本地播放音频视频所必须的，flash插件及额外的版权受限程序都可以在Ubuntu软件中心安装，大家可以在Ubuntu软件中心进行安装。</p>
-<h2 id="安装-vim"><a href="#安装-vim" class="headerlink" title="安装 vim"></a>安装 vim</h2><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-<span class="built_in">get</span> insall <span class="keyword">vim</span></div></pre></td></tr></table></figure>
-<h2 id="PDF-阅读器"><a href="#PDF-阅读器" class="headerlink" title="PDF 阅读器"></a>PDF 阅读器</h2><p>okular [ˈɔkjələ]   中文意思是 眼睛, 这个软件是一用就让你爱上他的那种<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-<span class="keyword">get</span> install okular</div></pre></td></tr></table></figure></p>
-<h2 id="安装很多-LaTeX"><a href="#安装很多-LaTeX" class="headerlink" title="安装很多 LaTeX"></a>安装很多 LaTeX</h2><p>使用下面命令可以在 Ubuntu 上安装 Tex Live<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get <span class="keyword">install</span> texlive-<span class="keyword">full</span></div></pre></td></tr></table></figure></p>
-<p>要编辑 LaTeX 文档需要一个编辑器，你可以找到很多编辑器，这里我们推荐 Texmaker<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-<span class="keyword">get</span> install texmaker</div></pre></td></tr></table></figure></p>
-<p>在 Ubuntu 下执行下面命令可以打开 Texmaker 编辑器：<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">texmaker</div></pre></td></tr></table></figure></p>
-<p>现在让我们用 Texmaker 创建一个简单的文档，点击 File -&gt; New 然后在新文档中插入如下内容：<br><figure class="highlight tex"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">\<span class="name">documentclass</span><span class="string">&#123;article&#125;</span></span></div><div class="line"><span class="tag">\<span class="name">begin</span><span class="string">&#123;document&#125;</span></span></div><div class="line">Hello oschina!</div><div class="line"><span class="tag">\<span class="name">end</span><span class="string">&#123;document&#125;</span></span></div></pre></td></tr></table></figure></p>
-<h2 id="安装VNC"><a href="#安装VNC" class="headerlink" title="安装VNC"></a>安装VNC</h2><p>在 <a href="https://www.realvnc.com/download/vnc/" target="_blank" rel="external">https://www.realvnc.com/download/vnc/</a> 下载<br>解压 tar -xvf VNC-5.3.2-Linux-x64-DEB.tar.gz<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">sudo</span> <span class="selector-tag">dpkg</span> <span class="selector-tag">-i</span> <span class="selector-tag">VNC-Server-5</span><span class="selector-class">.3</span><span class="selector-class">.2-Linux-x64</span><span class="selector-class">.deb</span> <span class="selector-tag">VNC-Viewer-5</span><span class="selector-class">.3</span><span class="selector-class">.2-Linux-x64</span><span class="selector-class">.deb</span></div></pre></td></tr></table></figure></p>
-<h2 id="安装配置git服务器"><a href="#安装配置git服务器" class="headerlink" title="安装配置git服务器"></a>安装配置git服务器</h2><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-<span class="keyword">get</span> install git</div></pre></td></tr></table></figure>
-<p><a href="http://yife.im/install-git-and-setting-in-ubuntu/" target="_blank" rel="external">http://yife.im/install-git-and-setting-in-ubuntu/</a></p>
-<h2 id="HEXO-Github-搭建属于自己的博客"><a href="#HEXO-Github-搭建属于自己的博客" class="headerlink" title="HEXO+Github,搭建属于自己的博客"></a>HEXO+Github,搭建属于自己的博客</h2><p><a href="http://www.jianshu.com/p/465830080ea9" target="_blank" rel="external">http://www.jianshu.com/p/465830080ea9</a><br>ERROR Deployer not found: git<br><a href="https://github.com/hexojs/hexo/wiki/Migrating-from-2.x-to-3.0" target="_blank" rel="external">https://github.com/hexojs/hexo/wiki/Migrating-from-2.x-to-3.0</a></p>
+        <p>第十三届全国研究生数学建模竞赛于2016年9月16日上午8:00开始，2016年9月20日中午12:00结束，整个赛事持续100小时。这是一场智力的竞争，更是对各位参赛队伍体能的一次检验。期间很多小伙伴向我咨询一些问题，涉及到题目内容的理解，方法的选择，求解技巧等多个方面。为了促进大家的交流，下面简单谈谈我对B题的理解。<br><a id="more"></a> </p>
+<h2 id="题目背景介绍"><a href="#题目背景介绍" class="headerlink" title="题目背景介绍"></a>题目背景介绍</h2><p>这道题目以遗传性疾病为背景，主要研究遗传性疾病和致病基因(位点)的关系，希望参赛人员根据已有数据找出导致疾病形成的主要位点(基因)。从现实应用的角度来看，如果能定位与性状或疾病相关联的位点在染色体或基因中的位置，能帮助研究人员了解性状和一些疾病的遗传机理，也能使人们对致病位点加以干预，防止一些遗传病的发生。</p>
+<h2 id="问题1"><a href="#问题1" class="headerlink" title="问题1"></a>问题1</h2><p>请用适当的方法，把genotype.dat中每个位点的碱基(A,T,C,G) 编码方式转化成数值编码方式，便于进行数据分析。</p>
+<p>DNA 序列 , 由 C、T 、A 、G 四种碱基排列而成 。因此对 4种碱基进行数字编码 , 可用 0(00)、1(01)、2( 10) 和 3(11) 4 个数字对 4种碱基进行编码 。这种编码格式共有 4!=24 种编码方式的组合。4 个碱基中 , C 与 G 互补 , T 与 A 互补 , 因此 , 4 种碱基的数字编码 , 应满足互补法则。而4 个数字中 0(00) 与 3( 11) 互补 , 1(01) 与 2(10)。C 、T 、A 、 G 4种碱基满足互补法则的数字编码格式共有 8 种，其余 16 种数字编码格式 , 因不满足互补法则而被摒弃。研究已经表明 0123/ CTAG 这种按分子量大小顺序排列的编码格式最好。因此在本实验中对碱基的编码采用这种方式。</p>
+<p>因为染色体具有双螺旋结构，所以用两个碱基的组合表示一个位点的信息。因此为了编码建基的组合，我们采取</p>
+<p>首先把 genotype.dat 载入matlab 工作空间，并保存到 genotype 变量中，其size 为 10001×9445. 按照上面的编码规则，可以将其文本建基对转化数值，便于后续的数值分析。</p>
+<p>%% 编码<br>[m, n] = size(genotype);<br>gene_data = zeros(m,n);</p>
+<p>for i = 2:m<br>    for j = 1:n<br>        switch genotype{i,j}<br>            case {‘CC’,’DD’}<br>                gene_data(i,j) = 0;<br>            case {‘CT’,’CI’}<br>                gene_data(i,j) = 1;<br>            case {‘CA’,’DA’}<br>                gene_data(i,j) = 2;<br>            case {‘CG’,’DG’}<br>                gene_data(i,j) = 3;<br>            case {‘TC’,’ID’}<br>                gene_data(i,j) = 4;<br>            case {‘TT’,’II’}<br>                gene_data(i,j) = 5;<br>            case {‘TA’,’DA’}<br>                gene_data(i,j) = 6;<br>            case {‘TG’,’IG’}<br>                gene_data(i,j) = 7;<br>            case {‘AC’,’AD’}<br>                gene_data(i,j) = 8;<br>            case {‘AT’,’AI’}<br>                gene_data(i,j) = 9;<br>            case ‘AA’<br>                gene_data(i,j) = 10;<br>            case ‘AG’<br>                gene_data(i,j) = 11;<br>            case {‘GC’,’GD’}<br>                gene_data(i,j) = 12;<br>            case {‘GT’,’GI’}<br>                gene_data(i,j) = 13;<br>            case ‘GA’<br>                gene_data(i,j) = 14;<br>            case ‘GG’<br>                gene_data(i,j) = 15;<br>            otherwise<br>                printf(‘the pair of bases is not exist: %s’,genotype{i,j});<br>        end<br>    end<br>end<br>snp.data = gene_data;<br>snp.name = genotype(1,:);</p>
+<p>%% 保存编码数据和位点名称<br>save(‘snp.mat’,’-struct’,’snp’);</p>
+<h2 id="问题2"><a href="#问题2" class="headerlink" title="问题2"></a>问题2</h2><p>根据附录中1000个样本在某条有可能致病的染色体片段上的9445个位点的编码信息(见genotype.dat)和样本患有遗传疾病A的信息（见phenotype.txt文件）。设计或采用一个方法，找出某种疾病最有可能的一个或几个致病位点，并给出相关的理论依据。</p>
+<h2 id="问题3"><a href="#问题3" class="headerlink" title="问题3"></a>问题3</h2><p>同上题中的样本患有遗传疾病A的信息（phenotype.txt文件）。现有300个基因，每个基因所包含的位点名称见文件夹gene_info中的300个dat文件，每个dat文件列出了对应基因所包含的位点(位点信息见文件genotype.dat)。由于可以把基因理解为若干个位点组成的集合，遗传疾病与基因的关联性可以由基因中包含的位点的全集或其子集合表现出来请找出与疾病最有可能相关的一个或几个基因，并说明理由。</p>
+<h2 id="问题4"><a href="#问题4" class="headerlink" title="问题4"></a>问题4</h2><p>在问题二中，已知9445个位点，其编码信息见genotype.dat文件。在实际的研究中，科研人员往往把相关的性状或疾病看成一个整体，然后来探寻与它们相关的位点或基因。试根据multi_phenos.txt文件给出的1000个样本的10个相关联性状的信息及其9445个位点的编码信息(见genotype.dat)，找出与multi_phenos.txt中10个性状有关联的位点。</p>
 
       
     </div>
@@ -201,9 +198,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Linux/"> #Linux </a>
-          
-            <a href="/tags/Ubuntu/"> #Ubuntu </a>
+            <a href="/tags/数学建模/"> #数学建模 </a>
           
         </div>
       
@@ -212,13 +207,11 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/07/21/论文笔记ScribbleSup/">论文笔记 《ScribbleSup Scribble-Supervised Convolutional Networks for Semantic Segmentation》</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/06/04/ReadingPaperList/">Reading Papers List</a>
+              <a href="/2016/07/21/论文笔记HCP-SS/">论文笔记 《Learning to segment with image-level annotations》</a>
             
           </div>
         </div>
@@ -234,8 +227,8 @@
     
       <div class="comments" id="comments">
         
-          <div class="ds-thread" data-thread-key="2016/07/20/ubuntu装机必干的事情/"
-               data-title="Ubuntu 装机后必须要做的事情" data-url="http://gaobb.github.io/2016/07/20/ubuntu装机必干的事情/">
+          <div class="ds-thread" data-thread-key="2016/09/20/2016年全国研究生数学建模竞赛B题的一些探索/"
+               data-title="2016年全国研究生数学建模竞赛B题的一些探索" data-url="http://gaobb.github.io/2016/09/20/2016年全国研究生数学建模竞赛B题的一些探索/">
           </div>
         
       </div>
@@ -345,7 +338,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#更新与升级"><span class="nav-number">1.</span> <span class="nav-text">更新与升级</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装中文输入法"><span class="nav-number">2.</span> <span class="nav-text">安装中文输入法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#更新语言支持"><span class="nav-number">3.</span> <span class="nav-text">更新语言支持</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装flash插件以及额外的版权受限程序"><span class="nav-number">4.</span> <span class="nav-text">安装flash插件以及额外的版权受限程序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装-vim"><span class="nav-number">5.</span> <span class="nav-text">安装 vim</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PDF-阅读器"><span class="nav-number">6.</span> <span class="nav-text">PDF 阅读器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装很多-LaTeX"><span class="nav-number">7.</span> <span class="nav-text">安装很多 LaTeX</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装VNC"><span class="nav-number">8.</span> <span class="nav-text">安装VNC</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装配置git服务器"><span class="nav-number">9.</span> <span class="nav-text">安装配置git服务器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HEXO-Github-搭建属于自己的博客"><span class="nav-number">10.</span> <span class="nav-text">HEXO+Github,搭建属于自己的博客</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#题目背景介绍"><span class="nav-number">1.</span> <span class="nav-text">题目背景介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题1"><span class="nav-number">2.</span> <span class="nav-text">问题1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题2"><span class="nav-number">3.</span> <span class="nav-text">问题2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题3"><span class="nav-number">4.</span> <span class="nav-text">问题3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题4"><span class="nav-number">5.</span> <span class="nav-text">问题4</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
