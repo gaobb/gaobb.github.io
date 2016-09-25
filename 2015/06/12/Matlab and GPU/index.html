@@ -194,6 +194,8 @@
 <p><img src="../../../../image/viewgpudevice.png" alt=""><br>可以看到当前的GPU的编号为2,对应于系统的1.</p>
 <h2 id="GPU-与-CPU-之间的数据交换"><a href="#GPU-与-CPU-之间的数据交换" class="headerlink" title="GPU 与 CPU 之间的数据交换"></a>GPU 与 CPU 之间的数据交换</h2><p>gpuArray<br>MATLAB中的gpuArray表示存储在GPU上的数据。使用gpuArray函数可以将数据从MATLAB工作空间传送到GPU。例如：<br><figure class="highlight ini"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attr">A</span> = data(<span class="number">10</span>);</div><div class="line"><span class="attr">G</span> = gpuArray(A);</div></pre></td></tr></table></figure></p>
 <p>gather<br>执行以上语句后，G 就是一个MATLAB GPUArray对象了。<br>当GPU运行完程序后，可以通过gather函数将数据从GPU取回到MATLAB工作空间。<br><figure class="highlight ini"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attr">D</span> = gather(G);</div></pre></td></tr></table></figure></p>
+<div class="ds-recent-visitors" data-num-items="28" data-avatar-size="42" id="ds-recent-visitors"></div>
+
 
       
     </div>

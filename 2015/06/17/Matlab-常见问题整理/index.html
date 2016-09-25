@@ -199,6 +199,8 @@
 <p>Solution<br>open the /vlfeat/makefile and edit:<br>Makefile DISABLE_OPENMP=yes</p>
 <h2 id="Vlfeat-Error-libvl-so-cannot-open-shared-object-file-No-such-file-or-directory"><a href="#Vlfeat-Error-libvl-so-cannot-open-shared-object-file-No-such-file-or-directory" class="headerlink" title="Vlfeat Error libvl.so: cannot open shared object file: No such file or directory"></a>Vlfeat Error libvl.so: cannot open shared object file: No such file or directory</h2><p>Invalid MEX-file ‘/home/gaobb/. mcrCache8.3/main_C0/home/gaobb/mywork/<br>toolbox/vlfeat- 0.9.20/toolbox/mex/mexa64/vl_fisher.mexa64’: libvl.so: cannot open shared object file: No such file or directory</p>
 <p>Solution<br>Open the /etc/ld.so.conf as sudo and add a new line with the library directory. In this case, we add /home/gaobb/mywork/toolbox/vlfeat-0.9.20/toolbox/mex/mexa64<br>Rerun ldconfig to rebuild the cache:<br>sudo ldconfig<br>Check if the shared library cache now includes the shared libraries from the new directory:<br>ldconfig -p</p>
+<div class="ds-recent-visitors" data-num-items="28" data-avatar-size="42" id="ds-recent-visitors"></div>
+
 
       
     </div>
