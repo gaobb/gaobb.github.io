@@ -124,8 +124,6 @@
           
 
   <div id="posts" class="posts-expand">
-  	#render方法第二个参数is_index为是否为首页
-  	#第三个参数is_pv为我们刚才设置的是否显示计数
     
 
   <div class="post post-type-normal ">
@@ -214,6 +212,8 @@
 <p>step7: 输出Top20 的位点<br><figure class="highlight scilab"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">fprintf</span>(<span class="string">'Top20 SNPs are: \n'</span>);</div><div class="line"><span class="keyword">for</span> t = <span class="number">1</span>:<span class="number">20</span></div><div class="line">    <span class="built_in">fprintf</span>(<span class="string">'top %2d: %10s \n'</span>, t, name&#123;<span class="number">1</span>,wi(t)&#125;);</div><div class="line"><span class="keyword">end</span></div></pre></td></tr></table></figure></p>
 <h2 id="问题3"><a href="#问题3" class="headerlink" title="问题3"></a>问题3</h2><p>同上题中的样本患有遗传疾病A的信息（phenotype.txt文件）.现有300个基因，每个基因所包含的位点名称见文件夹gene_info中的300个dat文件，每个dat文件列出了对应基因所包含的位点(位点信息见文件genotype.dat).由于可以把基因理解为若干个位点组成的集合，遗传疾病与基因的关联性可以由基因中包含的位点的全集或其子集合表现出来请找出与疾病最有可能相关的一个或几个基因，并说明理由.</p>
 <h2 id="问题4"><a href="#问题4" class="headerlink" title="问题4"></a>问题4</h2><p>在问题二中，已知9445个位点，其编码信息见genotype.dat文件.在实际的研究中，科研人员往往把相关的性状或疾病看成一个整体，然后来探寻与它们相关的位点或基因.试根据multi_phenos.txt文件给出的1000个样本的10个相关联性状的信息及其9445个位点的编码信息(见genotype.dat)，找出与multi_phenos.txt中10个性状有关联的位点.</p>
+<p><img src="/image/4-1.png" alt=""><br><img src="/image/4-2.png" alt=""><br><img src="/image/4-3.png" alt=""></p>
+<p>问题 3 和 问题 4 的方案和代码等我抽空在补充完整！</p>
 
       
     </div>
