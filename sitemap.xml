@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://gaobb.github.io/2016/07/20/ubuntu%E8%A3%85%E6%9C%BA%E5%BF%85%E5%B9%B2%E7%9A%84%E4%BA%8B%E6%83%85/</loc>
+    
+    <lastmod>2016-09-26T02:14:30.747Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://gaobb.github.io/2015/06/07/%E4%BD%BF%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</loc>
     
     <lastmod>2016-09-25T16:46:10.275Z</lastmod>
@@ -33,13 +40,6 @@
     <loc>http://gaobb.github.io/2015/06/07/%E5%85%B3%E4%BA%8E-Non-Maximum-Suppression/</loc>
     
     <lastmod>2016-09-25T16:45:19.257Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gaobb.github.io/2016/07/20/ubuntu%E8%A3%85%E6%9C%BA%E5%BF%85%E5%B9%B2%E7%9A%84%E4%BA%8B%E6%83%85/</loc>
-    
-    <lastmod>2016-09-25T16:45:01.466Z</lastmod>
     
   </url>
   
