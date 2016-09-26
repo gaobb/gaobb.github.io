@@ -208,7 +208,7 @@
 <h2 id="查看，杀死僵尸进程"><a href="#查看，杀死僵尸进程" class="headerlink" title="查看，杀死僵尸进程"></a>查看，杀死僵尸进程</h2><figure class="highlight perl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$   ps -ef | <span class="keyword">grep</span> defunct | <span class="keyword">grep</span> -v <span class="keyword">grep</span></div><div class="line">$   ps -A -o <span class="keyword">stat</span>,ppid,pid,cmd | <span class="keyword">grep</span> -e <span class="string">'^[Zz]'</span> | awk <span class="string">'&#123;print $2&#125;'</span> | xargs <span class="keyword">kill</span> -<span class="number">9</span></div><div class="line">               ps -A -o <span class="keyword">stat</span>,ppid,pid,cmd |<span class="keyword">grep</span> -e <span class="string">"^[Zz]"</span></div></pre></td></tr></table></figure>
 <h2 id="升级到Ubuntu-16-04的方法"><a href="#升级到Ubuntu-16-04的方法" class="headerlink" title="升级到Ubuntu 16.04的方法"></a>升级到Ubuntu 16.04的方法</h2><figure class="highlight q"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$  sudo apt-<span class="built_in">get</span> <span class="keyword">update</span> %先刷新源：</div><div class="line">$  sudo <span class="keyword">update</span>-manager -c -d  %执行更新：</div></pre></td></tr></table></figure>
 <h2 id="linux下测试磁盘的读写IO速度"><a href="#linux下测试磁盘的读写IO速度" class="headerlink" title="linux下测试磁盘的读写IO速度"></a>linux下测试磁盘的读写IO速度</h2><p>有时候我们在做维护的时候，总会遇到类似于IO特别高，但不能判定是IO瓶颈还是软件参数设置不当导致热盘的问题.这时候通常希望能知道磁盘的读写速度，来进行下一步的决策.</p>
-<p>下面是两种测试方法：<br>(1)使用hdparm命令<br>这是一个是用来获取ATA/IDE硬盘的参数的命令,是由早期Linux IDE驱动的开发和维护人员 Mark Lord开发编写的( hdparm has been written by Mark Lord <a href="&#109;&#x61;&#105;&#108;&#x74;&#x6f;&#58;&#109;&#108;&#111;&#x72;&#100;&#x40;&#x70;&#111;&#x62;&#x6f;&#x78;&#x2e;&#99;&#x6f;&#109;">&#109;&#108;&#111;&#x72;&#100;&#x40;&#x70;&#111;&#x62;&#x6f;&#x78;&#x2e;&#99;&#x6f;&#109;</a>, the primary developer and maintainer of the (E)IDE driver for Linux, with suggestions from many netfolk).该命令应该也是仅用于Linux系统,对于UNIX系统，ATA/IDE硬盘用的可能比较少，一般大型的系统都是使用磁盘阵列的.</p>
+<p>下面是两种测试方法：<br>(1)使用hdparm命令<br>这是一个是用来获取ATA/IDE硬盘的参数的命令,是由早期Linux IDE驱动的开发和维护人员 Mark Lord开发编写的( hdparm has been written by Mark Lord <a href="&#109;&#x61;&#105;&#108;&#x74;&#x6f;&#x3a;&#x6d;&#x6c;&#x6f;&#x72;&#100;&#x40;&#x70;&#x6f;&#98;&#x6f;&#x78;&#x2e;&#x63;&#111;&#109;">&#x6d;&#x6c;&#x6f;&#x72;&#100;&#x40;&#x70;&#x6f;&#98;&#x6f;&#x78;&#x2e;&#x63;&#111;&#109;</a>, the primary developer and maintainer of the (E)IDE driver for Linux, with suggestions from many netfolk).该命令应该也是仅用于Linux系统,对于UNIX系统，ATA/IDE硬盘用的可能比较少，一般大型的系统都是使用磁盘阵列的.</p>
 <p>使用方法很简单</p>
 <h1 id="hdparm-Tt-dev-sda"><a href="#hdparm-Tt-dev-sda" class="headerlink" title="hdparm -Tt /dev/sda"></a>hdparm -Tt /dev/sda</h1><p>/dev/sda:<br>Timing cached reads: 6676 MB in 2.00 seconds = 3340.18 MB/sec<br>Timing buffered disk reads: 218 MB in 3.11 seconds = 70.11 MB/sec</p>
 <p>可以看到,2秒钟读取了6676MB的缓存,约合3340.18 MB/sec;<br>在3.11秒中读取了218MB磁盘(物理读),读取速度约合70.11 MB/sec</p>
@@ -260,14 +260,6 @@ sudo apt-get install -f
 <p>最近访客</p>
 <p><div class="ds-recent-visitors" data-num-items="28" data-avatar-size="42" id="ds-recent-visitors"><br></div><br><br></p>
 </blockquote>
-<p>#ds-reset .ds-avatar img,</p>
-<p>#ds-recent-visitors .ds-avatar img {<br>width: 54px;<br>height: 54px;     /<em>设置图像的长和宽，这里要根据自己的评论框情况更改</em>/<br>border-radius: 27px;     /<em>设置图像圆角效果,在这里我直接设置了超过width/2的像素，即为圆形了</em>/<br>-webkit-border-radius: 27px;     /<em>圆角效果：兼容webkit浏览器</em>/<br>-moz-border-radius: 27px;<br>box-shadow: inset 0 -1px 0 #3333sf;     /<em>设置图像阴影效果</em>/<br>-webkit-box-shadow: inset 0 -1px 0 #3333sf;<br>-webkit-transition: 0.4s;<br>-webkit-transition: -webkit-transform 0.4s ease-out;<br>transition: transform 0.4s ease-out;     /<em>变化时间设置为0.4秒(变化动作即为下面的图像旋转360读）</em>/<br>-moz-transition: -moz-transform 0.4s ease-out;<br>}</p>
-<p>#ds-reset .ds-avatar img:hover,</p>
-<p>#ds-recent-visitors .ds-avatar img:hover {</p>
-<p>/<em>设置鼠标悬浮在头像时的CSS样式</em>/    box-shadow: 0 0 10px #fff;<br>rgba(255, 255, 255, .6), inset 0 0 20px rgba(255, 255, 255, 1);<br>-webkit-box-shadow: 0 0 10px #fff;<br>rgba(255, 255, 255, .6), inset 0 0 20px rgba(255, 255, 255, 1);<br>transform: rotateZ(360deg);     /<em>图像旋转360度</em>/<br>-webkit-transform: rotateZ(360deg);<br>-moz-transform: rotateZ(360deg);<br>}</p>
-<p>#ds-thread #ds-reset .ds-textarea-wrapper textarea {<br>background: url(<a href="http://ww4.sinaimg.cn/small/649a4735gw1et7gnhy5fej20zk0m8q3q.jpg" target="_blank" rel="external">http://ww4.sinaimg.cn/small/649a4735gw1et7gnhy5fej20zk0m8q3q.jpg</a>) right no-repeat;}</p>
-<p>#ds-recent-visitors .ds-avatar {<br>float: left<br>}<br>/<em>隐藏多说底部版权</em>/</p>
-<p>#ds-thread #ds-reset .ds-powered-by {<br>display: none;<br>}</p>
 <p>本文链接：<a href="http://gaobb.github.io/2015/06/07/linux系统常见问题整理/">http://gaobb.github.io/2015/06/07/linux系统常见问题整理/</a></p>
 
       
@@ -292,7 +284,7 @@ sudo apt-get install -f
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/06/07/使用hexo搭建博客/">使用hexo搭建博客</a>
+              <a href="/2015/06/07/关于-Non-Maximum-Suppression/">关于Non-Maximum Supression</a>
             
           </div>
         </div>
