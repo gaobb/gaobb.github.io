@@ -206,6 +206,14 @@
 <p>最近访客</p>
 <p><div class="ds-recent-visitors" data-num-items="28" data-avatar-size="42" id="ds-recent-visitors"><br></div><br><br></p>
 </blockquote>
+<p>#ds-reset .ds-avatar img,</p>
+<p>#ds-recent-visitors .ds-avatar img {<br>width: 54px;<br>height: 54px;     /<em>设置图像的长和宽，这里要根据自己的评论框情况更改</em>/<br>border-radius: 27px;     /<em>设置图像圆角效果,在这里我直接设置了超过width/2的像素，即为圆形了</em>/<br>-webkit-border-radius: 27px;     /<em>圆角效果：兼容webkit浏览器</em>/<br>-moz-border-radius: 27px;<br>box-shadow: inset 0 -1px 0 #3333sf;     /<em>设置图像阴影效果</em>/<br>-webkit-box-shadow: inset 0 -1px 0 #3333sf;<br>-webkit-transition: 0.4s;<br>-webkit-transition: -webkit-transform 0.4s ease-out;<br>transition: transform 0.4s ease-out;     /<em>变化时间设置为0.4秒(变化动作即为下面的图像旋转360读）</em>/<br>-moz-transition: -moz-transform 0.4s ease-out;<br>}</p>
+<p>#ds-reset .ds-avatar img:hover,</p>
+<p>#ds-recent-visitors .ds-avatar img:hover {</p>
+<p>/<em>设置鼠标悬浮在头像时的CSS样式</em>/    box-shadow: 0 0 10px #fff;<br>rgba(255, 255, 255, .6), inset 0 0 20px rgba(255, 255, 255, 1);<br>-webkit-box-shadow: 0 0 10px #fff;<br>rgba(255, 255, 255, .6), inset 0 0 20px rgba(255, 255, 255, 1);<br>transform: rotateZ(360deg);     /<em>图像旋转360度</em>/<br>-webkit-transform: rotateZ(360deg);<br>-moz-transform: rotateZ(360deg);<br>}</p>
+<p>#ds-thread #ds-reset .ds-textarea-wrapper textarea {<br>background: url(<a href="http://ww4.sinaimg.cn/small/649a4735gw1et7gnhy5fej20zk0m8q3q.jpg" target="_blank" rel="external">http://ww4.sinaimg.cn/small/649a4735gw1et7gnhy5fej20zk0m8q3q.jpg</a>) right no-repeat;}</p>
+<p>#ds-recent-visitors .ds-avatar {<br>float: left<br>}<br>/<em>隐藏多说底部版权</em>/</p>
+<p>#ds-thread #ds-reset .ds-powered-by {<br>display: none;<br>}</p>
 <p>本文链接：<a href="http://gaobb.github.io/2015/08/05/模糊孪生支持向量机/">http://gaobb.github.io/2015/08/05/模糊孪生支持向量机/</a></p>
 
       
