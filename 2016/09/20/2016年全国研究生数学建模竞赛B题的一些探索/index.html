@@ -105,7 +105,7 @@
 <meta property="og:image" content="http://gaobb.github.io/image/4-2.png">
 <meta property="og:image" content="http://gaobb.github.io/image/4-3.png">
 <meta property="og:image" content="http://gaobb.github.io/images/cc-by.svg">
-<meta property="og:updated_time" content="2016-09-27T08:29:52.139Z">
+<meta property="og:updated_time" content="2016-09-27T13:34:13.060Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="2016年全国研究生数学建模竞赛B题的一些探索">
 <meta name="twitter:description" content="第十三届全国研究生数学建模竞赛于2016年9月16日上午8:00开始，2016年9月20日中午12:00结束，整个赛事持续100小时.这是一场数学应用能力的比拼，更是一场团队合作和身体体能的考验.期间很多小伙伴向我咨询一些问题，涉及到题目内容的理解，方法的选择，求解技巧等多个方面.为了促进大家的交流，下面简单谈谈我对B题的理解.">
@@ -378,7 +378,7 @@
       
         <p><a href="http://gmcm.seu.edu.cn/" target="_blank" rel="external">第十三届全国研究生数学建模竞赛</a>于2016年9月16日上午8:00开始，2016年9月20日中午12:00结束，整个赛事持续100小时.这是一场数学应用能力的比拼，更是一场团队合作和身体体能的考验.期间很多小伙伴向我咨询一些问题，涉及到题目内容的理解，方法的选择，求解技巧等多个方面.为了促进大家的交流，下面简单谈谈我对B题的理解.<br><a id="more"></a> </p>
 <p>申明：本人没有正式参加这次研赛，只是出于兴趣和交流的目的提供本文，以下做法仅仅代表我个人对本题目的理解.</p>
-<h2 id="题目背景介绍"><a href="#题目背景介绍" class="headerlink" title="题目背景介绍"></a>题目背景介绍</h2><p>这道题目以遗传性疾病为背景，主要研究遗传性疾病和致病基因(位点)的关系，希望参赛人员根据已有数据找出导致疾病形成的主要位点(基因).从现实应用的角度来看，如果能定位与性状或疾病相关联的位点在染色体或基因中的位置，能帮助研究人员了解性状和一些疾病的遗传机理，也能使人们对致病位点加以干预，防止一些遗传病的发生.</p>
+<h2 id="题目背景介绍"><a href="#题目背景介绍" class="headerlink" title="题目背景介绍"></a>题目背景介绍</h2><p>这道题目以遗传性疾病为背景，主要研究遗传性疾病和致病基因(位点)的关系，希望参赛人员根据已有数据找出导致疾病形成的主要位点(基因).从现实应用的角度来看，如果能定位与性状或疾病相关联的位点在染色体或基因中的位置，能帮助研究人员了解性状和一些疾病的遗传机理，也能使人们对致病位点加以干预，防止一些遗传病的发生. 竞赛的题目和原始数据请在单击<a href="../../../../attachment/2016_B.tar.gz">这儿</a>下载。</p>
 <h2 id="问题1"><a href="#问题1" class="headerlink" title="问题1"></a>问题1</h2><p>请用适当的方法，把genotype.dat中每个位点的碱基(A,T,C,G) 编码方式转化成数值编码方式，便于进行数据分析.</p>
 <p>DNA 序列, 由 C、T 、A 、G 四种碱基排列而成. 因此对 4种碱基进行数字编码,可用 0(00)、1(01)、2( 10) 和 3(11) 4 个数字对4种碱基进行编码. 这种编码格式共有 4!=24 种编码方式的组合. 4 个碱基中, C 与 G 互补, T与A互补, 因此,4 种碱基的数字编码, 应满足互补法则. 而4 个数字中 0(00) 与 3( 11) 互补, 1(01) 与 2(10). C、T 、A 、 G 4种碱基满足互补法则的数字编码格式共有 8 种，其余 16 种数字编码格式, 因不满足互补法则而被摒弃. 研究已经表明 C:0 T:1 A:2 G:3 这种按分子量大小顺序排列的编码格式最好. 因此在本实验中对碱基的编码采用这种方式.</p>
 <p>因为染色体具有双螺旋结构，所以用两个碱基的组合表示一个位点的信息，这样四种碱基共有16组合方式<br><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="section">  |  C  |  T  |  A  | G</span></div><div class="line">-------------------------</div><div class="line">C |  CC    CT    CA    CG  </div><div class="line">T |  TC    TT    TA    TG</div><div class="line">A |  AC    AT    AA    AG </div><div class="line">G |  GC    GT    GA    GG</div></pre></td></tr></table></figure></p>
