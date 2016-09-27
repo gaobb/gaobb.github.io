@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gaobb.github.io/"/>
-  <updated>2016-09-27T13:34:13.060Z</updated>
+  <updated>2016-09-27T13:56:29.190Z</updated>
   <id>http://gaobb.github.io/</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>2016年全国研究生数学建模竞赛B题的一些探索</title>
+    <title>数学建模《遗传性疾病和性状基因的定位分析建模——2016年全国研赛B题的一些探索》</title>
     <link href="http://gaobb.github.io/2016/09/20/2016%E5%B9%B4%E5%85%A8%E5%9B%BD%E7%A0%94%E7%A9%B6%E7%94%9F%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E7%AB%9E%E8%B5%9BB%E9%A2%98%E7%9A%84%E4%B8%80%E4%BA%9B%E6%8E%A2%E7%B4%A2/"/>
     <id>http://gaobb.github.io/2016/09/20/2016年全国研究生数学建模竞赛B题的一些探索/</id>
     <published>2016-09-20T14:00:00.000Z</published>
-    <updated>2016-09-27T13:34:13.060Z</updated>
+    <updated>2016-09-27T13:56:29.190Z</updated>
     
     <content type="html"><![CDATA[<p><a href="http://gmcm.seu.edu.cn/" target="_blank" rel="external">第十三届全国研究生数学建模竞赛</a>于2016年9月16日上午8:00开始，2016年9月20日中午12:00结束，整个赛事持续100小时.这是一场数学应用能力的比拼，更是一场团队合作和身体体能的考验.期间很多小伙伴向我咨询一些问题，涉及到题目内容的理解，方法的选择，求解技巧等多个方面.为了促进大家的交流，下面简单谈谈我对B题的理解.<br><a id="more"></a> </p>
 <p>申明：本人没有正式参加这次研赛，只是出于兴趣和交流的目的提供本文，以下做法仅仅代表我个人对本题目的理解.</p>
