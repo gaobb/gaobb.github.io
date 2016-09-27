@@ -636,6 +636,41 @@
   </entry>
   
   <entry>
+    <title>关于Non-Maximum Supression</title>
+    <link href="http://gaobb.github.io/2015/06/07/%E5%85%B3%E4%BA%8E-Non-Maximum-Suppression/"/>
+    <id>http://gaobb.github.io/2015/06/07/关于-Non-Maximum-Suppression/</id>
+    <published>2015-06-07T03:21:39.000Z</published>
+    <updated>2016-09-26T05:41:54.150Z</updated>
+    
+    <content type="html"><![CDATA[<p>Non-Maximum Supression 是一种局部最大值搜索算法，在CV的很多任务中都有广泛的应用, 如跟踪、数据挖掘、3D重建、目标识别等。<br>参考：Alexander Neubeck的论文：Efﬁcient Non-Maximum Suppression。<br><a id="more"></a> </p>
+<h2 id="1-D-NMS"><a href="#1-D-NMS" class="headerlink" title="1-D NMS"></a>1-D NMS</h2><p>  2n+1邻域: 当前点n+i的2n+1邻域是指是在区间[i,2n+i] 上的2n+1个离散点， 也就是该点和该点左右侧各n个点构成。<br>  给定一个长度为w 的行向量y，NMS 就是以2n+1邻域搜索局部最大值. 下面以一维为例：<br><figure class="highlight matlab"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">maximumat</span> =<span class="title">nms</span><span class="params">(y,n)</span></span></div><div class="line"><span class="built_in">i</span>=<span class="number">1</span>;</div><div class="line">maximumat=[];</div><div class="line">w=<span class="built_in">length</span>(y);</div><div class="line"></div><div class="line"><span class="keyword">while</span> <span class="number">2</span>*n +<span class="built_in">i</span>&lt;w</div><div class="line">    <span class="keyword">if</span> y(<span class="built_in">i</span>+n)&gt;max(y(n+<span class="built_in">i</span>+<span class="number">1</span>:<span class="number">2</span>*n+<span class="built_in">i</span>))</div><div class="line">        <span class="keyword">if</span> y(<span class="built_in">i</span>+n)&gt;max(y(<span class="built_in">i</span>:n+<span class="built_in">i</span><span class="number">-1</span>))</div><div class="line">            maximumat = [maximumat i+n];</div><div class="line">        <span class="keyword">end</span></div><div class="line">    <span class="keyword">else</span> </div><div class="line">        <span class="built_in">i</span>=<span class="built_in">i</span>+<span class="number">1</span>;</div><div class="line">        <span class="keyword">while</span> <span class="number">2</span>*n +<span class="built_in">i</span>&lt;w &amp;&amp; y(<span class="built_in">i</span>+n)&lt;max(y(n+<span class="built_in">i</span>+<span class="number">1</span>:<span class="built_in">i</span>+<span class="number">2</span>*n))</div><div class="line">            <span class="built_in">i</span>=<span class="built_in">i</span>+<span class="number">1</span>;</div><div class="line">        <span class="keyword">end</span></div><div class="line">        <span class="keyword">if</span> <span class="number">2</span>*n +<span class="built_in">i</span>&lt;w</div><div class="line">            maximumat = [maximumat i+n];</div><div class="line">        <span class="keyword">end</span></div><div class="line">    <span class="keyword">end</span></div><div class="line">     <span class="built_in">i</span>=<span class="built_in">i</span>+n;</div><div class="line"><span class="keyword">end</span></div><div class="line"><span class="keyword">end</span></div></pre></td></tr></table></figure></p>
+<p>1、如果一个点比其左右两侧n点的值都大，即得到局部最大值，7-10行。<br>2、在处理过程中，如果未得到局部最大值，可以知道i + n 点比左侧的i到i+n-1点小，那么在下一次处理时，i = i + n，20行。<br><figure class="highlight gams"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">% eg1</div><div class="line">x= <span class="number">50</span>:<span class="number">0.1</span>:<span class="number">200</span>;</div><div class="line">y= <span class="built-in">sin</span>(x)./x;</div><div class="line"></div><div class="line">% eg2</div><div class="line">x=<span class="number">1</span>:<span class="number">200</span>;</div><div class="line">y=rand(<span class="number">1</span>,<span class="number">200</span>);</div><div class="line"></div><div class="line">n=<span class="number">2</span>;</div><div class="line">maximumat =nms(y,n);</div><div class="line">plot(x,y,<span class="string">'-bo'</span>);</div><div class="line">hold on </div><div class="line"><span class="function"><span class="title">plot</span>(<span class="params">x(maximumat</span>)</span>,y(maximumat),<span class="string">'-rs'</span>,  <span class="string">'MarkerFaceColor'</span>,<span class="string">'r'</span>,...</div><div class="line"> <span class="string">'MarkerSize'</span>,<span class="number">8</span>);</div><div class="line">legend(<span class="string">'Original data'</span>,<span class="string">'NMS'</span>);</div><div class="line">title(sprintf(<span class="string">'NMS:%d(2*%d+1)-Neighborhood  '</span>,<span class="number">2</span>*n+<span class="number">1</span>,n));</div></pre></td></tr></table></figure></p>
+<p><img src="../../../../image/nms_1.jpg" alt=""><br><img src="../../../../image/nms_2.jpg" alt=""></p>
+<h2 id="2-D-NMS"><a href="#2-D-NMS" class="headerlink" title="2-D NMS"></a>2-D NMS</h2><p>  2D邻域为以当前点为中心的(2n+1)×(2n+1)区域。</p>
+<h2 id="NMS-在目标检测中应用"><a href="#NMS-在目标检测中应用" class="headerlink" title="NMS 在目标检测中应用"></a>NMS 在目标检测中应用</h2><hr>
+<p><img src="/images/cc-by.svg" alt="">本作品采用<a href="http://creativecommons.org/licenses/by/2.5/cn/" target="_blank" rel="external">知识共享署名 2.5 中国大陆许可协议</a>进行许可，欢迎转载，但转载请注明来自 <a href="http://gaobb.github.io/">Sunshine</a> 并保持转载后文章内容的完整。本人保留所有版权相关权利。</p>
+<p><blockquote class="blockquote-center">留下你的话语，带走我的问候，欢迎大家没事踩踩。</blockquote><br><br></p>
+<blockquote>
+<p>最近访客</p>
+<p><div class="ds-recent-visitors" data-num-items="28" data-avatar-size="42" id="ds-recent-visitors"><br></div><br><br></p>
+</blockquote>
+<p>本文链接：<a href="http://gaobb.github.io/2015/06/07/关于-Non-Maximum-Suppression/">http://gaobb.github.io/2015/06/07/关于-Non-Maximum-Suppression/</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Non-Maximum Supression 是一种局部最大值搜索算法，在CV的很多任务中都有广泛的应用, 如跟踪、数据挖掘、3D重建、目标识别等。&lt;br&gt;参考：Alexander Neubeck的论文：Efﬁcient Non-Maximum Suppression。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="读书笔记" scheme="http://gaobb.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="NMS" scheme="http://gaobb.github.io/tags/NMS/"/>
+    
+  </entry>
+  
+  <entry>
     <title>linux系统常见问题整理</title>
     <link href="http://gaobb.github.io/2015/06/07/linux%E7%B3%BB%E7%BB%9F%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%95%B4%E7%90%86/"/>
     <id>http://gaobb.github.io/2015/06/07/linux系统常见问题整理/</id>
@@ -659,7 +694,7 @@
 <h2 id="查看，杀死僵尸进程"><a href="#查看，杀死僵尸进程" class="headerlink" title="查看，杀死僵尸进程"></a>查看，杀死僵尸进程</h2><figure class="highlight perl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$   ps -ef | <span class="keyword">grep</span> defunct | <span class="keyword">grep</span> -v <span class="keyword">grep</span></div><div class="line">$   ps -A -o <span class="keyword">stat</span>,ppid,pid,cmd | <span class="keyword">grep</span> -e <span class="string">'^[Zz]'</span> | awk <span class="string">'&#123;print $2&#125;'</span> | xargs <span class="keyword">kill</span> -<span class="number">9</span></div><div class="line">               ps -A -o <span class="keyword">stat</span>,ppid,pid,cmd |<span class="keyword">grep</span> -e <span class="string">"^[Zz]"</span></div></pre></td></tr></table></figure>
 <h2 id="升级到Ubuntu-16-04的方法"><a href="#升级到Ubuntu-16-04的方法" class="headerlink" title="升级到Ubuntu 16.04的方法"></a>升级到Ubuntu 16.04的方法</h2><figure class="highlight q"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$  sudo apt-<span class="built_in">get</span> <span class="keyword">update</span> %先刷新源：</div><div class="line">$  sudo <span class="keyword">update</span>-manager -c -d  %执行更新：</div></pre></td></tr></table></figure>
 <h2 id="linux下测试磁盘的读写IO速度"><a href="#linux下测试磁盘的读写IO速度" class="headerlink" title="linux下测试磁盘的读写IO速度"></a>linux下测试磁盘的读写IO速度</h2><p>有时候我们在做维护的时候，总会遇到类似于IO特别高，但不能判定是IO瓶颈还是软件参数设置不当导致热盘的问题.这时候通常希望能知道磁盘的读写速度，来进行下一步的决策.</p>
-<p>下面是两种测试方法：<br>(1)使用hdparm命令<br>这是一个是用来获取ATA/IDE硬盘的参数的命令,是由早期Linux IDE驱动的开发和维护人员 Mark Lord开发编写的( hdparm has been written by Mark Lord <a href="&#x6d;&#x61;&#105;&#x6c;&#116;&#x6f;&#x3a;&#x6d;&#108;&#111;&#114;&#100;&#64;&#x70;&#111;&#x62;&#111;&#120;&#x2e;&#99;&#x6f;&#109;">&#x6d;&#108;&#111;&#114;&#100;&#64;&#x70;&#111;&#x62;&#111;&#120;&#x2e;&#99;&#x6f;&#109;</a>, the primary developer and maintainer of the (E)IDE driver for Linux, with suggestions from many netfolk).该命令应该也是仅用于Linux系统,对于UNIX系统，ATA/IDE硬盘用的可能比较少，一般大型的系统都是使用磁盘阵列的.</p>
+<p>下面是两种测试方法：<br>(1)使用hdparm命令<br>这是一个是用来获取ATA/IDE硬盘的参数的命令,是由早期Linux IDE驱动的开发和维护人员 Mark Lord开发编写的( hdparm has been written by Mark Lord <a href="&#109;&#x61;&#x69;&#x6c;&#116;&#x6f;&#x3a;&#x6d;&#108;&#111;&#114;&#x64;&#x40;&#112;&#x6f;&#x62;&#x6f;&#120;&#46;&#x63;&#x6f;&#x6d;">&#x6d;&#108;&#111;&#114;&#x64;&#x40;&#112;&#x6f;&#x62;&#x6f;&#120;&#46;&#x63;&#x6f;&#x6d;</a>, the primary developer and maintainer of the (E)IDE driver for Linux, with suggestions from many netfolk).该命令应该也是仅用于Linux系统,对于UNIX系统，ATA/IDE硬盘用的可能比较少，一般大型的系统都是使用磁盘阵列的.</p>
 <p>使用方法很简单</p>
 <h1 id="hdparm-Tt-dev-sda"><a href="#hdparm-Tt-dev-sda" class="headerlink" title="hdparm -Tt /dev/sda"></a>hdparm -Tt /dev/sda</h1><p>/dev/sda:<br>Timing cached reads: 6676 MB in 2.00 seconds = 3340.18 MB/sec<br>Timing buffered disk reads: 218 MB in 3.11 seconds = 70.11 MB/sec</p>
 <p>可以看到,2秒钟读取了6676MB的缓存,约合3340.18 MB/sec;<br>在3.11秒中读取了218MB磁盘(物理读),读取速度约合70.11 MB/sec</p>
@@ -724,41 +759,6 @@ sudo apt-get install -f
     
     
       <category term="linux" scheme="http://gaobb.github.io/tags/linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>关于Non-Maximum Supression</title>
-    <link href="http://gaobb.github.io/2015/06/07/%E5%85%B3%E4%BA%8E-Non-Maximum-Suppression/"/>
-    <id>http://gaobb.github.io/2015/06/07/关于-Non-Maximum-Suppression/</id>
-    <published>2015-06-07T03:21:39.000Z</published>
-    <updated>2016-09-26T05:41:54.150Z</updated>
-    
-    <content type="html"><![CDATA[<p>Non-Maximum Supression 是一种局部最大值搜索算法，在CV的很多任务中都有广泛的应用, 如跟踪、数据挖掘、3D重建、目标识别等。<br>参考：Alexander Neubeck的论文：Efﬁcient Non-Maximum Suppression。<br><a id="more"></a> </p>
-<h2 id="1-D-NMS"><a href="#1-D-NMS" class="headerlink" title="1-D NMS"></a>1-D NMS</h2><p>  2n+1邻域: 当前点n+i的2n+1邻域是指是在区间[i,2n+i] 上的2n+1个离散点， 也就是该点和该点左右侧各n个点构成。<br>  给定一个长度为w 的行向量y，NMS 就是以2n+1邻域搜索局部最大值. 下面以一维为例：<br><figure class="highlight matlab"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">maximumat</span> =<span class="title">nms</span><span class="params">(y,n)</span></span></div><div class="line"><span class="built_in">i</span>=<span class="number">1</span>;</div><div class="line">maximumat=[];</div><div class="line">w=<span class="built_in">length</span>(y);</div><div class="line"></div><div class="line"><span class="keyword">while</span> <span class="number">2</span>*n +<span class="built_in">i</span>&lt;w</div><div class="line">    <span class="keyword">if</span> y(<span class="built_in">i</span>+n)&gt;max(y(n+<span class="built_in">i</span>+<span class="number">1</span>:<span class="number">2</span>*n+<span class="built_in">i</span>))</div><div class="line">        <span class="keyword">if</span> y(<span class="built_in">i</span>+n)&gt;max(y(<span class="built_in">i</span>:n+<span class="built_in">i</span><span class="number">-1</span>))</div><div class="line">            maximumat = [maximumat i+n];</div><div class="line">        <span class="keyword">end</span></div><div class="line">    <span class="keyword">else</span> </div><div class="line">        <span class="built_in">i</span>=<span class="built_in">i</span>+<span class="number">1</span>;</div><div class="line">        <span class="keyword">while</span> <span class="number">2</span>*n +<span class="built_in">i</span>&lt;w &amp;&amp; y(<span class="built_in">i</span>+n)&lt;max(y(n+<span class="built_in">i</span>+<span class="number">1</span>:<span class="built_in">i</span>+<span class="number">2</span>*n))</div><div class="line">            <span class="built_in">i</span>=<span class="built_in">i</span>+<span class="number">1</span>;</div><div class="line">        <span class="keyword">end</span></div><div class="line">        <span class="keyword">if</span> <span class="number">2</span>*n +<span class="built_in">i</span>&lt;w</div><div class="line">            maximumat = [maximumat i+n];</div><div class="line">        <span class="keyword">end</span></div><div class="line">    <span class="keyword">end</span></div><div class="line">     <span class="built_in">i</span>=<span class="built_in">i</span>+n;</div><div class="line"><span class="keyword">end</span></div><div class="line"><span class="keyword">end</span></div></pre></td></tr></table></figure></p>
-<p>1、如果一个点比其左右两侧n点的值都大，即得到局部最大值，7-10行。<br>2、在处理过程中，如果未得到局部最大值，可以知道i + n 点比左侧的i到i+n-1点小，那么在下一次处理时，i = i + n，20行。<br><figure class="highlight gams"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">% eg1</div><div class="line">x= <span class="number">50</span>:<span class="number">0.1</span>:<span class="number">200</span>;</div><div class="line">y= <span class="built-in">sin</span>(x)./x;</div><div class="line"></div><div class="line">% eg2</div><div class="line">x=<span class="number">1</span>:<span class="number">200</span>;</div><div class="line">y=rand(<span class="number">1</span>,<span class="number">200</span>);</div><div class="line"></div><div class="line">n=<span class="number">2</span>;</div><div class="line">maximumat =nms(y,n);</div><div class="line">plot(x,y,<span class="string">'-bo'</span>);</div><div class="line">hold on </div><div class="line"><span class="function"><span class="title">plot</span>(<span class="params">x(maximumat</span>)</span>,y(maximumat),<span class="string">'-rs'</span>,  <span class="string">'MarkerFaceColor'</span>,<span class="string">'r'</span>,...</div><div class="line"> <span class="string">'MarkerSize'</span>,<span class="number">8</span>);</div><div class="line">legend(<span class="string">'Original data'</span>,<span class="string">'NMS'</span>);</div><div class="line">title(sprintf(<span class="string">'NMS:%d(2*%d+1)-Neighborhood  '</span>,<span class="number">2</span>*n+<span class="number">1</span>,n));</div></pre></td></tr></table></figure></p>
-<p><img src="../../../../image/nms_1.jpg" alt=""><br><img src="../../../../image/nms_2.jpg" alt=""></p>
-<h2 id="2-D-NMS"><a href="#2-D-NMS" class="headerlink" title="2-D NMS"></a>2-D NMS</h2><p>  2D邻域为以当前点为中心的(2n+1)×(2n+1)区域。</p>
-<h2 id="NMS-在目标检测中应用"><a href="#NMS-在目标检测中应用" class="headerlink" title="NMS 在目标检测中应用"></a>NMS 在目标检测中应用</h2><hr>
-<p><img src="/images/cc-by.svg" alt="">本作品采用<a href="http://creativecommons.org/licenses/by/2.5/cn/" target="_blank" rel="external">知识共享署名 2.5 中国大陆许可协议</a>进行许可，欢迎转载，但转载请注明来自 <a href="http://gaobb.github.io/">Sunshine</a> 并保持转载后文章内容的完整。本人保留所有版权相关权利。</p>
-<p><blockquote class="blockquote-center">留下你的话语，带走我的问候，欢迎大家没事踩踩。</blockquote><br><br></p>
-<blockquote>
-<p>最近访客</p>
-<p><div class="ds-recent-visitors" data-num-items="28" data-avatar-size="42" id="ds-recent-visitors"><br></div><br><br></p>
-</blockquote>
-<p>本文链接：<a href="http://gaobb.github.io/2015/06/07/关于-Non-Maximum-Suppression/">http://gaobb.github.io/2015/06/07/关于-Non-Maximum-Suppression/</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Non-Maximum Supression 是一种局部最大值搜索算法，在CV的很多任务中都有广泛的应用, 如跟踪、数据挖掘、3D重建、目标识别等。&lt;br&gt;参考：Alexander Neubeck的论文：Efﬁcient Non-Maximum Suppression。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="读书笔记" scheme="http://gaobb.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="NMS" scheme="http://gaobb.github.io/tags/NMS/"/>
     
   </entry>
   
