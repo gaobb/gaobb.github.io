@@ -76,7 +76,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="matlab,gpu," />
+  <meta name="keywords" content="编程实践," />
 
 
 
@@ -94,22 +94,18 @@
 
 
 
-<meta name="description" content="本文主要总结 MATLAB 下如何指定GPU计算资源.">
+<meta name="description" content="大壮老师的开场：欢迎学习《用Python玩转数据》，本课程用非计算机专业的小伙伴们能听得懂的方式来讲述如何利用Python这种简单易学的程序设计语言方便快捷地获取数据、表示数据、分析数据和展示数据，通过多个案例让大家轻松愉快地学会用Python玩转各领域数据。相信《用Python玩转数据》是一门可以让你不再害怕数据处理的计算机程序设计课，2016年9月8日10:00，大壮老师期待你的加入^_^。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Matlab and GPU">
-<meta property="og:url" content="http://gaobb.github.io/2015/06/12/Matlab and GPU/index.html">
+<meta property="og:title" content="MOOC《用Python玩转数据》编程作业">
+<meta property="og:url" content="http://gaobb.github.io/2016/09/30/学习笔记_MOOC_Learning_Python/index.html">
 <meta property="og:site_name" content="Sunshine">
-<meta property="og:description" content="本文主要总结 MATLAB 下如何指定GPU计算资源.">
-<meta property="og:image" content="http://gaobb.github.io/../../../../image/nvidia-smi.png">
-<meta property="og:image" content="http://gaobb.github.io/../../../../image/gpudevice.png">
-<meta property="og:image" content="http://gaobb.github.io/../../../../image/resetgpu.png">
-<meta property="og:image" content="http://gaobb.github.io/../../../../image/viewgpudevice.png">
+<meta property="og:description" content="大壮老师的开场：欢迎学习《用Python玩转数据》，本课程用非计算机专业的小伙伴们能听得懂的方式来讲述如何利用Python这种简单易学的程序设计语言方便快捷地获取数据、表示数据、分析数据和展示数据，通过多个案例让大家轻松愉快地学会用Python玩转各领域数据。相信《用Python玩转数据》是一门可以让你不再害怕数据处理的计算机程序设计课，2016年9月8日10:00，大壮老师期待你的加入^_^。">
 <meta property="og:image" content="http://gaobb.github.io/images/cc-by.svg">
-<meta property="og:updated_time" content="2016-09-26T05:41:13.862Z">
+<meta property="og:updated_time" content="2016-09-30T15:17:44.438Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Matlab and GPU">
-<meta name="twitter:description" content="本文主要总结 MATLAB 下如何指定GPU计算资源.">
-<meta name="twitter:image" content="http://gaobb.github.io/../../../../image/nvidia-smi.png">
+<meta name="twitter:title" content="MOOC《用Python玩转数据》编程作业">
+<meta name="twitter:description" content="大壮老师的开场：欢迎学习《用Python玩转数据》，本课程用非计算机专业的小伙伴们能听得懂的方式来讲述如何利用Python这种简单易学的程序设计语言方便快捷地获取数据、表示数据、分析数据和展示数据，通过多个案例让大家轻松愉快地学会用Python玩转各领域数据。相信《用Python玩转数据》是一门可以让你不再害怕数据处理的计算机程序设计课，2016年9月8日10:00，大壮老师期待你的加入^_^。">
+<meta name="twitter:image" content="http://gaobb.github.io/images/cc-by.svg">
 
 
 
@@ -130,9 +126,9 @@
 
 
 
-  <link rel="canonical" href="http://gaobb.github.io/2015/06/12/Matlab and GPU/"/>
+  <link rel="canonical" href="http://gaobb.github.io/2016/09/30/学习笔记_MOOC_Learning_Python/"/>
 
-  <title> Matlab and GPU | Sunshine </title>
+  <title> MOOC《用Python玩转数据》编程作业 | Sunshine </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -314,7 +310,7 @@
             
             
               
-                Matlab and GPU
+                MOOC《用Python玩转数据》编程作业
               
             
           </h1>
@@ -326,8 +322,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-06-12T18:58:58+08:00" content="2015-06-12">
-              2015-06-12
+            <time itemprop="dateCreated" datetime="2016-09-30T22:00:00+08:00" content="2016-09-30">
+              2016-09-30
             </time>
           </span>
 
@@ -340,8 +336,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/linux/" itemprop="url" rel="index">
-                    <span itemprop="name">linux</span>
+                  <a href="/categories/Project/" itemprop="url" rel="index">
+                    <span itemprop="name">Project</span>
                   </a>
                 </span>
 
@@ -356,8 +352,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2015/06/12/Matlab and GPU/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/06/12/Matlab and GPU/" itemprop="commentsCount"></span>
+                <a href="/2016/09/30/学习笔记_MOOC_Learning_Python/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/30/学习笔记_MOOC_Learning_Python/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -385,20 +381,22 @@
       
 
       
-        <p>本文主要总结 MATLAB 下如何指定GPU计算资源.<br><a id="more"></a> </p>
-<h2 id="查看服务器GPU计算资源"><a href="#查看服务器GPU计算资源" class="headerlink" title="查看服务器GPU计算资源"></a>查看服务器GPU计算资源</h2><figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$ </span>nvidia-smi</div></pre></td></tr></table></figure>
-<p><img src="../../../../image/nvidia-smi.png" alt=""></p>
-<p>上图可以知道，该台服务器共有4 块GPU（0 1 2 3），其中2和3 被进程PID：14138和16433使用.<br>如果自己的应用需要很大显存，可以指定GPU，例如这里至少可以使用 0 和 1. 在matlab 环境下，可以使用 gpuDevice 和 reset.<br><figure class="highlight erlang-repl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">matlab  <span class="comment">%启动matlab</span></div><div class="line">gpuDevice</div></pre></td></tr></table></figure></p>
-<p><img src="../../../../image/gpudevice.png" alt=""><br>默认为第0块GPU. 需要指出的是matlab 从1开始计数，而系统则是从0开始计数. 因此在matlab 下4块显卡的编号从（0 1 2 3）变为（1 2 3 4）.</p>
-<p>如果我们想用第1块显卡，则对应于matlab下面的第2块.可以使用reset 设定.<br><figure class="highlight gams"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">$</span> g=gpuDevice(<span class="number">2</span>)</div><div class="line"><span class="symbol">$</span> reset(g)</div><div class="line"><span class="symbol">$</span> <span class="keyword">system</span>(<span class="string">'nvidia-smi'</span>)  %调用系统命令查看</div></pre></td></tr></table></figure></p>
-<p><img src="../../../../image/resetgpu.png" alt=""><br>可以看到第1块显卡被启动，也可以使用matlab 提供的函数gpuDevice 查看.</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gpuDevice</div></pre></td></tr></table></figure>
-<p><img src="../../../../image/viewgpudevice.png" alt=""><br>可以看到当前的GPU的编号为2,对应于系统的1.</p>
-<h2 id="GPU-与-CPU-之间的数据交换"><a href="#GPU-与-CPU-之间的数据交换" class="headerlink" title="GPU 与 CPU 之间的数据交换"></a>GPU 与 CPU 之间的数据交换</h2><p>gpuArray<br>MATLAB中的gpuArray表示存储在GPU上的数据。使用gpuArray函数可以将数据从MATLAB工作空间传送到GPU。例如：<br><figure class="highlight ini"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attr">A</span> = data(<span class="number">10</span>);</div><div class="line"><span class="attr">G</span> = gpuArray(A);</div></pre></td></tr></table></figure></p>
-<p>gather<br>执行以上语句后，G 就是一个MATLAB GPUArray对象了。<br>当GPU运行完程序后，可以通过gather函数将数据从GPU取回到MATLAB工作空间。<br><figure class="highlight ini"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attr">D</span> = gather(G);</div></pre></td></tr></table></figure></p>
+        <p>大壮老师的开场：欢迎学习《用Python玩转数据》，本课程用非计算机专业的小伙伴们能听得懂的方式来讲述如何利用Python这种简单易学的程序设计语言方便快捷地获取数据、表示数据、分析数据和展示数据，通过多个案例让大家轻松愉快地学会用Python玩转各领域数据。相信《用Python玩转数据》是一门可以让你不再害怕数据处理的计算机程序设计课，2016年9月8日10:00，大壮老师期待你的加入^_^。</p>
+<a id="more"></a> 
+<h4 id="MODULE-01-Python基础之第二周-Python面面观"><a href="#MODULE-01-Python基础之第二周-Python面面观" class="headerlink" title="MODULE 01: Python基础之第二周 Python面面观"></a>MODULE 01: Python基础之第二周 Python面面观</h4><h2 id="题目内容："><a href="#题目内容：" class="headerlink" title="题目内容："></a>题目内容：</h2><p>找第n个默尼森数。P是素数且M也是素数，并且满足等式M=2<strong>P-1，则称M为默尼森数。例如，P=5，M=2</strong>P-1=31，5和31都是素数，因此31是默尼森数。</p>
+<p>输入格式:用input()函数输入，注意如果Python 3中此函数的返回类型<br>输出格式：int类型</p>
+<p>输入样例：4<br>输出样例：127</p>
+<h2 id="Python实现"><a href="#Python实现" class="headerlink" title="Python实现"></a>Python实现</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> math <span class="keyword">import</span> sqrt</div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">prime</span><span class="params">(num)</span>:</span></div><div class="line">   <span class="keyword">if</span> num &lt;=<span class="number">1</span>:</div><div class="line">       <span class="keyword">return</span> <span class="keyword">False</span></div><div class="line"></div><div class="line">   N = int(sqrt(num))</div><div class="line">   <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">2</span>,N+<span class="number">1</span>):</div><div class="line">     <span class="keyword">if</span> num%i ==<span class="number">0</span>:</div><div class="line">        <span class="keyword">return</span> <span class="keyword">False</span></div><div class="line">        <span class="keyword">break</span></div><div class="line">   <span class="keyword">return</span> <span class="keyword">True</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">monisen</span><span class="params">(no)</span>:</span></div><div class="line">    <span class="keyword">if</span> no &gt;=<span class="number">1</span>:</div><div class="line">       k = <span class="number">0</span></div><div class="line">       num = <span class="number">2</span></div><div class="line">       <span class="keyword">while</span> <span class="keyword">True</span>:</div><div class="line">          M = <span class="number">2</span>**num - <span class="number">1</span></div><div class="line">          <span class="keyword">if</span> prime(num) <span class="keyword">and</span> prime(M):</div><div class="line">             k += <span class="number">1</span></div><div class="line">          num += <span class="number">1</span></div><div class="line">          <span class="keyword">if</span> k == no:</div><div class="line">            <span class="keyword">break</span></div><div class="line">       <span class="keyword">return</span> M</div><div class="line">    <span class="keyword">else</span>:</div><div class="line">        <span class="keyword">return</span> <span class="number">0</span></div><div class="line"></div><div class="line"><span class="keyword">print</span> monisen(input())</div><div class="line">`</div></pre></td></tr></table></figure>
+<h4 id="MODULE-02-数据获取与表示之第三周-数据获取与表示"><a href="#MODULE-02-数据获取与表示之第三周-数据获取与表示" class="headerlink" title="MODULE 02: 数据获取与表示之第三周 数据获取与表示"></a>MODULE 02: 数据获取与表示之第三周 数据获取与表示</h4><p>##　题目内容：<br>定义函数countchar()统计字符串中所有出现的字母的个数（允许输入大写字符，并且计数时不区分大小写）。形如：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">countchar</span><span class="params">(str)</span>:</span></div><div class="line">      ... ...</div><div class="line">     <span class="keyword">return</span> a list</div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</div><div class="line">     str = raw_input()</div><div class="line">     ... ...</div><div class="line">     <span class="keyword">print</span> countchar(str)    <span class="comment"># print(countchar(str)) in Python 3</span></div></pre></td></tr></table></figure></p>
+<p>输入格式:<br>字符串</p>
+<p>输出格式：<br>列表</p>
+<p>输入样例：<br>Hello, World!</p>
+<p>输出样例：</p>
+<p>[0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 3, 0, 0, 2, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0]</p>
+<h2 id="Python实现-1"><a href="#Python实现-1" class="headerlink" title="Python实现"></a>Python实现</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#coding=utf-8</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">countchar</span><span class="params">(str)</span>:</span></div><div class="line">    charmap = &#123;&#125;</div><div class="line">    charnum = []</div><div class="line">    <span class="comment">#初始化字典</span></div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">26</span>):</div><div class="line">      charmap[chr(i+<span class="number">97</span>)]=<span class="number">0</span></div><div class="line">      charnum.append(<span class="number">0</span>)</div><div class="line">    <span class="comment">#统一大小写</span></div><div class="line">    str=str.lower()</div><div class="line">    <span class="comment">#统计个字母出现次数</span></div><div class="line">    <span class="keyword">for</span> c <span class="keyword">in</span> str:</div><div class="line">      <span class="keyword">if</span>  ord(<span class="string">"a"</span>)&lt;=ord(c)&lt;=ord(<span class="string">"z"</span>):</div><div class="line">        charmap[c]+=<span class="number">1</span></div><div class="line">      <span class="keyword">else</span>:</div><div class="line">        <span class="keyword">continue</span></div><div class="line"></div><div class="line"></div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">26</span>):</div><div class="line">        charnum[i] = charmap[chr(i+<span class="number">97</span>)]</div><div class="line">    <span class="keyword">return</span> charnum</div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</div><div class="line">     str = raw_input()</div><div class="line">     <span class="keyword">print</span> countchar(str)    <span class="comment"># print(countchar(str)) in Python 3</span></div></pre></td></tr></table></figure>
 <hr>
 <p><img src="/images/cc-by.svg" alt="">本作品采用<a href="http://creativecommons.org/licenses/by/2.5/cn/" target="_blank" rel="external">知识共享署名 2.5 中国大陆许可协议</a>进行许可，欢迎转载，但转载请注明来自 <a href="http://gaobb.github.io/">Sunshine</a> 并保持转载后文章内容的完整。本人保留所有版权相关权利。</p>
-<p>本文链接：<a href="http://gaobb.github.io/2015/06/12/Matlab">http://gaobb.github.io/2015/06/12/Matlab</a> and GPU/</p>
+<p>本文链接：<a href="http://gaobb.github.io/2016/09/30/学习笔记_MOOC_Learning_Python/">http://gaobb.github.io/2016/09/30/学习笔记_MOOC_Learning_Python/</a></p>
 
       
     </div>
@@ -442,9 +440,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/matlab/" rel="tag">#matlab</a>
-          
-            <a href="/tags/gpu/" rel="tag">#gpu</a>
+            <a href="/tags/编程实践/" rel="tag">#编程实践</a>
           
         </div>
       
@@ -453,17 +449,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/06/07/关于-Non-Maximum-Suppression/" rel="next" title="关于Non-Maximum Supression">
-                <i class="fa fa-chevron-left"></i> 关于Non-Maximum Supression
+              <a href="/2016/09/20/读书笔记_CRF/" rel="next" title="读书笔记《条件随机场》">
+                <i class="fa fa-chevron-left"></i> 读书笔记《条件随机场》
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2015/06/17/Matlab-常见问题整理/" rel="prev" title="Matlab 常见问题整理">
-                Matlab 常见问题整理 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -515,8 +507,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2015/06/12/Matlab and GPU/"
-           data-title="Matlab and GPU" data-url="http://gaobb.github.io/2015/06/12/Matlab and GPU/">
+      <div class="ds-thread" data-thread-key="2016/09/30/学习笔记_MOOC_Learning_Python/"
+           data-title="MOOC《用Python玩转数据》编程作业" data-url="http://gaobb.github.io/2016/09/30/学习笔记_MOOC_Learning_Python/">
       </div>
     
   </div>
@@ -652,7 +644,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#查看服务器GPU计算资源"><span class="nav-number">1.</span> <span class="nav-text">查看服务器GPU计算资源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GPU-与-CPU-之间的数据交换"><span class="nav-number">2.</span> <span class="nav-text">GPU 与 CPU 之间的数据交换</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#MODULE-01-Python基础之第二周-Python面面观"><span class="nav-number">1.</span> <span class="nav-text">MODULE 01: Python基础之第二周 Python面面观</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#题目内容："><span class="nav-number"></span> <span class="nav-text">题目内容：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Python实现"><span class="nav-number"></span> <span class="nav-text">Python实现</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#MODULE-02-数据获取与表示之第三周-数据获取与表示"><span class="nav-number">1.</span> <span class="nav-text">MODULE 02: 数据获取与表示之第三周 数据获取与表示</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Python实现-1"><span class="nav-number"></span> <span class="nav-text">Python实现</span></a></div>
             
           </div>
         </section>
