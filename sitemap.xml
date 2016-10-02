@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://gaobb.github.io/2016/09/30/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_Mooc_Learning_Python/</loc>
+    
+    <lastmod>2016-10-02T14:21:57.464Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gaobb.github.io/2015/06/04/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0_CNN%E9%83%A8%E4%BB%B6/</loc>
+    
+    <lastmod>2016-10-01T16:47:42.781Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://gaobb.github.io/2016/09/30/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_MOOC_Learning_Python/</loc>
     
     <lastmod>2016-09-30T15:17:44.438Z</lastmod>
@@ -166,13 +180,6 @@
     <loc>http://gaobb.github.io/2015/06/05/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0R-CNN-and-Fast-RCNN/</loc>
     
     <lastmod>2015-06-05T13:23:00.961Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gaobb.github.io/2015/06/04/The%20details%20are%20always%20in%20convolutional%20neural%20network/</loc>
-    
-    <lastmod>2015-06-05T13:18:57.000Z</lastmod>
     
   </url>
   
