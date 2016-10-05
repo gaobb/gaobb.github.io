@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gaobb.github.io/"/>
-  <updated>2016-10-05T07:33:21.779Z</updated>
+  <updated>2016-10-05T11:39:05.287Z</updated>
   <id>http://gaobb.github.io/</id>
   
   <author>
@@ -20,17 +20,17 @@
     <link href="http://gaobb.github.io/2016/10/05/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0_%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/"/>
     <id>http://gaobb.github.io/2016/10/05/学习笔记_离散数学/</id>
     <published>2016-10-05T07:00:00.000Z</published>
-    <updated>2016-10-05T07:33:21.779Z</updated>
+    <updated>2016-10-05T11:39:05.287Z</updated>
     
     <content type="html"><![CDATA[<p>离散数学概论<br><a id="more"></a> </p>
-<h2 id="自我相关，相互缠绕——悖论、版画、卡农"><a href="#自我相关，相互缠绕——悖论、版画、卡农" class="headerlink" title="自我相关，相互缠绕——悖论、版画、卡农"></a>自我相关，相互缠绕——悖论、版画、卡农</h2><p>“下面这句话是错的<br>上面这句话是对的”</p>
-<p>说下面这句话是错的 然后第二句话呢，是上面这句话是对的， 那么到底是对的还是错的， 那么如果说下面这句话是错的话，那么就上面这句话 反过来它应该是错，那么它双重又否 否定了自己，这是一个非常直接的自我相关的怪圈</p>
-<h4 id="谁创造了谁？"><a href="#谁创造了谁？" class="headerlink" title="谁创造了谁？"></a>谁创造了谁？</h4><p>这个纸上的 这个手是由手来画出来的，那么画与被画这是完全不同的两个层次，那么他这个版画呢，把这两个层次硬生生的揉在了一起，那么谁画了谁，谁是被画的呢？ 完全缠绕在了一起。</p>
+<h2 id="自我相关，相互缠绕——悖论、版画、卡农"><a href="#自我相关，相互缠绕——悖论、版画、卡农" class="headerlink" title="自我相关，相互缠绕——悖论、版画、卡农"></a>自我相关，相互缠绕——悖论、版画、卡农</h2><h4 id="哪句话是对的？"><a href="#哪句话是对的？" class="headerlink" title="哪句话是对的？"></a>哪句话是对的？</h4><p>“下面这句话是对的<br>上面这句话是错的”</p>
+<p>假设两句话全是对的.那么“下面这句话是对的,上面这句话是错的”成了无限循环.舍去.<br>假设两句话全是错的.即“下面这句话是错的,上面这句话是对的”也成了无限循环.舍去.<br>假设第二句话是错的,第一句话是对的.那么应该是“下面这句话是对的”可是与已知假设“第二句话是错的”不符.<br>如果假设第一句话是错的,第二句话是对的.那么就是“下面这句话是错的”这样第二句话就也是错的了.不符合“第二句话是对的”.　这是一个非常直接的自我相关的怪圈</p>
+<h4 id="谁创造了谁？"><a href="#谁创造了谁？" class="headerlink" title="谁创造了谁？"></a>谁创造了谁？</h4><p>这个纸上的手是由手来画出来的. 画与被画是完全不同的两个层次，在这个版画里面把这两个层次硬生生的揉在了一起，那么谁画了谁，谁是被画的呢？ 完全缠绕在了一起。</p>
 <p><img src="/image/DrawHands.jpg" alt="Drawing Hands"></p>
-<h4 id="谁包含了谁？"><a href="#谁包含了谁？" class="headerlink" title="谁包含了谁？"></a>谁包含了谁？</h4><p>为了欣赏这幅画我们要从左下角这个人开始，那么这个人显然在画廊里，他看了墙上的一幅画， 虽然这个画变形的很厉害，不影响我们认为他是一幅画， 这个画里面呢是一个港口，港口靠岸呢有 城市、 有街道，那么这个街道上呢有一个画廊， 那么画廊我们会发现，这个画廊就正是这个人 这个观众所处的这个画廊，所以呢这个画里画外 也是硬生生的被缠绕在一起了， 但是这里头还有一个小小的技巧， 大家注意到，这个画的中心是没有东西的， 因为根据严格的计算，这个中心这一部分 他就没法画出来，所以呢作者很巧妙的 在这个中间空白的地方作为自己签名之处。<br><img src="/image/PrintGallery.jpg" alt="Print Gallery"></p>
-<h4 id="能走完了吗？"><a href="#能走完了吗？" class="headerlink" title="能走完了吗？"></a>能走完了吗？</h4><p>寺庙的顶上， 有两队的僧侣，一队的僧侣一直在上台阶，我们初看这个 台阶，它每一段都是很正常的， 上台阶，接下来又上台阶，再上台阶 再上，我们突然发现他在不停的上台阶的过程中，上了一圈的台阶回到了原地， 那么也就说它永远的上台阶， 而不会达到任何的别的高度， 那么另外一队僧侣呢是在不停的下台阶，那么跟上台阶的这个僧侣遭遇是一样的， 他也永远也上不完，他也永远走不到地面。<br><img src="/image/AscendingDescending.jpg" alt="Ａscending and Descending"></p>
-<h4 id="水流到哪儿去了？"><a href="#水流到哪儿去了？" class="headerlink" title="水流到哪儿去了？"></a>水流到哪儿去了？</h4><p>水从高处落下，带动了水车， 然后水就往远处流，突然这个水又回到原处，就是高的那个地方。这就是一个高处与低处、 近处与远处的一个非常巧妙的缠绕。<br><img src="/image/WaterFall.jpg" alt="Ｗater Fall"></p>
-<h4 id="音乐的奉献"><a href="#音乐的奉献" class="headerlink" title="音乐的奉献"></a>音乐的奉献</h4><p>巴赫，我们知道是一个非常伟大的音乐家， 作曲家，他有一组的乐曲，称之为音乐的奉献 它采用了一种特别的卡农形式. 所谓的卡农呢就是一种重复的演奏同一个主题的一种音乐形式 而且呢他通常会用不同的音部来重复的演奏这个主题 除此之外，他把每一个音部呢都会相比前面的音部 会延迟一段时间，那么这样呢就要求有非常高的技巧 让这个音乐的主题的每一个音符都要非常巧妙的跟延迟的音部当中 同样一个主题的自身的其他的音符能够保持和谐 这是需要相当的这个技巧，也就是自身和自身 也要打造一种音符的和谐，那么《音乐的奉献》，就是一个 达到了极端高度的这个卡农的这种形式，他运用了一种特殊的这种技巧 构成自我相关的怪圈，然后他通过不同的音部收尾相连的这种变调 使得听众有一种不断增调的感觉，这种感觉.</p>
+<h4 id="谁包含了谁？"><a href="#谁包含了谁？" class="headerlink" title="谁包含了谁？"></a>谁包含了谁？</h4><p>为了欣赏这幅画我们要从左下角这个人开始，这个人显然在画廊里，他看了墙上的一幅画， 虽然这个画变形的很厉害，并不影响我们认为他是一幅画。 画里面是一个港口，港口靠岸有 城市、 街道，街道上有一个画廊， 我们会发现，这个画廊里就正是这个人所处的这个画廊，所以画里画外 也是硬生生的被缠绕在一起。 这里头还有一个小小的技巧， 大家注意到，这个画的中心是没有东西的， 因为根据严格的计算，中心这一部分没法画出来，所以作者很巧妙的在这个中间空白的地方作为自己签名之处。<br><img src="/image/PrintGallery.jpg" alt="Print Gallery"></p>
+<h4 id="能走完吗？"><a href="#能走完吗？" class="headerlink" title="能走完吗？"></a>能走完吗？</h4><p>寺庙的顶上， 有两队的僧侣，一队的僧侣一直在上台阶，另外一队僧侣呢是在不停的下台阶。我们初看这个台阶，它每一段都是很正常的。对于上台阶的僧侣来说，上台阶，接下来又上台阶，再上台阶再上，我们突然发现他在不停的上台阶的过程中，上了一圈的台阶又回到了原地， 也就是说它永远在上台阶， 而不会达到任何的别的高度， 对于不停的下台阶另外一队僧侣而言，跟上台阶的僧侣遭遇是一样的， 永远也下不完，永远走不到地面。<br><img src="/image/AscendingDescending.jpg" alt="Ａscending and Descending"></p>
+<h4 id="水流到哪儿去了？"><a href="#水流到哪儿去了？" class="headerlink" title="水流到哪儿去了？"></a>水流到哪儿去了？</h4><p>水从高处落下，带动了水车，然后水就往远处流，突然这个水又回到原处，就是高的那个地方。这就是一个高处与低处、 近处与远处的一个非常巧妙的缠绕。<br><img src="/image/WaterFall.jpg" alt="Ｗater Fall"></p>
+<h4 id="音乐的奉献"><a href="#音乐的奉献" class="headerlink" title="音乐的奉献"></a>音乐的奉献</h4><p>巴赫，我们知道是一个非常伟大的音乐家， 作曲家，他有一组的乐曲，称之为音乐的奉献 它采用了一种特别的卡农形式. 所谓的卡农就是一种重复的演奏同一个主题的一种音乐形式 而且他通常会用不同的音部来重复的演奏这个主题 除此之外，他把每一个音部都会相比前面的音部 会延迟一段时间，这样就要求有非常高的技巧 让这个音乐的主题的每一个音符都要非常巧妙的跟延迟的音部当中 同样一个主题的自身的其他的音符能够保持和谐 这是需要相当的这个技巧，也就是自身和自身 也要打造一种音符的和谐，《音乐的奉献》就是一个达到了极端高度的卡农的形式，他运用了一种特殊的技巧 构成自我相关的怪圈，然后他通过不同的音部收尾相连的这种变调 使得听众有一种不断增调的感觉.</p>
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="http://music.163.com/outchain/player?type=2&id=1585779&auto=1&height=66"></iframe>
 
 <hr>
@@ -768,45 +768,6 @@
   </entry>
   
   <entry>
-    <title>使用hexo搭建博客</title>
-    <link href="http://gaobb.github.io/2015/06/07/%E4%BD%BF%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
-    <id>http://gaobb.github.io/2015/06/07/使用hexo搭建博客/</id>
-    <published>2015-06-07T03:21:39.000Z</published>
-    <updated>2016-09-27T08:31:25.548Z</updated>
-    
-    <content type="html"><![CDATA[<p>使用hexo搭建博客<br><a id="more"></a> </p>
-<h2 id="配置好Node-js环境"><a href="#配置好Node-js环境" class="headerlink" title="配置好Node.js环境"></a>配置好Node.js环境</h2><p>sudo apt-get install nodejs-legacy</p>
-<p>node –version<br>v4.2.4</p>
-<h2 id="配置npm工具"><a href="#配置npm工具" class="headerlink" title="配置npm工具"></a>配置npm工具</h2><p>sudo apt-get install npm</p>
-<p>npm –version<br>3.5.2</p>
-<h2 id="配置-Git"><a href="#配置-Git" class="headerlink" title="配置 Git"></a>配置 Git</h2><p>sudo apt-get install git</p>
-<p>git  –version<br>git version 2.7.0.rc3</p>
-<h2 id="配置-hexo"><a href="#配置-hexo" class="headerlink" title="配置 hexo"></a>配置 hexo</h2><p>sudo  npm install -g hexo<br>hexo init <folder></folder></p>
-<p>hexo server  启动本地服务器<br>hexo deploy<br>hexo genernate</p>
-<p><br></p>
-<blockquote>
-<p>最近访客</p>
-<p><div class="ds-recent-visitors" data-num-items="28" data-avatar-size="42" id="ds-recent-visitors"></div><br><br></p>
-</blockquote>
-<hr>
-<p><img src="/images/cc-by.svg" alt="">本作品采用<a href="http://creativecommons.org/licenses/by/2.5/cn/" target="_blank" rel="external">知识共享署名 2.5 中国大陆许可协议</a>进行许可，欢迎转载，但转载请注明来自 <a href="http://gaobb.github.io/">Sunshine</a> 并保持转载后文章内容的完整。本人保留所有版权相关权利。</p>
-<p>本文链接：<a href="http://gaobb.github.io/2015/06/07/使用hexo搭建博客/">http://gaobb.github.io/2015/06/07/使用hexo搭建博客/</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;使用hexo搭建博客&lt;br&gt;
-    
-    </summary>
-    
-      <category term="Linux" scheme="http://gaobb.github.io/categories/Linux/"/>
-    
-    
-      <category term="linux" scheme="http://gaobb.github.io/tags/linux/"/>
-    
-  </entry>
-  
-  <entry>
     <title>linux系统常见问题整理</title>
     <link href="http://gaobb.github.io/2015/06/07/linux%E7%B3%BB%E7%BB%9F%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%95%B4%E7%90%86/"/>
     <id>http://gaobb.github.io/2015/06/07/linux系统常见问题整理/</id>
@@ -830,7 +791,7 @@
 <h2 id="查看，杀死僵尸进程"><a href="#查看，杀死僵尸进程" class="headerlink" title="查看，杀死僵尸进程"></a>查看，杀死僵尸进程</h2><figure class="highlight perl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$   ps -ef | <span class="keyword">grep</span> defunct | <span class="keyword">grep</span> -v <span class="keyword">grep</span></div><div class="line">$   ps -A -o <span class="keyword">stat</span>,ppid,pid,cmd | <span class="keyword">grep</span> -e <span class="string">'^[Zz]'</span> | awk <span class="string">'&#123;print $2&#125;'</span> | xargs <span class="keyword">kill</span> -<span class="number">9</span></div><div class="line">               ps -A -o <span class="keyword">stat</span>,ppid,pid,cmd |<span class="keyword">grep</span> -e <span class="string">"^[Zz]"</span></div></pre></td></tr></table></figure>
 <h2 id="升级到Ubuntu-16-04的方法"><a href="#升级到Ubuntu-16-04的方法" class="headerlink" title="升级到Ubuntu 16.04的方法"></a>升级到Ubuntu 16.04的方法</h2><figure class="highlight q"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$  sudo apt-<span class="built_in">get</span> <span class="keyword">update</span> %先刷新源：</div><div class="line">$  sudo <span class="keyword">update</span>-manager -c -d  %执行更新：</div></pre></td></tr></table></figure>
 <h2 id="linux下测试磁盘的读写IO速度"><a href="#linux下测试磁盘的读写IO速度" class="headerlink" title="linux下测试磁盘的读写IO速度"></a>linux下测试磁盘的读写IO速度</h2><p>有时候我们在做维护的时候，总会遇到类似于IO特别高，但不能判定是IO瓶颈还是软件参数设置不当导致热盘的问题.这时候通常希望能知道磁盘的读写速度，来进行下一步的决策.</p>
-<p>下面是两种测试方法：<br>(1)使用hdparm命令<br>这是一个是用来获取ATA/IDE硬盘的参数的命令,是由早期Linux IDE驱动的开发和维护人员 Mark Lord开发编写的( hdparm has been written by Mark Lord <a href="&#109;&#x61;&#105;&#x6c;&#x74;&#x6f;&#58;&#109;&#x6c;&#111;&#114;&#x64;&#x40;&#x70;&#x6f;&#x62;&#111;&#120;&#46;&#x63;&#111;&#109;">&#109;&#x6c;&#111;&#114;&#x64;&#x40;&#x70;&#x6f;&#x62;&#111;&#120;&#46;&#x63;&#111;&#109;</a>, the primary developer and maintainer of the (E)IDE driver for Linux, with suggestions from many netfolk).该命令应该也是仅用于Linux系统,对于UNIX系统，ATA/IDE硬盘用的可能比较少，一般大型的系统都是使用磁盘阵列的.</p>
+<p>下面是两种测试方法：<br>(1)使用hdparm命令<br>这是一个是用来获取ATA/IDE硬盘的参数的命令,是由早期Linux IDE驱动的开发和维护人员 Mark Lord开发编写的( hdparm has been written by Mark Lord <a href="&#109;&#x61;&#x69;&#x6c;&#116;&#111;&#58;&#x6d;&#x6c;&#111;&#x72;&#100;&#x40;&#x70;&#x6f;&#98;&#x6f;&#120;&#46;&#x63;&#111;&#109;">&#x6d;&#x6c;&#111;&#x72;&#100;&#x40;&#x70;&#x6f;&#98;&#x6f;&#120;&#46;&#x63;&#111;&#109;</a>, the primary developer and maintainer of the (E)IDE driver for Linux, with suggestions from many netfolk).该命令应该也是仅用于Linux系统,对于UNIX系统，ATA/IDE硬盘用的可能比较少，一般大型的系统都是使用磁盘阵列的.</p>
 <p>使用方法很简单</p>
 <h1 id="hdparm-Tt-dev-sda"><a href="#hdparm-Tt-dev-sda" class="headerlink" title="hdparm -Tt /dev/sda"></a>hdparm -Tt /dev/sda</h1><p>/dev/sda:<br>Timing cached reads: 6676 MB in 2.00 seconds = 3340.18 MB/sec<br>Timing buffered disk reads: 218 MB in 3.11 seconds = 70.11 MB/sec</p>
 <p>可以看到,2秒钟读取了6676MB的缓存,约合3340.18 MB/sec;<br>在3.11秒中读取了218MB磁盘(物理读),读取速度约合70.11 MB/sec</p>
@@ -883,6 +844,45 @@ sudo apt-get install -f
     <summary type="html">
     
       &lt;p&gt;本文总结一些在Linux 系统下常见的一些问题以及解决方案.&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://gaobb.github.io/categories/Linux/"/>
+    
+    
+      <category term="linux" scheme="http://gaobb.github.io/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用hexo搭建博客</title>
+    <link href="http://gaobb.github.io/2015/06/07/%E4%BD%BF%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://gaobb.github.io/2015/06/07/使用hexo搭建博客/</id>
+    <published>2015-06-07T03:21:39.000Z</published>
+    <updated>2016-09-27T08:31:25.548Z</updated>
+    
+    <content type="html"><![CDATA[<p>使用hexo搭建博客<br><a id="more"></a> </p>
+<h2 id="配置好Node-js环境"><a href="#配置好Node-js环境" class="headerlink" title="配置好Node.js环境"></a>配置好Node.js环境</h2><p>sudo apt-get install nodejs-legacy</p>
+<p>node –version<br>v4.2.4</p>
+<h2 id="配置npm工具"><a href="#配置npm工具" class="headerlink" title="配置npm工具"></a>配置npm工具</h2><p>sudo apt-get install npm</p>
+<p>npm –version<br>3.5.2</p>
+<h2 id="配置-Git"><a href="#配置-Git" class="headerlink" title="配置 Git"></a>配置 Git</h2><p>sudo apt-get install git</p>
+<p>git  –version<br>git version 2.7.0.rc3</p>
+<h2 id="配置-hexo"><a href="#配置-hexo" class="headerlink" title="配置 hexo"></a>配置 hexo</h2><p>sudo  npm install -g hexo<br>hexo init <folder></folder></p>
+<p>hexo server  启动本地服务器<br>hexo deploy<br>hexo genernate</p>
+<p><br></p>
+<blockquote>
+<p>最近访客</p>
+<p><div class="ds-recent-visitors" data-num-items="28" data-avatar-size="42" id="ds-recent-visitors"></div><br><br></p>
+</blockquote>
+<hr>
+<p><img src="/images/cc-by.svg" alt="">本作品采用<a href="http://creativecommons.org/licenses/by/2.5/cn/" target="_blank" rel="external">知识共享署名 2.5 中国大陆许可协议</a>进行许可，欢迎转载，但转载请注明来自 <a href="http://gaobb.github.io/">Sunshine</a> 并保持转载后文章内容的完整。本人保留所有版权相关权利。</p>
+<p>本文链接：<a href="http://gaobb.github.io/2015/06/07/使用hexo搭建博客/">http://gaobb.github.io/2015/06/07/使用hexo搭建博客/</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;使用hexo搭建博客&lt;br&gt;
     
     </summary>
     
