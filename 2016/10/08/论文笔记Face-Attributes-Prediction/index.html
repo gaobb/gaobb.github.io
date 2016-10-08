@@ -96,15 +96,15 @@
 
 <meta name="description" content="这篇论文主要提出了一个人脸属性预测的框架，将人脸定位和属性预测统一起来.此外另一个重要的贡献是构建了人脸属性预测的Benchmark.　论文的·项目链接">
 <meta property="og:type" content="article">
-<meta property="og:title" content="论文笔记Face_Attributes_Prediction">
+<meta property="og:title" content="论文笔记《Deep Learning Face Attributes in the Wild》">
 <meta property="og:url" content="http://gaobb.github.io/2016/10/08/论文笔记Face-Attributes-Prediction/index.html">
 <meta property="og:site_name" content="Sunshine">
 <meta property="og:description" content="这篇论文主要提出了一个人脸属性预测的框架，将人脸定位和属性预测统一起来.此外另一个重要的贡献是构建了人脸属性预测的Benchmark.　论文的·项目链接">
 <meta property="og:image" content="http://gaobb.github.io/image/face_attributes.png">
 <meta property="og:image" content="http://gaobb.github.io/images/cc-by.svg">
-<meta property="og:updated_time" content="2016-10-08T13:34:03.622Z">
+<meta property="og:updated_time" content="2016-10-08T13:43:45.903Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="论文笔记Face_Attributes_Prediction">
+<meta name="twitter:title" content="论文笔记《Deep Learning Face Attributes in the Wild》">
 <meta name="twitter:description" content="这篇论文主要提出了一个人脸属性预测的框架，将人脸定位和属性预测统一起来.此外另一个重要的贡献是构建了人脸属性预测的Benchmark.　论文的·项目链接">
 <meta name="twitter:image" content="http://gaobb.github.io/image/face_attributes.png">
 
@@ -129,7 +129,7 @@
 
   <link rel="canonical" href="http://gaobb.github.io/2016/10/08/论文笔记Face-Attributes-Prediction/"/>
 
-  <title> 论文笔记Face_Attributes_Prediction | Sunshine </title>
+  <title> 论文笔记《Deep Learning Face Attributes in the Wild》 | Sunshine </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -311,7 +311,7 @@
             
             
               
-                论文笔记Face_Attributes_Prediction
+                论文笔记《Deep Learning Face Attributes in the Wild》
               
             
           </h1>
@@ -365,16 +365,13 @@
       
         <p>这篇论文主要提出了一个人脸属性预测的框架，将人脸定位和属性预测统一起来.此外另一个重要的贡献是构建了人脸属性预测的Benchmark.　论文的·<a href="http://personal.ie.cuhk.edu.hk/~lz013/projects/FaceAttributes.html" target="_blank" rel="external">项目链接</a><br><a id="more"></a> </p>
 <h4 id="LNets-ANet-主要部分："><a href="#LNets-ANet-主要部分：" class="headerlink" title="LNets+ANet 主要部分："></a>LNets+ANet 主要部分：</h4><p><img src="/image/face_attributes.png" alt=""><br>LNets+ANet方法的整个流程主要由３部分构成：LNets(人脸区域的定位)＋ANet(属性特征提取网络) ＋ SVM(属性分类)，这三个部分是按照顺序独立完成的. 其中LNets和ANet结构类似于Ａlex-Net.</p>
-<h5 id="LNet0-LNets"><a href="#LNet0-LNets" class="headerlink" title="LNet0+LNets"></a>LNet0+LNets</h5><p>LNet 结构：５个卷基层＋１个全连接层<br>LNet loss:  采用attributes labels ，利用cross-entropy　loss训练<br>LNet 0：输入是原始图像，期望定位一个包含头部＋肩膀的人脸区域<br>LNets： 输入是LNet 0的输出，期望输出只包含人脸的精细区域</p>
-<h5 id="ANet"><a href="#ANet" class="headerlink" title="ANet"></a>ANet</h5><p>ANet结构：４个卷基层＋１个全连接层(不同的是前两个卷基层参数全局共享，即普通的卷积，而后两个卷基层参数局部共享)<br>Pre-training：作者选择了8k个人，约 160k 的训练图像. 一种比较简单的方式是直接使用 8000 个类别输出的softmax loss直接训练 。但是这样每个类别只有 20张训练图像，为了学习到类内部的不变性，作者组合softmax loss 和  similarity loss，这里的similarity loss是以属于同一个人的 Fc 特征的L2 loss 量化.<br>Fine-tuning:  用attributes labels 做fine-tuning.</p>
+<h5 id="LNet0-LNets"><a href="#LNet0-LNets" class="headerlink" title="LNet0+LNets"></a>LNet0+LNets</h5><p><strong>LNet 结构</strong>：５个卷基层＋１个全连接层<br><strong>LNet loss</strong>:  采用attributes labels ，利用cross-entropy　loss训练<br><strong>LNet0</strong>：输入是原始图像，期望定位一个包含头部＋肩膀的人脸区域<br><strong>LNets</strong>： 输入是LNet 0的输出，期望输出只包含人脸的精细区域</p>
+<h5 id="ANet"><a href="#ANet" class="headerlink" title="ANet"></a>ANet</h5><p><strong>ANet结构</strong>：４个卷基层＋１个全连接层(不同的是前两个卷基层参数全局共享，即普通的卷积，而后两个卷基层参数局部共享)<br><strong>Pre-training</strong>：作者选择了8k个人，约 160k 的训练图像. 一种比较简单的方式是直接使用 8000 个类别输出的softmax loss直接训练 。但是这样每个类别只有 20张训练图像，为了学习到类内部的不变性，作者组合softmax loss 和  similarity loss，这里的similarity loss是以属于同一个人的 Fc 特征的L2 loss 量化.<br><strong>Fine-tuning</strong>:  用attributes labels 做fine-tuning.</p>
 <h5 id="SVM"><a href="#SVM" class="headerlink" title="SVM"></a>SVM</h5><p>提取ANet的Fc特征，利用属性标记训练40个SVM. 需要注意的是他们并没有把 SVM 嵌入CNN，特征识别和SVM训练是两个单独的过程. 这一点我早上给您说错了.</p>
-<h4 id="LNets-ANet-对比实验设置："><a href="#LNets-ANet-对比实验设置：" class="headerlink" title="LNets+ANet 对比实验设置："></a>LNets+ANet 对比实验设置：</h4><p>1 Face-Tracer(ECCV’08)：提取人脸重要区域的HOG 和 color histograms特征，然后训练 SVM 做属性的分类.<br>2 PANDA(CVPR’14): 提取人脸重要区域的CNN特征,然后训练 SVM 做属性的分类.　<br>　作者使用了两个人脸重要区域的选择的方案：<br>　PANDA-w：使用当前最好的人脸检测和对齐方法<br>　PANDA-l：使用ground truth landmark points<br>3 Face detection+ANet: 主要就是将本文的人脸定位网络LNets替换为当前最好的人脸检测. 作者这个实验是想说他们的定位网络对属性预测性能的贡献.</p>
-<h4 id="LNets-ANet-实验结果："><a href="#LNets-ANet-实验结果：" class="headerlink" title="LNets+ANet 实验结果："></a>LNets+ANet 实验结果：</h4><p>作者构建了两个数据集CelebA and LFWA,　其中训练数据和测试数据的划分如下：</p>
-<h2 id="Datasets-identities-face-images-training-ANet-LNet-training-SVM-Test"><a href="#Datasets-identities-face-images-training-ANet-LNet-training-SVM-Test" class="headerlink" title="  Datasets|    identities     |    face images      |  training ANet, LNet     |   training SVM      |          Test"></a>  Datasets|    identities     |    face images      |  training ANet, LNet     |   training SVM      |          Test</h2><p>CelebA   　  　　　 10,177              202,599               8k identities            2k identities              　　1k identities</p>
-<h2 id="LFWA-5-749-13-233-0-6-263-face-iamges-6970-face-images"><a href="#LFWA-5-749-13-233-0-6-263-face-iamges-6970-face-images" class="headerlink" title="LFWA　           　5,749             　　13,233                0                       6,263 face iamges          6970 face images"></a>LFWA　           　5,749             　　13,233                0                       6,263 face iamges          6970 face images</h2><p>注：LFWA直接使用在CelebA 上训练好的ANet, LNet，因此训练图像的数目是０，构建LFWA主要是为了检验ANet, LNet的泛化性能</p>
-<p>40个属性的平均预测结果(准确率％)如下：</p>
-<h2 id="Datasets-Face-Tracer-PANDA-w-PANDA-l-Face-detection-ANet-LNets-ANet"><a href="#Datasets-Face-Tracer-PANDA-w-PANDA-l-Face-detection-ANet-LNets-ANet" class="headerlink" title="  Datasets    |  Face-Tracer      |    PANDA-w    |    PANDA-l        |     Face detection+ANet     |    LNets+ANet"></a>  Datasets    |  Face-Tracer      |    PANDA-w    |    PANDA-l        |     Face detection+ANet     |    LNets+ANet</h2><p>CelebA   　      　    81               79                  85                          83                    87</p>
-<h2 id="LFWA-74-71-81-76-84"><a href="#LFWA-74-71-81-76-84" class="headerlink" title="LFWA　     　          74               71                  81                          76                    84"></a>LFWA　     　          74               71                  81                          76                    84</h2><hr>
+<h4 id="LNets-ANet-对比实验设置："><a href="#LNets-ANet-对比实验设置：" class="headerlink" title="LNets+ANet 对比实验设置："></a>LNets+ANet 对比实验设置：</h4><p>1 <strong>Face-Tracer(ECCV’08)</strong>：提取人脸重要区域的HOG 和 color histograms特征，然后训练 SVM 做属性的分类.<br>2 <strong>PANDA(CVPR’14)</strong>: 提取人脸重要区域的CNN特征,然后训练 SVM 做属性的分类.　<br>　作者使用了两个人脸重要区域的选择的方案：<br>　PANDA-w：使用当前最好的人脸检测和对齐方法<br>　PANDA-l：使用ground truth landmark points<br>3 <strong>Face detection+ANet</strong>: 主要就是将本文的人脸定位网络LNets替换为当前最好的人脸检测. 作者这个实验是想说他们的定位网络对属性预测性能的贡献.</p>
+<h4 id="LNets-ANet-实验结果："><a href="#LNets-ANet-实验结果：" class="headerlink" title="LNets+ANet 实验结果："></a>LNets+ANet 实验结果：</h4><p>作者构建了两个数据集CelebA and LFWA,　其中训练数据和测试数据的划分如下：<br><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="section">  Datasets| identities  | face images |  training ANet, LNet  |  training SVM |  Test</span></div><div class="line">----------------------------------------------------------------------------------------------------------------------------------</div><div class="line">CelebA   　  　　10,177       202,599        8k identities          2k identities     1k identities</div><div class="line"><span class="section">LFWA　          5,749        13,233        0                    6,263 face iamges   6970 face images</span></div><div class="line">----------------------------------------------------------------------------------------------------------------------------------</div><div class="line">*<span class="strong">*注:*</span>* LFWA直接使用在CelebA 上训练好的ANet, LNet，因此训练图像的数目是０，构建LFWA主要是为了检验ANet, LNet的泛化性能</div></pre></td></tr></table></figure></p>
+<p>40个属性的平均预测结果(准确率％)如下：<br><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="section">  Datasets|  Face-Tracer| PANDA-w  | PANDA-l | Face detection+ANet | LNets+ANet</span></div><div class="line">-------------------------------------------------------------------------------------------------------------------------</div><div class="line">CelebA   　      　81          79         85              83                87</div><div class="line"><span class="section">LFWA　     　      74          71         81              76                84</span></div><div class="line">-------------------------------------------------------------------------------------------------------------------------</div></pre></td></tr></table></figure></p>
+<hr>
 <p><img src="/images/cc-by.svg" alt="">本作品采用<a href="http://creativecommons.org/licenses/by/2.5/cn/" target="_blank" rel="external">知识共享署名 2.5 中国大陆许可协议</a>进行许可，欢迎转载，但转载请注明来自 <a href="http://gaobb.github.io/">Sunshine</a> 并保持转载后文章内容的完整。本人保留所有版权相关权利。</p>
 <p>本文链接：<a href="http://gaobb.github.io/2016/10/08/论文笔记Face-Attributes-Prediction/">http://gaobb.github.io/2016/10/08/论文笔记Face-Attributes-Prediction/</a></p>
 
@@ -488,7 +485,7 @@
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2016/10/08/论文笔记Face-Attributes-Prediction/"
-           data-title="论文笔记Face_Attributes_Prediction" data-url="http://gaobb.github.io/2016/10/08/论文笔记Face-Attributes-Prediction/">
+           data-title="论文笔记《Deep Learning Face Attributes in the Wild》" data-url="http://gaobb.github.io/2016/10/08/论文笔记Face-Attributes-Prediction/">
       </div>
     
   </div>
@@ -633,7 +630,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#LNets-ANet-主要部分："><span class="nav-number">1.</span> <span class="nav-text">LNets+ANet 主要部分：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#LNet0-LNets"><span class="nav-number">1.1.</span> <span class="nav-text">LNet0+LNets</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#ANet"><span class="nav-number">1.2.</span> <span class="nav-text">ANet</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#SVM"><span class="nav-number">1.3.</span> <span class="nav-text">SVM</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#LNets-ANet-对比实验设置："><span class="nav-number">2.</span> <span class="nav-text">LNets+ANet 对比实验设置：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#LNets-ANet-实验结果："><span class="nav-number">3.</span> <span class="nav-text">LNets+ANet 实验结果：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Datasets-identities-face-images-training-ANet-LNet-training-SVM-Test"><span class="nav-number"></span> <span class="nav-text">  Datasets|    identities     |    face images      |  training ANet, LNet     |   training SVM      |          Test</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#LFWA-5-749-13-233-0-6-263-face-iamges-6970-face-images"><span class="nav-number"></span> <span class="nav-text">LFWA　           　5,749             　　13,233                0                       6,263 face iamges          6970 face images</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Datasets-Face-Tracer-PANDA-w-PANDA-l-Face-detection-ANet-LNets-ANet"><span class="nav-number"></span> <span class="nav-text">  Datasets    |  Face-Tracer      |    PANDA-w    |    PANDA-l        |     Face detection+ANet     |    LNets+ANet</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#LFWA-74-71-81-76-84"><span class="nav-number"></span> <span class="nav-text">LFWA　     　          74               71                  81                          76                    84</span></a></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#LNets-ANet-主要部分："><span class="nav-number">1.</span> <span class="nav-text">LNets+ANet 主要部分：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#LNet0-LNets"><span class="nav-number">1.1.</span> <span class="nav-text">LNet0+LNets</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#ANet"><span class="nav-number">1.2.</span> <span class="nav-text">ANet</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#SVM"><span class="nav-number">1.3.</span> <span class="nav-text">SVM</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#LNets-ANet-对比实验设置："><span class="nav-number">2.</span> <span class="nav-text">LNets+ANet 对比实验设置：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#LNets-ANet-实验结果："><span class="nav-number">3.</span> <span class="nav-text">LNets+ANet 实验结果：</span></a></li></ol></div>
             
           </div>
         </section>
