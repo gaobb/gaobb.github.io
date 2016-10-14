@@ -76,7 +76,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="CNN,Visualizing," />
+  <meta name="keywords" content="学习笔记," />
 
 
 
@@ -94,24 +94,18 @@
 
 
 
-<meta name="description" content="通过可视化卷积网络的feature map、fiflters来更好理解（解释）CNN">
+<meta name="description" content="Hello, Ipython　Notebook">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Visualizing what ConvNets learn">
-<meta property="og:url" content="http://gaobb.github.io/2015/06/05/Visualizing-what-ConvNets-learn/index.html">
+<meta property="og:title" content="学习笔记《Ipython　Notebook》">
+<meta property="og:url" content="http://gaobb.github.io/2016/10/14/学习笔记_Ipython/index.html">
 <meta property="og:site_name" content="Sunshine">
-<meta property="og:description" content="通过可视化卷积网络的feature map、fiflters来更好理解（解释）CNN">
-<meta property="og:image" content="http://gaobb.github.io/../../../../image/act1.jpeg">
-<meta property="og:image" content="http://gaobb.github.io/../../../../image/act2.jpeg">
-<meta property="og:image" content="http://gaobb.github.io/../../../../image/filt1.jpeg">
-<meta property="og:image" content="http://gaobb.github.io/../../../../image/filt2.jpeg">
-<meta property="og:image" content="http://gaobb.github.io/../../../../image/pool5max.jpeg">
-<meta property="og:image" content="http://gaobb.github.io/../../../../image/occlude.jpeg">
+<meta property="og:description" content="Hello, Ipython　Notebook">
 <meta property="og:image" content="http://gaobb.github.io/images/cc-by.svg">
-<meta property="og:updated_time" content="2015-06-07T07:41:28.000Z">
+<meta property="og:updated_time" content="2016-10-14T04:22:09.426Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Visualizing what ConvNets learn">
-<meta name="twitter:description" content="通过可视化卷积网络的feature map、fiflters来更好理解（解释）CNN">
-<meta name="twitter:image" content="http://gaobb.github.io/../../../../image/act1.jpeg">
+<meta name="twitter:title" content="学习笔记《Ipython　Notebook》">
+<meta name="twitter:description" content="Hello, Ipython　Notebook">
+<meta name="twitter:image" content="http://gaobb.github.io/images/cc-by.svg">
 
 
 
@@ -132,9 +126,9 @@
 
 
 
-  <link rel="canonical" href="http://gaobb.github.io/2015/06/05/Visualizing-what-ConvNets-learn/"/>
+  <link rel="canonical" href="http://gaobb.github.io/2016/10/14/学习笔记_Ipython/"/>
 
-  <title> Visualizing what ConvNets learn | Sunshine </title>
+  <title> 学习笔记《Ipython　Notebook》 | Sunshine </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -306,7 +300,7 @@
             
             
               
-                Visualizing what ConvNets learn
+                学习笔记《Ipython　Notebook》
               
             
           </h1>
@@ -318,38 +312,19 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-06-05T11:42:37+08:00" content="2015-06-05">
-              2015-06-05
+            <time itemprop="dateCreated" datetime="2016-10-14T12:12:55+08:00" content="2016-10-14">
+              2016-10-14
             </time>
           </span>
 
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/CNN/" itemprop="url" rel="index">
-                    <span itemprop="name">CNN</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
           
 
           
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2015/06/05/Visualizing-what-ConvNets-learn/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/06/05/Visualizing-what-ConvNets-learn/" itemprop="commentsCount"></span>
+                <a href="/2016/10/14/学习笔记_Ipython/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/14/学习笔记_Ipython/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -377,14 +352,15 @@
       
 
       
-        <p>通过可视化卷积网络的feature map、fiflters来更好理解（解释）CNN<br><a id="more"></a> </p>
-<h2 id="可视化神经元的激活值（activation）"><a href="#可视化神经元的激活值（activation）" class="headerlink" title="可视化神经元的激活值（activation）"></a>可视化神经元的激活值（activation）</h2><p><img src="../../../../image/act1.jpeg" alt=""><br><img src="../../../../image/act2.jpeg" alt=""></p>
-<h2 id="可视化神经网络每层的权重"><a href="#可视化神经网络每层的权重" class="headerlink" title="可视化神经网络每层的权重"></a>可视化神经网络每层的权重</h2><p><img src="../../../../image/filt1.jpeg" alt=""><br><img src="../../../../image/filt2.jpeg" alt=""></p>
-<h2 id="通过pool5-最大激活值追踪输入图像对应的patch"><a href="#通过pool5-最大激活值追踪输入图像对应的patch" class="headerlink" title="通过pool5 最大激活值追踪输入图像对应的patch"></a>通过pool5 最大激活值追踪输入图像对应的patch</h2><p><img src="../../../../image/pool5max.jpeg" alt=""></p>
-<h2 id="遮挡输入图像的部分，可视化每个遮挡后对应的输出类别在遮挡位置的置信度"><a href="#遮挡输入图像的部分，可视化每个遮挡后对应的输出类别在遮挡位置的置信度" class="headerlink" title="遮挡输入图像的部分，可视化每个遮挡后对应的输出类别在遮挡位置的置信度"></a>遮挡输入图像的部分，可视化每个遮挡后对应的输出类别在遮挡位置的置信度</h2><p><img src="../../../../image/occlude.jpeg" alt=""></p>
+        <p>Hello, Ipython　Notebook<br><a id="more"></a> </p>
+<h2 id="ipython-notebook-无法正常启动"><a href="#ipython-notebook-无法正常启动" class="headerlink" title="ipython notebook 无法正常启动"></a>ipython notebook 无法正常启动</h2><p>问题1. Connecting to 127.0.0.1:80… failed: Connection refused.”?</p>
+<p>   手动修改　firefox 代理</p>
+<p>问题2. An unknown error occurred while loading this notebook. This version can load notebook formats v4 or earlier.</p>
+<p>I solved this problem by changing the ownership of the ~/.local/share/jupyter　directory from root to user. I don’t know why this problem occurred, as it didn’t happen on my other systems, so perhaps it’s a bug and I will leave this here.</p>
+<h2 id="动态更新绘图"><a href="#动态更新绘图" class="headerlink" title="动态更新绘图"></a>动态更新绘图</h2><figure class="highlight stata"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">%matplotlib inline</div><div class="line">import time</div><div class="line">import pylab <span class="keyword">as</span> <span class="keyword">pl</span></div><div class="line">from IPython import <span class="keyword">display</span></div><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="keyword">range</span>(10):</div><div class="line">    <span class="keyword">pl</span>.clf()</div><div class="line">    <span class="keyword">pl</span>.<span class="keyword">plot</span>(<span class="keyword">pl</span>.randn(100))</div><div class="line">    <span class="keyword">display</span>.<span class="keyword">display</span>(<span class="keyword">pl</span>.gcf())</div><div class="line">    <span class="keyword">display</span>.clear_output(wait=True)</div><div class="line">    time.<span class="keyword">sleep</span>(1.0)</div></pre></td></tr></table></figure>
 <hr>
 <p><img src="/images/cc-by.svg" alt="">本作品采用<a href="http://creativecommons.org/licenses/by/2.5/cn/" target="_blank" rel="external">知识共享署名 2.5 中国大陆许可协议</a>进行许可，欢迎转载，但转载请注明来自 <a href="http://gaobb.github.io/">Sunshine</a> 并保持转载后文章内容的完整。本人保留所有版权相关权利。</p>
-<p>本文链接：<a href="http://gaobb.github.io/2015/06/05/Visualizing-what-ConvNets-learn/">http://gaobb.github.io/2015/06/05/Visualizing-what-ConvNets-learn/</a></p>
+<p>本文链接：<a href="http://gaobb.github.io/2016/10/14/学习笔记_Ipython/">http://gaobb.github.io/2016/10/14/学习笔记_Ipython/</a></p>
 
       
     </div>
@@ -428,9 +404,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/CNN/" rel="tag">#CNN</a>
-          
-            <a href="/tags/Visualizing/" rel="tag">#Visualizing</a>
+            <a href="/tags/学习笔记/" rel="tag">#学习笔记</a>
           
         </div>
       
@@ -439,17 +413,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/06/04/Convolutional neural network toolbox/" rel="next" title="Convolutional neural network toolbox">
-                <i class="fa fa-chevron-left"></i> Convolutional neural network toolbox
+              <a href="/2016/10/08/论文笔记Face-Attributes-Prediction/" rel="next" title="论文笔记《Deep Learning Face Attributes in the Wild》">
+                <i class="fa fa-chevron-left"></i> 论文笔记《Deep Learning Face Attributes in the Wild》
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2015/06/05/论文笔记R-CNN-and-Fast-RCNN/" rel="prev" title="论文笔记R-CNN and Fast-RCNN">
-                论文笔记R-CNN and Fast-RCNN <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -501,8 +471,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2015/06/05/Visualizing-what-ConvNets-learn/"
-           data-title="Visualizing what ConvNets learn" data-url="http://gaobb.github.io/2015/06/05/Visualizing-what-ConvNets-learn/">
+      <div class="ds-thread" data-thread-key="2016/10/14/学习笔记_Ipython/"
+           data-title="学习笔记《Ipython　Notebook》" data-url="http://gaobb.github.io/2016/10/14/学习笔记_Ipython/">
       </div>
     
   </div>
@@ -647,7 +617,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#可视化神经元的激活值（activation）"><span class="nav-number">1.</span> <span class="nav-text">可视化神经元的激活值（activation）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#可视化神经网络每层的权重"><span class="nav-number">2.</span> <span class="nav-text">可视化神经网络每层的权重</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#通过pool5-最大激活值追踪输入图像对应的patch"><span class="nav-number">3.</span> <span class="nav-text">通过pool5 最大激活值追踪输入图像对应的patch</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#遮挡输入图像的部分，可视化每个遮挡后对应的输出类别在遮挡位置的置信度"><span class="nav-number">4.</span> <span class="nav-text">遮挡输入图像的部分，可视化每个遮挡后对应的输出类别在遮挡位置的置信度</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#ipython-notebook-无法正常启动"><span class="nav-number">1.</span> <span class="nav-text">ipython notebook 无法正常启动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#动态更新绘图"><span class="nav-number">2.</span> <span class="nav-text">动态更新绘图</span></a></li></ol></div>
             
           </div>
         </section>
