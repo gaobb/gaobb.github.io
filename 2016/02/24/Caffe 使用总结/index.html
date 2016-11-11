@@ -76,7 +76,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Matlab," />
+  <meta name="keywords" content="Caffe," />
 
 
 
@@ -94,18 +94,19 @@
 
 
 
-<meta name="description" content="本文总结一些在Linux 环境（ubuntu15.04 and redhat 6.5）下使用MATLAB常见的一些问题以及解决方案.">
+<meta name="description" content="Caffe 安装常见问题">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Matlab 常见问题整理">
-<meta property="og:url" content="http://gaobb.github.io/2015/06/17/Matlab-常见问题整理/index.html">
+<meta property="og:title" content="Caffe 使用总结">
+<meta property="og:url" content="http://gaobb.github.io/2016/02/24/Caffe 使用总结/index.html">
 <meta property="og:site_name" content="Sunshine">
-<meta property="og:description" content="本文总结一些在Linux 环境（ubuntu15.04 and redhat 6.5）下使用MATLAB常见的一些问题以及解决方案.">
+<meta property="og:description" content="Caffe 安装常见问题">
+<meta property="og:image" content="http://gaobb.github.io/image/caffenet.png">
 <meta property="og:image" content="http://gaobb.github.io/images/cc-by.svg">
-<meta property="og:updated_time" content="2016-09-26T05:41:21.090Z">
+<meta property="og:updated_time" content="2016-10-30T05:44:57.907Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Matlab 常见问题整理">
-<meta name="twitter:description" content="本文总结一些在Linux 环境（ubuntu15.04 and redhat 6.5）下使用MATLAB常见的一些问题以及解决方案.">
-<meta name="twitter:image" content="http://gaobb.github.io/images/cc-by.svg">
+<meta name="twitter:title" content="Caffe 使用总结">
+<meta name="twitter:description" content="Caffe 安装常见问题">
+<meta name="twitter:image" content="http://gaobb.github.io/image/caffenet.png">
 
 
 
@@ -126,9 +127,9 @@
 
 
 
-  <link rel="canonical" href="http://gaobb.github.io/2015/06/17/Matlab-常见问题整理/"/>
+  <link rel="canonical" href="http://gaobb.github.io/2016/02/24/Caffe 使用总结/"/>
 
-  <title> Matlab 常见问题整理 | Sunshine </title>
+  <title> Caffe 使用总结 | Sunshine </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -300,7 +301,7 @@
             
             
               
-                Matlab 常见问题整理
+                Caffe 使用总结
               
             
           </h1>
@@ -312,8 +313,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-06-17T19:53:38+08:00" content="2015-06-17">
-              2015-06-17
+            <time itemprop="dateCreated" datetime="2016-02-24T15:55:52+08:00" content="2016-02-24">
+              2016-02-24
             </time>
           </span>
 
@@ -326,8 +327,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Matlab/" itemprop="url" rel="index">
-                    <span itemprop="name">Matlab</span>
+                  <a href="/categories/Project/" itemprop="url" rel="index">
+                    <span itemprop="name">Project</span>
                   </a>
                 </span>
 
@@ -342,8 +343,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2015/06/17/Matlab-常见问题整理/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/06/17/Matlab-常见问题整理/" itemprop="commentsCount"></span>
+                <a href="/2016/02/24/Caffe 使用总结/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/24/Caffe 使用总结/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -371,25 +372,30 @@
       
 
       
-        <p>本文总结一些在Linux 环境（ubuntu15.04 and redhat 6.5）下使用MATLAB常见的一些问题以及解决方案.<br><a id="more"></a> </p>
-<h2 id="使用Matlab-在没有安装excel的linux-Mac以及win-系统环境上写数据到excel"><a href="#使用Matlab-在没有安装excel的linux-Mac以及win-系统环境上写数据到excel" class="headerlink" title="使用Matlab 在没有安装excel的linux,Mac以及win 系统环境上写数据到excel."></a>使用Matlab 在没有安装excel的linux,Mac以及win 系统环境上写数据到excel.</h2><p>xlwrite: Generate XLS(X) files without Excel on Mac/Linux/Win.<br>解决方法来自：<br><a href="http://www.mathworks.com/matlabcentral/fileexchange/38591-xlwrite--generate-xls-x--files-without-excel-on-mac-linux-win" target="_blank" rel="external">http://www.mathworks.com/matlabcentral/fileexchange/38591-xlwrite--generate-xls-x--files-without-excel-on-mac-linux-win</a></p>
-<p>具体例子如下：<br>% Small demonstration on how to use XLWRITE<br>% Initialisation of POI Libs<br>% Add Java POI Libs to matlab javapath<br><figure class="highlight lisp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">javaaddpath('poi_library/poi-3.<span class="number">8</span><span class="number">-20120326</span>.jar')<span class="comment">;</span></div><div class="line">javaaddpath('poi_library/poi-ooxml-3.<span class="number">8</span><span class="number">-20120326</span>.jar')<span class="comment">;</span></div><div class="line">javaaddpath('poi_library/poi-ooxml-schemas-3.<span class="number">8</span><span class="number">-20120326</span>.jar')<span class="comment">;</span></div><div class="line">javaaddpath('poi_library/xmlbeans-2.<span class="number">3.0</span>.jar')<span class="comment">;</span></div><div class="line">javaaddpath('poi_library/dom4j-1.<span class="number">6.1</span>.jar')<span class="comment">;</span></div><div class="line">javaaddpath('poi_library/stax-api-1.<span class="number">0.1</span>.jar')<span class="comment">;</span></div></pre></td></tr></table></figure></p>
-<p>% Data Generation for XLSX<br>% Define an xls name<br><figure class="highlight ini"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="attr">fileName</span> = <span class="string">'test_xlwrite.xlsx'</span>;</div><div class="line"><span class="attr">sheetName</span> = <span class="string">'this_is_sheetname'</span>;</div><div class="line"><span class="attr">startRange</span> = <span class="string">'B3'</span>;</div></pre></td></tr></table></figure></p>
-<p>% Generate some data<br><figure class="highlight sml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">xlsData = &#123;<span class="symbol">'A</span> <span class="type">Number'</span> <span class="symbol">'Boolean</span> <span class="type">Data'</span> <span class="symbol">'Empty</span> <span class="type">Cells'</span> <span class="symbol">'Strings'</span>;...</div><div class="line"><span class="number">1</span> <span class="literal">true</span> <span class="literal">[]</span> <span class="symbol">'String</span> <span class="type">Text'</span>;...</div><div class="line"><span class="number">5</span> <span class="literal">false</span> <span class="literal">[]</span> <span class="symbol">'Another</span> very descriptive text';...</div><div class="line">-<span class="number">6.26</span> <span class="literal">false</span> <span class="symbol">'This</span> should have been an empty cell but <span class="type">I</span> made an error' <span class="symbol">'This</span> is text';...</div><div class="line"><span class="number">1e8</span> <span class="literal">true</span> <span class="literal">[]</span> <span class="symbol">'Last</span> cell <span class="keyword">with</span> text';...</div><div class="line"><span class="number">1e3</span> <span class="literal">false</span> <span class="type">NaN</span> <span class="type">NaN</span>;...</div><div class="line"><span class="number">1e2</span> <span class="literal">true</span> <span class="literal">[]</span> <span class="symbol">'test'</span>&#125;</div></pre></td></tr></table></figure></p>
-<p>% Generate XLSX file<br><figure class="highlight lisp"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">xlwrite(<span class="name">fileName</span>, xlsData, sheetName, startRange)<span class="comment">;</span></div></pre></td></tr></table></figure></p>
-<h2 id="I-can’t-open-Matlab-2015a-after-I-upgrade-Ubuntu-14-10-to-15-04"><a href="#I-can’t-open-Matlab-2015a-after-I-upgrade-Ubuntu-14-10-to-15-04" class="headerlink" title="I can’t open Matlab 2015a after I upgrade Ubuntu 14.10 to 15.04."></a>I can’t open Matlab 2015a after I upgrade Ubuntu 14.10 to 15.04.</h2><p>Picked up JAVA_TOOL_OPTIONS: -javaagent:/usr/share/java/jayatanaag.jar</p>
-<p>This package is responsible for application menu support for Java swing applications, and seems to be the cause for the segfault. Removing it worked for me:<br><figure class="highlight arduino"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo apt-<span class="built_in">get</span> <span class="built_in">remove</span> jayatana</div></pre></td></tr></table></figure></p>
-<p>If you just want to remove the message you can just edit your $HOME/.bashrc (if using bash) or $HOME/.profile and unset the variable with: unset JAVA_TOOL_OPTIONS<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ echo <span class="string">'unset JAVA_TOOL_OPTIONS'</span> &gt;&gt; ~/<span class="selector-class">.bashrc</span></div><div class="line">$ echo <span class="string">'unset JAVA_TOOL_OPTIONS'</span> &gt;&gt; ~/<span class="selector-class">.profile</span></div><div class="line">$ source ~/<span class="selector-class">.bashrc</span></div><div class="line">$ source ~/.profile</div></pre></td></tr></table></figure></p>
-<h2 id="MATLAB-parallel-error"><a href="#MATLAB-parallel-error" class="headerlink" title="MATLAB parallel error"></a>MATLAB parallel error</h2><p>  Java exception occurred:<br>  java.net.UnknownHostException: <strong><strong>**</strong></strong>: nodename nor servname provided, or not known<br>    at java.net.InetAddress.getLocalHost(InetAddress.java:1473)</p>
-<p>When you type !hostname in the command window In Matlab, it returns a string. In /etc/hosts (OS X/Linux), you should add: 127.0.0.1 str (str being whatever string !hostname returned). Is this what you tried? I had the same issue and it worked for me. (in my case I added 127.0.0.1 server because my hostname is server) –  Franck Dernoncourt Feb 2 at 4:17 </p>
-<h2 id="matlab-read-CMYK-image-error"><a href="#matlab-read-CMYK-image-error" class="headerlink" title="matlab read CMYK image error"></a>matlab read CMYK image error</h2><figure class="highlight mel"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">image_path=<span class="string">'./Desktop/n01739381_1309.JPEG'</span>;</div><div class="line">image_name=<span class="string">'n01739381_1309.JPEG'</span></div><div class="line"><span class="keyword">if</span> <span class="keyword">strcmp</span>(info(<span class="number">1</span>,<span class="number">1</span>).ColorType,<span class="string">'CMYK'</span>)</div><div class="line">    <span class="keyword">system</span>([<span class="string">'convert '</span>, image_path, <span class="string">' -colorspace RGB'</span>, <span class="string">' ./tmp/'</span>,image_name]);</div><div class="line">    <span class="keyword">image</span>=imread([<span class="string">'./tmp/'</span>,image_name]);</div><div class="line">end</div></pre></td></tr></table></figure>
-<h2 id="Vlfeat-Error-in-vl-demo-covdet-line-15"><a href="#Vlfeat-Error-in-vl-demo-covdet-line-15" class="headerlink" title="Vlfeat Error in vl_demo_covdet (line 15)"></a>Vlfeat Error in vl_demo_covdet (line 15)</h2><p>Invalid MEX-file ‘/home/gaobb/mywork/toolbox/vlfeat-0.9.19/toolbox/mex/mexa64/vl_covdet.mexa64’:<br>/home/gaobb/mywork/toolbox/vlfeat-0.9.19/toolbox/mex/mexa64/libvl.so: undefined symbol: GOMP_parallel<br>Error in vl_demo_covdet (line 15)<br>frames = vl_covdet(imgs, ‘verbose’) ;</p>
-<p>Solution<br>open the /vlfeat/makefile and edit:<br>Makefile DISABLE_OPENMP=yes</p>
-<h2 id="Vlfeat-Error-libvl-so-cannot-open-shared-object-file-No-such-file-or-directory"><a href="#Vlfeat-Error-libvl-so-cannot-open-shared-object-file-No-such-file-or-directory" class="headerlink" title="Vlfeat Error libvl.so: cannot open shared object file: No such file or directory"></a>Vlfeat Error libvl.so: cannot open shared object file: No such file or directory</h2><p>Invalid MEX-file ‘/home/gaobb/. mcrCache8.3/main_C0/home/gaobb/mywork/<br>toolbox/vlfeat- 0.9.20/toolbox/mex/mexa64/vl_fisher.mexa64’: libvl.so: cannot open shared object file: No such file or directory</p>
-<p>Solution<br>Open the /etc/ld.so.conf as sudo and add a new line with the library directory. In this case, we add /home/gaobb/mywork/toolbox/vlfeat-0.9.20/toolbox/mex/mexa64<br>Rerun ldconfig to rebuild the cache:<br>sudo ldconfig<br>Check if the shared library cache now includes the shared libraries from the new directory:<br>ldconfig -p</p>
+        <p>Caffe 安装常见问题<br><a id="more"></a> </p>
+<h2 id="编译错误"><a href="#编译错误" class="headerlink" title="编译错误"></a>编译错误</h2><p>After ‘make all’, you may face two errors. Here are the solutions:</p>
+<h4 id="Error-One"><a href="#Error-One" class="headerlink" title="Error One:"></a>Error One:</h4><p>./include/caffe/common.hpp:5:27: fatal error: gflags/gflags.h: No such file or directory<br>compilation terminated.</p>
+<p>Solutions:<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">wget http<span class="variable">s:</span>//github.<span class="keyword">com</span>/schuhschuh/gflags/archive/master.zip</div><div class="line">unzip master.zip</div><div class="line"><span class="keyword">cd</span> gflags-master</div><div class="line"><span class="built_in">mkdir</span> build &amp;&amp; <span class="keyword">cd</span> build</div><div class="line">export CXXFLAGS=<span class="string">"-fPIC"</span> &amp;&amp; cmake .. &amp;&amp; <span class="keyword">make</span> VERBOSE=<span class="number">1</span></div><div class="line"><span class="keyword">make</span> </div><div class="line">sudo <span class="keyword">make</span> install</div></pre></td></tr></table></figure></p>
+<h4 id="Error-Two"><a href="#Error-Two" class="headerlink" title="Error Two:"></a>Error Two:</h4><p>./include/caffe/data_layers.hpp:11:18: fatal error: lmdb.h: No such file or directory<br>Solution:<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">git clone gi<span class="variable">t:</span>//gitorious.org/mdb/mdb.git</div><div class="line"><span class="keyword">cd</span> mdb/libraries/liblmdb</div><div class="line"><span class="keyword">make</span></div><div class="line">sudo <span class="keyword">make</span> install</div></pre></td></tr></table></figure></p>
+<h2 id="Python-接口调用错误"><a href="#Python-接口调用错误" class="headerlink" title="Python　接口调用错误"></a>Python　接口调用错误</h2><p>After the installation of caffe, you could build the python interfance for it:<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">sudo ln -s /usr/<span class="keyword">include</span>/python2.<span class="number">7</span>/ <span class="regexp">/usr/local</span><span class="regexp">/include/python</span>2.<span class="number">7</span></div><div class="line">sudo ln -s /usr/local/<span class="class"><span class="keyword">lib</span>/<span class="title">python2</span>.7/<span class="title">dist</span>-<span class="title">packages</span>/<span class="title">numpy</span>-1.8.1-<span class="title">py2</span>.7-<span class="title">linux</span>-<span class="title">x86_64</span>.<span class="title">egg</span>/<span class="title">numpy</span>/<span class="title">core</span>/<span class="title">include</span>/<span class="title">numpy</span> /<span class="title">usr</span>/<span class="title">local</span>/<span class="title">include</span>/<span class="title">python2</span>.7/<span class="title">numpy</span></span></div><div class="line">make pycaffe</div><div class="line">echo <span class="string">'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64:/usr/local/lib'</span> &gt;&gt; ~<span class="regexp">/.bashrc</span></div><div class="line">source ~/.bashrc</div><div class="line">sudo easy_install pillow</div></pre></td></tr></table></figure></p>
+<p>If when you run ‘make pycaffe’, you see this error</p>
+<h4 id="Error-One-1"><a href="#Error-One-1" class="headerlink" title="Error One:"></a>Error One:</h4><p>UnicodeDecodeError: ‘ascii’ codec can’t decode byte 0xe2 in position 54: ordinal not in range(128)<br>you could fix it by running:<br><figure class="highlight q"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-<span class="built_in">get</span> install libevent-<span class="built_in">dev</span> python-<span class="built_in">dev</span></div></pre></td></tr></table></figure></p>
+<p>That should be the end of the installation. You can test that it runs with:<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">python python/classify<span class="selector-class">.py</span> --print_results examples/images/cat<span class="selector-class">.jpg</span> foo</div></pre></td></tr></table></figure></p>
+<p>The expected output is:<br><figure class="highlight scheme"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[(<span class="symbol">'kit</span> fox', <span class="symbol">'0.27327</span>'), (<span class="symbol">'red</span> fox', <span class="symbol">'0.20591</span>'), (<span class="symbol">'wood</span> rabbit', <span class="symbol">'0.12281</span>'), (<span class="symbol">'Egyptian</span></div></pre></td></tr></table></figure></p>
+<h4 id="Error-Two-1"><a href="#Error-Two-1" class="headerlink" title="Error Two:"></a>Error Two:</h4><p>Pycaffe not working: No module named google.protobuf.internal<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">cd</span> ~/anaconda2/<span class="keyword">bin/</span></div><div class="line"><span class="symbol">pip</span> install protobuf</div></pre></td></tr></table></figure></p>
+<h2 id="安装配置nVidia-cuDNN-加速Caffe模型运算"><a href="#安装配置nVidia-cuDNN-加速Caffe模型运算" class="headerlink" title="安装配置nVidia cuDNN 加速Caffe模型运算"></a>安装配置nVidia cuDNN 加速Caffe模型运算</h2><p>a. 安装cuDNN<br>该改版本caffe-master默认支持cudnn-6.5-linux-x64-v2，使用cudnn-6.5-linux-R1会报错，安装前请去先官网下载最新的cuDNN<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ sudo cp cudnn.h /usr/local/<span class="keyword">include</span></div><div class="line">$ sudo cp libcudnn.so /usr/local/<span class="class"><span class="keyword">lib</span></span></div><div class="line">$ sudo cp libcudnn.so.<span class="number">6.5</span> /usr/local/<span class="class"><span class="keyword">lib</span></span></div><div class="line">$ sudo cp libcudnn.so.<span class="number">6.5</span>.<span class="number">48</span> /usr/local/<span class="class"><span class="keyword">lib</span></span></div></pre></td></tr></table></figure></p>
+<p>b. 链接cuDNN的库文件<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ sudo ln -sf /usr/local/<span class="class"><span class="keyword">lib</span>/<span class="title">libcudnn</span>.<span class="title">so</span>.6.5.48 /<span class="title">usr</span>/<span class="title">local</span>/<span class="title">lib</span>/<span class="title">libcudnn</span>.<span class="title">so</span>.6.5</span></div><div class="line">$ sudo ln -sf /usr/local/<span class="class"><span class="keyword">lib</span>/<span class="title">libcudnn</span>.<span class="title">so</span>.6.5 /<span class="title">usr</span>/<span class="title">local</span>/<span class="title">lib</span>/<span class="title">libcudnn</span>.<span class="title">so</span></span></div><div class="line">$ sudo ldconfig -v</div></pre></td></tr></table></figure></p>
+<h2 id="opencv"><a href="#opencv" class="headerlink" title="opencv"></a>opencv</h2><p>Unsupported gpu architecture ‘compute_11’</p>
+<p>cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D CUDA_GENERATION=Kepler ..<br>cmake需要指定GPU架构3 ：-D CUDA_GENERATION=Kepler，否则报错：Unsupported gpu architecture ‘compute_11’<br>生成lib/libopencv_highgui.so.2.4.9找不到png_set_longjmp_fn，可以这样解决：<br>google之后发现这个函数定义在libpng中<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 查看libopencv_highgui.so.2.4.9引用了哪个libpng</span></div><div class="line">$ ldd <span class="class"><span class="keyword">lib</span>/<span class="title">libopencv_highgui</span>.<span class="title">so</span>.2.4.9 | <span class="title">grep</span> <span class="title">libpng</span></span></div><div class="line"><span class="comment"># 查看该lipng中是否定义了png_set_longjmp_fn，注意根据自己的环境替换掉/usr/lib64/libpng12.so.0.49.0</span></div><div class="line">$ readelf -s /usr/lib64/libpng12.so.<span class="number">0.49</span>.<span class="number">0</span> | grep png_set_longjmp_fn</div><div class="line"><span class="comment"># 没有任何输出，说明没有定义，则需要安装更新的版本</span></div><div class="line">$ wget <span class="symbol">http:</span>/<span class="regexp">/github.com/glennrp</span><span class="regexp">/libpng-releases/raw</span><span class="regexp">/master/libpng</span>-<span class="number">1.5</span>.<span class="number">23</span>.tar.xz</div><div class="line">$ tar -xvf libpng-<span class="number">1.5</span>.<span class="number">23</span>.tar.xz</div><div class="line">$ cd libpng-<span class="number">1.5</span>.<span class="number">23</span></div><div class="line">$ make install</div><div class="line"><span class="comment"># 安装后发现仍然找不到，这是因为链接时查找路径的问题4:</span></div><div class="line"></div><div class="line">$ cd /usr/local/<span class="class"><span class="keyword">lib</span></span></div><div class="line">$ cp -d libpng15.a libpng15.la libpng15.so* libpng.a libpng.* <span class="regexp">/usr/lib</span>64</div></pre></td></tr></table></figure></p>
+<h2 id="绘制模型的结构"><a href="#绘制模型的结构" class="headerlink" title="绘制模型的结构"></a>绘制模型的结构</h2><p>To install this package with conda run:<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">conda install -c rmg pydot=<span class="number">1.2</span><span class="number">.2</span></div></pre></td></tr></table></figure></p>
+<p>caffe python Exception: “dot” not found in path</p>
+<p>Installed GraphViz on Ubuntu:<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-<span class="keyword">get</span> install GraphViz</div></pre></td></tr></table></figure></p>
+<p>Installed GraphViz for Python:<br><figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pip <span class="keyword">install</span> GraphViz.</div></pre></td></tr></table></figure></p>
+<p>#have a look at the model<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">python python/draw_net<span class="selector-class">.py</span> models/bvlc_reference_caffenet/deploy<span class="selector-class">.prototxt</span> caffenet<span class="selector-class">.png</span></div><div class="line">open caffenet.png</div></pre></td></tr></table></figure></p>
+<p><img src="/image/caffenet.png" alt=""></p>
 <hr>
 <p><img src="/images/cc-by.svg" alt="">本作品采用<a href="http://creativecommons.org/licenses/by/2.5/cn/" target="_blank" rel="external">知识共享署名 2.5 中国大陆许可协议</a>进行许可，欢迎转载，但转载请注明来自 <a href="http://gaobb.github.io/">Sunshine</a> 并保持转载后文章内容的完整。本人保留所有版权相关权利。</p>
-<p>本文链接：<a href="http://gaobb.github.io/2015/06/17/Matlab-常见问题整理/">http://gaobb.github.io/2015/06/17/Matlab-常见问题整理/</a></p>
+<p>本文链接：<a href="http://gaobb.github.io/2016/02/24/Caffe">http://gaobb.github.io/2016/02/24/Caffe</a> 使用总结/</p>
 
       
     </div>
@@ -433,7 +439,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Matlab/" rel="tag">#Matlab</a>
+            <a href="/tags/Caffe/" rel="tag">#Caffe</a>
           
         </div>
       
@@ -442,16 +448,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/06/12/Matlab and GPU/" rel="next" title="Matlab and GPU">
-                <i class="fa fa-chevron-left"></i> Matlab and GPU
+              <a href="/2016/02/22/linux命令行备份数据到GoogleDrive神器之Grive/" rel="next" title="Linux命令行备份数据到GoogleDrive神器之Grive">
+                <i class="fa fa-chevron-left"></i> Linux命令行备份数据到GoogleDrive神器之Grive
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/06/19/论文笔记VGG/" rel="prev" title="论文笔记Very deep convolutional neural network for large scale image recognition">
-                论文笔记Very deep convolutional neural network for large scale image recognition <i class="fa fa-chevron-right"></i>
+              <a href="/2016/06/04/ReadingPaperList/" rel="prev" title="Reading Papers List">
+                Reading Papers List <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -504,8 +510,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2015/06/17/Matlab-常见问题整理/"
-           data-title="Matlab 常见问题整理" data-url="http://gaobb.github.io/2015/06/17/Matlab-常见问题整理/">
+      <div class="ds-thread" data-thread-key="2016/02/24/Caffe 使用总结/"
+           data-title="Caffe 使用总结" data-url="http://gaobb.github.io/2016/02/24/Caffe 使用总结/">
       </div>
     
   </div>
@@ -650,7 +656,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用Matlab-在没有安装excel的linux-Mac以及win-系统环境上写数据到excel"><span class="nav-number">1.</span> <span class="nav-text">使用Matlab 在没有安装excel的linux,Mac以及win 系统环境上写数据到excel.</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#I-can’t-open-Matlab-2015a-after-I-upgrade-Ubuntu-14-10-to-15-04"><span class="nav-number">2.</span> <span class="nav-text">I can’t open Matlab 2015a after I upgrade Ubuntu 14.10 to 15.04.</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MATLAB-parallel-error"><span class="nav-number">3.</span> <span class="nav-text">MATLAB parallel error</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#matlab-read-CMYK-image-error"><span class="nav-number">4.</span> <span class="nav-text">matlab read CMYK image error</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vlfeat-Error-in-vl-demo-covdet-line-15"><span class="nav-number">5.</span> <span class="nav-text">Vlfeat Error in vl_demo_covdet (line 15)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vlfeat-Error-libvl-so-cannot-open-shared-object-file-No-such-file-or-directory"><span class="nav-number">6.</span> <span class="nav-text">Vlfeat Error libvl.so: cannot open shared object file: No such file or directory</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#编译错误"><span class="nav-number">1.</span> <span class="nav-text">编译错误</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Error-One"><span class="nav-number">1.0.1.</span> <span class="nav-text">Error One:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Error-Two"><span class="nav-number">1.0.2.</span> <span class="nav-text">Error Two:</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Python-接口调用错误"><span class="nav-number">2.</span> <span class="nav-text">Python　接口调用错误</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Error-One-1"><span class="nav-number">2.0.1.</span> <span class="nav-text">Error One:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Error-Two-1"><span class="nav-number">2.0.2.</span> <span class="nav-text">Error Two:</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装配置nVidia-cuDNN-加速Caffe模型运算"><span class="nav-number">3.</span> <span class="nav-text">安装配置nVidia cuDNN 加速Caffe模型运算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#opencv"><span class="nav-number">4.</span> <span class="nav-text">opencv</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#绘制模型的结构"><span class="nav-number">5.</span> <span class="nav-text">绘制模型的结构</span></a></li></ol></div>
             
           </div>
         </section>
