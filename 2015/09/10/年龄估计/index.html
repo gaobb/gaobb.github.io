@@ -100,7 +100,9 @@
 <meta property="og:url" content="http://gaobb.github.io/2015/09/10/年龄估计/index.html">
 <meta property="og:site_name" content="Sunshine">
 <meta property="og:description" content="ＣonvNet年龄估计技术总结．人脸含有非常重要的个人信息，无论我们随身携带的各种证件，还是电子档案，都有一个非常重要的位置用于放置脸部照片．人脸识别(身份验证，表情，种族，性别，年龄）是人脸研究核心课题，人脸检测, 人脸关键点对准是做好人脸识别的基础．由于人脸识别广阔的应用前景，国内关于人脸识别的公司陆续上市，例如 LinkFace ， Face++．本文主要总结最近的一个工作（年龄估计）．">
+<meta property="og:image" content="http://gaobb.github.io/image/2014_oscar.jpg.jpg">
 <meta property="og:image" content="http://gaobb.github.io/image/oscar.medium.png">
+<meta property="og:image" content="http://gaobb.github.io/image/oscar_MTCNN.jpg">
 <meta property="og:image" content="http://gaobb.github.io/image/keypoints.png">
 <meta property="og:image" content="http://gaobb.github.io/image/pre_pro-c.jpg">
 <meta property="og:image" content="http://gaobb.github.io/image/dldl-c.jpg">
@@ -109,11 +111,11 @@
 <meta property="og:image" content="http://gaobb.github.io/image/9-c.png">
 <meta property="og:image" content="http://gaobb.github.io/image/pre_age.gif">
 <meta property="og:image" content="http://gaobb.github.io/images/cc-by.svg">
-<meta property="og:updated_time" content="2016-09-26T05:42:25.789Z">
+<meta property="og:updated_time" content="2016-11-24T13:31:34.134Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="年龄估计">
 <meta name="twitter:description" content="ＣonvNet年龄估计技术总结．人脸含有非常重要的个人信息，无论我们随身携带的各种证件，还是电子档案，都有一个非常重要的位置用于放置脸部照片．人脸识别(身份验证，表情，种族，性别，年龄）是人脸研究核心课题，人脸检测, 人脸关键点对准是做好人脸识别的基础．由于人脸识别广阔的应用前景，国内关于人脸识别的公司陆续上市，例如 LinkFace ， Face++．本文主要总结最近的一个工作（年龄估计）．">
-<meta name="twitter:image" content="http://gaobb.github.io/image/oscar.medium.png">
+<meta name="twitter:image" content="http://gaobb.github.io/image/2014_oscar.jpg.jpg">
 
 
 
@@ -380,7 +382,9 @@
 
       
         <p>ＣonvNet年龄估计技术总结．人脸含有非常重要的个人信息，无论我们随身携带的各种证件，还是电子档案，都有一个非常重要的位置用于放置脸部照片．人脸识别(身份验证，表情，种族，性别，年龄）是人脸研究核心课题，人脸检测, 人脸关键点对准是做好人脸识别的基础．由于人脸识别广阔的应用前景，国内关于人脸识别的公司陆续上市，例如 <a href="http://www.linkface.cn/" target="_blank" rel="external">LinkFace </a>， <a href="http://www.faceplusplus.com.cn/" target="_blank" rel="external">Face++</a>．本文主要总结最近的一个工作（年龄估计）．<br><a id="more"></a> </p>
-<h2 id="人脸检测-Face-detection"><a href="#人脸检测-Face-detection" class="headerlink" title="人脸检测(Face detection)"></a>人脸检测(Face detection)</h2><p>脸部含有人类年龄最重要的信息，因此做年龄估计的第一步就是如何准确Crop　出一张脸，通常称作人脸检测．伴随深度学习等技术的迅速发展，人脸检测的准确度有了很大提高．很多相关的成果在最近几年的顶级会议或者期刊发表．其中<a href="http://markusmathias.bitbucket.org/2014_eccv_face_detection/" target="_blank" rel="external">DPM,ECCV2014</a> 是一个非常成功的方法．<br><img src="/image/oscar.medium.png" alt="DPM"></p>
+<h2 id="人脸检测-Face-detection"><a href="#人脸检测-Face-detection" class="headerlink" title="人脸检测(Face detection)"></a>人脸检测(Face detection)</h2><p>脸部含有人类年龄最重要的信息，因此做年龄估计的第一步就是如何准确Crop　出一张脸，通常称作人脸检测．伴随深度学习等技术的迅速发展，人脸检测的准确度有了很大提高．很多相关的成果在最近几年的顶级会议或者期刊发表．当前一些开源的人脸检测工作总结如下：</p>
+<p><a href="http://markusmathias.bitbucket.org/2014_eccv_face_detection/" target="_blank" rel="external">DPM,ECCV2014</a> ．<br>论文摘要中秀的图片来自<a href="http://www.awardsdaily.com/wp-content/uploads/2013/02/academylare.jpg" target="_blank" rel="external">Oscar nominees Group Shot</a><br><img src="/image/2014_oscar.jpg.jpg" alt="oscar"><br>DPM 在这张照片上的检测效果如下：<br><img src="/image/oscar.medium.png" alt="DPM"></p>
+<p><a href="https://github.com/kpzhang93/MTCNN_face_detection_alignment" target="_blank" rel="external">MTCNN, IEEE Signal Processing Letters 2016</a><br>对同样的照片，MTCNN 的检测效果如下：<br><img src="/image/oscar_MTCNN.jpg" alt="MTCNN"></p>
 <h2 id="关键点检测-Key-points-与人脸矫正-Face-alignment"><a href="#关键点检测-Key-points-与人脸矫正-Face-alignment" class="headerlink" title="关键点检测(Key points)　与人脸矫正(Face alignment)"></a>关键点检测(Key points)　与人脸矫正(Face alignment)</h2><p>在一张人脸图像上，关键点主要是以下５个位置：一双眼睛，鼻尖，嘴巴的两角．如果能够准确的预测这５个位置，那么对于人脸识别的相关任务意义不言而喻．但是在实际应用中人脸图像由于受到姿态，表情，灯光，遮挡等复杂因素的影响，对于解决这个问题带来严重的挑战．为了解决这个问题，各种模型以及算法被提出． 香港中文大学　<a href="http://www.ie.cuhk.edu.hk/people/xotang.shtml" target="_blank" rel="external">Prof. Xiaoou Tang</a> 带领的 <a href="http://mmlab.ie.cuhk.edu.hk/" target="_blank" rel="external">Multimedia Laboratory</a> 在解决这个问题取得重大成功，他们的<a href="http://mmlab.ie.cuhk.edu.hk/archive/CNN_FacePoint.htm" target="_blank" rel="external">工作</a> 发表在 CVPR2013. 只要提取到关键点，对齐将是一件比较容易的事情，常用的方法比如模板匹配．<br><img src="/image/keypoints.png" alt=""></p>
 <p><img src="/image/pre_pro-c.jpg" alt=""></p>
 <h2 id="训练CNN-Training-CNN"><a href="#训练CNN-Training-CNN" class="headerlink" title="训练CNN(Training CNN)"></a>训练CNN(Training CNN)</h2><p><img src="/image/dldl-c.jpg" alt=""><br>最终目的是要根据人脸面部的表征预测年龄．有了前面的准备工作，可能很多人会想，只要把这些数据塞到一个深度卷积网络（ＣonvNet）训练不就好了吗？遗憾的是要成功的训练一个ＣonvNet　并非易事．因为ＣonvNet能够取得成功一个重要因素就是大量的训练样本．但是目前公开的相关的年龄的数据集训练样本相当有限，例如 Morph 作为最大的数据集也仅仅只有５万多张．因此训练样本成为使用ＣonvNet　模型估计年龄的瓶颈．我们的工作正是为了解决这一问题．<br>……</p>
